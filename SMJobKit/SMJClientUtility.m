@@ -92,19 +92,19 @@
   
   if (status == errAuthorizationDenied)
   {
-    SET_ERROR(SMJAuthorizationDenied, @"The system denied the authorization request");
+    SET_ERROR(SMJErrorCodeAuthorizationDenied, @"The system denied the authorization request");
   }
   else if (status == errAuthorizationCanceled)
   {
-    SET_ERROR(SMJAuthorizationCanceled, @"The user canceled the authorization request");
+    SET_ERROR(SMJErrorCodeAuthorizationCanceled, @"The user canceled the authorization request");
   }
   else if (status == errAuthorizationInteractionNotAllowed)
   {
-    SET_ERROR(SMJAuthorizationInteractionNotAllowed, @"Not allowed to prompt the user for authorization");
+    SET_ERROR(SMJErrorCodeAuthorizationInteractionNotAllowed, @"Not allowed to prompt the user for authorization");
   }
   else
   {
-    SET_ERROR(SMJAuthorizationFailed, @"Unknown failure when calling AuthorizationCreate (OSStatus %d)", status);
+    SET_ERROR(SMJErrorCodeAuthorizationFailed, @"Unknown failure when calling AuthorizationCreate (OSStatus %d)", status);
   }
   
   return NULL;

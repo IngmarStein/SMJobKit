@@ -1,6 +1,5 @@
-#ifndef NS_ENUM
 #import <Foundation/Foundation.h>
-#endif
+
 typedef NS_ENUM(unsigned int, SMJErrorCode) {
   
   // A failure when referencing a bundle that doesn't exist (or bad perms)
@@ -13,15 +12,15 @@ typedef NS_ENUM(unsigned int, SMJErrorCode) {
   SMJErrorCodeBadBundleCodeSigningDictionary = 1003,
   
   // Failure when calling SMJobBless
-  SMJErrorUnableToBless = 1010,
+  SMJErrorCodeUnableToBless = 1010,
   
   // Authorization was denied by the system when asking a user for authorization
-  SMJAuthorizationDenied = 1020,
+  SMJErrorCodeAuthorizationDenied = 1020,
   // The user canceled a prompt for authorization
-  SMJAuthorizationCanceled = 1021,
+  SMJErrorCodeAuthorizationCanceled = 1021,
   // Unable to prompt the user (interaction disallowed)
-  SMJAuthorizationInteractionNotAllowed = 1022,
+  SMJErrorCodeAuthorizationInteractionNotAllowed = 1022,
   // Unknown failure when prompting the user for authorization
-  SMJAuthorizationFailed = 1023,
+  SMJErrorCodeAuthorizationFailed = 1023,
   
 };

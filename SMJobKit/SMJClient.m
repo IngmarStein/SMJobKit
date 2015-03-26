@@ -64,7 +64,7 @@
   if (!SMJobBless(kSMDomainSystemLaunchd, [self cfIdentifier], authRef, &cfError))
   {
     NSError* blessError = (__bridge NSError*)cfError;
-    SET_ERROR(SMJErrorUnableToBless, @"SMJobBless Failure (code %ld): %@", blessError.code, blessError.localizedDescription);
+    SET_ERROR(SMJErrorCodeUnableToBless, @"SMJobBless Failure (code %ld): %@", blessError.code, blessError.localizedDescription);
     return NO;
   }
   
@@ -88,7 +88,7 @@
   if (!SMJobRemove(kSMDomainSystemLaunchd, self.cfIdentifier, authRef, YES, &cfError))
   {
     NSError* removeError = (__bridge NSError*)cfError;
-    SET_ERROR(SMJErrorUnableToBless, @"SMJobRemove Failure (code %ld): %@", removeError.code, removeError.localizedDescription);
+    SET_ERROR(SMJErrorCodeUnableToBless, @"SMJobRemove Failure (code %ld): %@", removeError.code, removeError.localizedDescription);
     return NO;
   }
   
