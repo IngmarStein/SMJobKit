@@ -5,14 +5,14 @@
 
 @implementation NSDictionary (XPCInterop)
 
-+ (id) dictionaryWithXPCDictionary:(xpc_object_t)xpcDictionary
++ (instancetype) dictionaryWithXPCDictionary:(xpc_object_t)xpcDictionary
 {
   AssertXPCObjectType(xpcDictionary, XPC_TYPE_DICTIONARY);
   
   NSMutableDictionary* dictionary = [NSMutableDictionary dictionaryWithCapacity:xpc_dictionary_get_count(xpcDictionary)];
   xpc_dictionary_apply(xpcDictionary, ^bool(const char* key, xpc_object_t xpcValue)
   {
-    [dictionary setObject:[NSObject objectWithXPCObject:xpcValue] forKey:[NSString stringWithUTF8String:key]];
+    dictionary[@(key)] = [NSObject objectWithXPCObject:xpcValue];
 
     return true;
   });

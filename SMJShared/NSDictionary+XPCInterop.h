@@ -5,7 +5,7 @@
 
 @interface NSDictionary (XPCInterop)
 
-+ (id) dictionaryWithXPCDictionary:(xpc_object_t)xpcDictionary;
-- (xpc_object_t) XPCDictionary;
++ (instancetype) dictionaryWithXPCDictionary:(xpc_object_t)xpcDictionary;
+@property (NS_NONATOMIC_IOSONLY, readonly) xpc_object_t XPCDictionary;
 
 @end

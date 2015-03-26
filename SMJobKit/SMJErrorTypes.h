@@ -1,4 +1,7 @@
-typedef enum {
+#ifndef NS_ENUM
+#import <Foundation/Foundation.h>
+#endif
+typedef NS_ENUM(unsigned int, SMJErrorCode) {
   
   // A failure when referencing a bundle that doesn't exist (or bad perms)
   SMJErrorCodeBundleNotFound = 1000,
@@ -21,4 +24,4 @@ typedef enum {
   // Unknown failure when prompting the user for authorization
   SMJAuthorizationFailed = 1023,
   
-} SMJErrorCode;
+};

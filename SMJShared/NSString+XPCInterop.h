@@ -5,7 +5,7 @@
 
 @interface NSString (XPCInterop)
 
-+ (id) stringWithXPCString:(xpc_object_t)xpcString;
-- (xpc_object_t) XPCString;
++ (instancetype) stringWithXPCString:(xpc_object_t)xpcString;
+@property (NS_NONATOMIC_IOSONLY, readonly) xpc_object_t XPCString;
 
 @end

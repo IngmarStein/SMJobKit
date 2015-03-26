@@ -53,7 +53,7 @@
     return nil;
   }
   
-  id versionValue = [bundleInfo objectForKey:@"CFBundleVersion"];
+  id versionValue = bundleInfo[@"CFBundleVersion"];
   if (![versionValue isKindOfClass:NSString.class]) return nil;
   
   return versionValue;

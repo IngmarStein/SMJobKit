@@ -2,7 +2,7 @@
 
 @implementation NSString (XPCInterop)
 
-+ (id) stringWithXPCString:(xpc_object_t)xpcString
++ (instancetype) stringWithXPCString:(xpc_object_t)xpcString
 {
   AssertXPCObjectType(xpcString, XPC_TYPE_STRING);
   

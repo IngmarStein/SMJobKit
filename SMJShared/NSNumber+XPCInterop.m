@@ -8,7 +8,7 @@ static NSNumber* maxLongLong = nil;
 
 @implementation NSNumber (XPCInterop)
 
-+ (id) numberWithXPCNumber:(xpc_object_t)xpcNumber
++ (instancetype) numberWithXPCNumber:(xpc_object_t)xpcNumber
 {
   xpc_type_t xpcType = xpc_get_type(xpcNumber);
   
@@ -24,7 +24,7 @@ static NSNumber* maxLongLong = nil;
 - (xpc_object_t) XPCNumber
 {
   if (!maxLongLong)
-    maxLongLong = [[NSNumber alloc] initWithLongLong:LLONG_MAX];
+    maxLongLong = @LLONG_MAX;
   
   switch (CFNumberGetType((__bridge CFNumberRef)self))
   {
@@ -59,7 +59,7 @@ static NSNumber* maxLongLong = nil;
 
     case kCFNumberCharType:
       // Booleans are encoded as chars, so we've gotta do some extra testing.
-      if ([self isKindOfClass:[[NSNumber numberWithBool:YES] class]])
+      if ([self isKindOfClass:[@YES class]])
       {
         return xpc_bool_create([self boolValue]);
       }

@@ -5,7 +5,7 @@
 
 @interface NSNumber (XPCInterop)
 
-+ (id) numberWithXPCNumber:(xpc_object_t)xpcNumber;
-- (xpc_object_t) XPCNumber;
++ (instancetype) numberWithXPCNumber:(xpc_object_t)xpcNumber;
+@property (NS_NONATOMIC_IOSONLY, readonly) xpc_object_t XPCNumber;
 
 @end

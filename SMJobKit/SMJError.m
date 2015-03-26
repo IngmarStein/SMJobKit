@@ -4,7 +4,7 @@
 
 + (NSError*) errorWithCode:(NSInteger)code message:(NSString*)message
 {
-  NSDictionary* userInfo = [NSDictionary dictionaryWithObjectsAndKeys:message, NSLocalizedDescriptionKey, nil];
+  NSDictionary* userInfo = @{NSLocalizedDescriptionKey: message};
   
   return [self errorWithDomain:@"SMJobKit" code:code userInfo:userInfo];
 }

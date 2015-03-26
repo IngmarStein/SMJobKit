@@ -5,7 +5,7 @@
 
 @interface NSArray (XPCInterop)
 
-+ (id) arrayWithXPCArray:(xpc_object_t)xpcArray;
-- (xpc_object_t) XPCArray;
++ (instancetype) arrayWithXPCArray:(xpc_object_t)xpcArray;
+@property (NS_NONATOMIC_IOSONLY, readonly) xpc_object_t XPCArray;
 
 @end

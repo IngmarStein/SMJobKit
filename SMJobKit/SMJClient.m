@@ -124,7 +124,7 @@
 {
   NSDictionary* jobData = (__bridge NSDictionary*)SMJobCopyDictionary(kSMDomainSystemLaunchd, self.cfIdentifier);
   
-  return [[jobData objectForKey:@"ProgramArguments"] objectAtIndex:0];
+  return jobData[@"ProgramArguments"][0];
 }
 
 

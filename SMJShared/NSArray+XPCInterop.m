@@ -3,7 +3,7 @@
 
 @implementation NSArray (XPCInterop)
 
-+ (id) arrayWithXPCArray:(xpc_object_t)xpcArray
++ (instancetype) arrayWithXPCArray:(xpc_object_t)xpcArray
 {
   AssertXPCObjectType(xpcArray, XPC_TYPE_ARRAY);
   
@@ -24,7 +24,7 @@
   
   for (NSUInteger i = 0; i < self.count; i++)
   {
-    objects[i] = [[self objectAtIndex:i] XPCObject];
+    objects[i] = [self[i] XPCObject];
   }
   
   xpc_object_t result = xpc_array_create(objects, self.count);

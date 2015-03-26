@@ -10,7 +10,7 @@
 
 @implementation NSObject (XPCInterop)
 
-+ (id) objectWithXPCObject:(xpc_object_t)xpcObject
++ (instancetype) objectWithXPCObject:(xpc_object_t)xpcObject
 {
   xpc_type_t objectType = xpc_get_type(xpcObject);
 
