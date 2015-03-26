@@ -15,5 +15,4 @@ FRAMEWORK_SEARCH_PATHS = $(DEVELOPER_LIBRARY_DIR)/Frameworks
 
 // Compiler - Language
 // ===================
-GCC_PRECOMPILE_PREFIX_HEADER = YES
-GCC_PREFIX_HEADER            = Tests/$(TARGET_NAME)/Prefix.pch
+GCC_PRECOMPILE_PREFIX_HEADER = NO

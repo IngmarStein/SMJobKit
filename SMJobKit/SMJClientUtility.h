@@ -1,3 +1,5 @@
+#import <Foundation/Foundation.h>
+
 @interface SMJClientUtility : NSObject
 
 + (NSString*) versionForBundlePath:(NSString*)bundlePath;

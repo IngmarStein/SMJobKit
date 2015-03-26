@@ -1,5 +1,6 @@
 #import "SMJClientUtility.h"
-
+#import "SMJError.h"
+#import "SMJErrorTypes.h"
 #import <Security/SecCode.h>
 
 

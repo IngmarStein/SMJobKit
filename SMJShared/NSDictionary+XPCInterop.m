@@ -1,6 +1,7 @@
+#import "SMJDiagnostics.h"
+#import "SMJCompatibility.h"
 #import "NSDictionary+XPCInterop.h"
-
-#import <Foundation/NSString.h>
+#import <Foundation/Foundation.h>
 
 
 @implementation NSDictionary (XPCInterop)

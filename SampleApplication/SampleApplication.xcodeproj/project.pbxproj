@@ -16,7 +16,7 @@
 		3CE185B715C64C1000A8FB57 /* SampleService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE185B615C64C1000A8FB57 /* SampleService.m */; };
 		3CE185C115C64C1000A8FB57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE185C015C64C1000A8FB57 /* Foundation.framework */; };
 		3CE185C415C64C1000A8FB57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE185C315C64C1000A8FB57 /* main.m */; };
-		3CE185CF15C64C2A00A8FB57 /* net.nevir.SMJobKit.SampleApplication.SampleService in Copy Services */ = {isa = PBXBuildFile; fileRef = 3CE185BC15C64C1000A8FB57 /* net.nevir.SMJobKit.SampleApplication.SampleService */; };
+		3CE185CF15C64C2A00A8FB57 /* net.nevir.SMJobKit.SampleApplication.SampleService in Copy Services */ = {isa = PBXBuildFile; fileRef = 3CE185BC15C64C1000A8FB57 /* net.nevir.SMJobKit.SampleApplication.SampleService */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3CE185D115C64CA500A8FB57 /* SMJobKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE185D015C64CA500A8FB57 /* SMJobKit.framework */; };
 		3CE185D315C64CAA00A8FB57 /* libSMJService.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE185D215C64CAA00A8FB57 /* libSMJService.a */; };
 /* End PBXBuildFile section */
@@ -222,7 +222,7 @@
 		3CE1858B15C64C1000A8FB57 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Ian MacLeod";
 			};
 			buildConfigurationList = 3CE1858E15C64C1000A8FB57 /* Build configuration list for PBXProject "SampleApplication" */;
@@ -348,7 +348,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -377,7 +376,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -454,8 +452,6 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/SMJobKit-fliesfietiliwshiebehkxithcjq/Build/Products/Debug\"",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SampleApplication/SampleApplication-Prefix.pch";
 				INFOPLIST_FILE = "SampleApplication/SampleApplication-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -471,8 +467,6 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/SMJobKit-fliesfietiliwshiebehkxithcjq/Build/Products/Debug\"",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SampleApplication/SampleApplication-Prefix.pch";
 				INFOPLIST_FILE = "SampleApplication/SampleApplication-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -498,6 +492,7 @@
 				3CE185CB15C64C1000A8FB57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3CE185CC15C64C1000A8FB57 /* Build configuration list for PBXNativeTarget "SampleApplication" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +501,7 @@
 				3CE185CE15C64C1000A8FB57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

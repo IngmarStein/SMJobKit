@@ -1,4 +1,5 @@
 #import "NSNumber+XPCInterop.h"
+#import "SMJDiagnostics.h"
 
 #import <CoreFoundation/CFNumber.h>
 #import <Foundation/NSException.h>

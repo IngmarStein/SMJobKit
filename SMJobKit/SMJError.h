@@ -1,3 +1,5 @@
+#import <Foundation/Foundation.h>
+
 @interface SMJError : NSError
 
 + (NSError*) errorWithCode:(NSInteger)code message:(NSString*)message;

@@ -4,6 +4,7 @@
 #import "NSDictionary+XPCInterop.h"
 #import "NSNumber+XPCInterop.h"
 #import "NSString+XPCInterop.h"
+#import "SMJDiagnostics.h"
 
 #import <Foundation/NSException.h>
 

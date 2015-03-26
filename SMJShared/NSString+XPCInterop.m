@@ -1,4 +1,5 @@
 #import "NSString+XPCInterop.h"
+#import "SMJDiagnostics.h"
 
 @implementation NSString (XPCInterop)
 

@@ -1,4 +1,5 @@
 #import "NSArray+XPCInterop.h"
+#import "SMJDiagnostics.h"
 
 
 @implementation NSArray (XPCInterop)
