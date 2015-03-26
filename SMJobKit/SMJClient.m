@@ -1,6 +1,5 @@
 #import "SMJClient.h"
 #import "SMJClientUtility.h"
-#import "SMJDiagnostics.h"
 #import "SMJError.h"
 #import "SMJErrorTypes.h"
 #import <ServiceManagement/ServiceManagement.h>
