@@ -124,7 +124,7 @@
 
 + (NSString*) installedServicePath
 {
-  NSDictionary* jobData = (__bridge NSDictionary*)SMJobCopyDictionary(kSMDomainSystemLaunchd, self.cfIdentifier);
+  NSDictionary* jobData = (__bridge_transfer NSDictionary*)SMJobCopyDictionary(kSMDomainSystemLaunchd, self.cfIdentifier);
   
   return jobData[@"ProgramArguments"][0];
 }
