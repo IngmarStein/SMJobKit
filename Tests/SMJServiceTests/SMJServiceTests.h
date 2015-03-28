@@ -1,3 +1,5 @@
-@interface SMJServiceTests : SenTestCase
+@import XCTest;
+
+@interface SMJServiceTests : XCTestCase
 
 @end

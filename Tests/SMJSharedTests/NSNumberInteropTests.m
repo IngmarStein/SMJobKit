@@ -1,7 +1,8 @@
 #import "NSNumber+XPCInterop.h"
+#import "TestHelpers.h"
+@import XCTest;
 
-
-@interface NSNumberInteropTests : SenTestCase
+@interface NSNumberInteropTests : XCTestCase
 
 @end
 
@@ -83,29 +84,29 @@
 
 - (void) testXPCBoolToNSNumber
 {
-  STAssertEqualObjects([NSNumber numberWithXPCNumber:xpc_bool_create(true)],  [NSNumber numberWithBool:YES], @"Failed to convert XPC bool true to NSNumber");
-  STAssertEqualObjects([NSNumber numberWithXPCNumber:xpc_bool_create(false)], [NSNumber numberWithBool:NO],  @"Failed to convert XPC bool false to NSNumber");
+  XCTAssertEqualObjects([NSNumber numberWithXPCNumber:xpc_bool_create(true)],  [NSNumber numberWithBool:YES], @"Failed to convert XPC bool true to NSNumber");
+  XCTAssertEqualObjects([NSNumber numberWithXPCNumber:xpc_bool_create(false)], [NSNumber numberWithBool:NO],  @"Failed to convert XPC bool false to NSNumber");
 }
 
 - (void) testXPCIntToNSNumber
 {
-  STAssertEqualObjects([NSNumber numberWithXPCNumber:xpc_int64_create(LLONG_MIN)], [NSNumber numberWithLongLong:LLONG_MIN], @"Failed to convert XPC int64 to NSNumber");
-  STAssertEqualObjects([NSNumber numberWithXPCNumber:xpc_int64_create(LLONG_MAX)], [NSNumber numberWithLongLong:LLONG_MAX], @"Failed to convert XPC int64 to NSNumber");
+  XCTAssertEqualObjects([NSNumber numberWithXPCNumber:xpc_int64_create(LLONG_MIN)], [NSNumber numberWithLongLong:LLONG_MIN], @"Failed to convert XPC int64 to NSNumber");
+  XCTAssertEqualObjects([NSNumber numberWithXPCNumber:xpc_int64_create(LLONG_MAX)], [NSNumber numberWithLongLong:LLONG_MAX], @"Failed to convert XPC int64 to NSNumber");
 }
 
 - (void) testXPCUIntToNSNumber
 {
-  STAssertEqualObjects([NSNumber numberWithXPCNumber:xpc_uint64_create(ULLONG_MAX)], [NSNumber numberWithUnsignedLongLong:ULLONG_MAX], @"Failed to convert XPC uint64 to NSNumber");
+  XCTAssertEqualObjects([NSNumber numberWithXPCNumber:xpc_uint64_create(ULLONG_MAX)], [NSNumber numberWithUnsignedLongLong:ULLONG_MAX], @"Failed to convert XPC uint64 to NSNumber");
 }
 
 - (void) testXPCDoubleToNSNumber
 {
-  STAssertEqualObjects([NSNumber numberWithXPCNumber:xpc_double_create(1713.12482732)], [NSNumber numberWithDouble:1713.12482732], @"Failed to convert XPC double to NSNumber");
+  XCTAssertEqualObjects([NSNumber numberWithXPCNumber:xpc_double_create(1713.12482732)], [NSNumber numberWithDouble:1713.12482732], @"Failed to convert XPC double to NSNumber");
 }
 
 - (void) testXPCObjectToNSString
 {
-  STAssertThrowsSpecificNamed([NSNumber numberWithXPCNumber:xpc_string_create("ohai")], NSException, @"BadArgument", @"A non-numeric XPC object should throw!");
+  XCTAssertThrowsSpecificNamed([NSNumber numberWithXPCNumber:xpc_string_create("ohai")], NSException, @"BadArgument", @"A non-numeric XPC object should throw!");
 }
 
 @end

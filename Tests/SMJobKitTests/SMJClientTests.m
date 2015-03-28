@@ -1,27 +1,32 @@
-@interface SMJClientTests : SenTestCase
+#import "SMJTestClient.h"
+#import "SMJMissingClient.h"
+#import "SMJErrorTypes.h"
+@import XCTest;
+
+@interface SMJClientTests : XCTestCase
 @end
 
 @implementation SMJClientTests
 
 - (void) testBundledVersion
 {
-  STAssertEqualObjects([SMJTestClient bundledVersion], @"0.01", @"Missing/wrong version");
-  STAssertEqualObjects([SMJMissingClient bundledVersion], nil, @"Missing client should return nil");
+  XCTAssertEqualObjects([SMJTestClient bundledVersion], @"0.01", @"Missing/wrong version");
+  XCTAssertEqualObjects([SMJMissingClient bundledVersion], nil, @"Missing client should return nil");
 }
 
 - (void) testInstalledVersion
 {
-  STAssertEqualObjects([SMJTestClient installedVersion], nil, @"Missing client should return nil");
+  XCTAssertEqualObjects([SMJTestClient installedVersion], nil, @"Missing client should return nil");
 }
 
 - (void) testForProblems
 {
-  STAssertNil([SMJTestClient checkForProblems], @"TestService should not have problems");
+  XCTAssertNil([SMJTestClient checkForProblems], @"TestService should not have problems");
   
   NSArray* errors = [SMJMissingClient checkForProblems];
-  STAssertEquals(errors.count, (NSUInteger)1, @"MissingService should have one error");
+  XCTAssertEqual(errors.count, (NSUInteger)1, @"MissingService should have one error");
   NSError* error = [errors objectAtIndex:0];
-  STAssertEquals((SMJErrorCode)error.code, SMJErrorCodeBundleNotFound, @"Missing service should be missing");
+  XCTAssertEqual((SMJErrorCode)error.code, SMJErrorCodeBundleNotFound, @"Missing service should be missing");
 }
 
 @end

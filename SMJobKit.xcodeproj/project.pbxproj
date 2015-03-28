@@ -35,10 +35,8 @@
 		3C4C2B0815ABF3AB00775A8B /* SMJErrorTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C4C2B0715ABF3AB00775A8B /* SMJErrorTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C528CC815AA5B11000AB26E /* NSArrayInteropTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C528CC715AA5B11000AB26E /* NSArrayInteropTests.m */; };
 		3C52F29715AA68A7005A46A1 /* NSDictionaryInteropTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C52F29615AA68A7005A46A1 /* NSDictionaryInteropTests.m */; };
-		3C560D4115A9419800A05BC2 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA1508A15A91179001CF9F8 /* SenTestingKit.framework */; };
 		3C560D4515A9419800A05BC2 /* libSMJShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C560D2E15A9419800A05BC2 /* libSMJShared.a */; };
 		3C560D6115A941A300A05BC2 /* SMJService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560D6015A941A300A05BC2 /* SMJService.m */; };
-		3C560D6815A941A300A05BC2 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA1508A15A91179001CF9F8 /* SenTestingKit.framework */; };
 		3C560D8215A9435200A05BC2 /* libSMJShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C560D2E15A9419800A05BC2 /* libSMJShared.a */; };
 		3C560D8515A9436900A05BC2 /* SMJobKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CA1508115A91179001CF9F8 /* SMJobKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C560D8615A9436B00A05BC2 /* SMJClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CA150AC15A93C3A001CF9F8 /* SMJClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -61,7 +59,6 @@
 		3C560DEC15AA4E0700A05BC2 /* SMJDiagnostics.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C560DEA15AA4E0600A05BC2 /* SMJDiagnostics.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		3C560DED15AA4E0700A05BC2 /* SMJDiagnostics.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560DEB15AA4E0600A05BC2 /* SMJDiagnostics.m */; };
 		3C75ECC415AD39600041240E /* SMJMissingClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75ECC315AD39600041240E /* SMJMissingClient.m */; };
-		3CA1508B15A91179001CF9F8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA1508A15A91179001CF9F8 /* SenTestingKit.framework */; };
 		3CA1508F15A91179001CF9F8 /* SMJobKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA1507115A91179001CF9F8 /* SMJobKit.framework */; };
 		3CA150AF15A93C3A001CF9F8 /* SMJClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA150AD15A93C3A001CF9F8 /* SMJClient.m */; };
 		3CA150B015A93C5F001CF9F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA1507915A91179001CF9F8 /* Foundation.framework */; };
@@ -153,11 +150,11 @@
 		3C528CC715AA5B11000AB26E /* NSArrayInteropTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayInteropTests.m; sourceTree = "<group>"; };
 		3C52F29615AA68A7005A46A1 /* NSDictionaryInteropTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryInteropTests.m; sourceTree = "<group>"; };
 		3C560D2E15A9419800A05BC2 /* libSMJShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSMJShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C560D4015A9419800A05BC2 /* SMJSharedTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMJSharedTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C560D4015A9419800A05BC2 /* SMJSharedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMJSharedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C560D5A15A941A300A05BC2 /* libSMJService.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSMJService.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C560D5F15A941A300A05BC2 /* SMJService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMJService.h; sourceTree = "<group>"; };
 		3C560D6015A941A300A05BC2 /* SMJService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMJService.m; sourceTree = "<group>"; };
-		3C560D6715A941A300A05BC2 /* SMJServiceTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMJServiceTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C560D6715A941A300A05BC2 /* SMJServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMJServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C560D7C15A9422400A05BC2 /* SMJService.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SMJService.xcconfig; sourceTree = "<group>"; };
 		3C560D7E15A9422400A05BC2 /* SMJShared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SMJShared.xcconfig; sourceTree = "<group>"; };
 		3C560D8115A9428900A05BC2 /* Tests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Tests.xcconfig; sourceTree = "<group>"; };
@@ -190,8 +187,7 @@
 		3CA1507915A91179001CF9F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3CA1507C15A91179001CF9F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CA1508115A91179001CF9F8 /* SMJobKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMJobKit.h; sourceTree = "<group>"; };
-		3CA1508915A91179001CF9F8 /* SMJobKitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMJobKitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CA1508A15A91179001CF9F8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		3CA1508915A91179001CF9F8 /* SMJobKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMJobKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA150A115A911A0001CF9F8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		3CA150A215A911A7001CF9F8 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		3CA150A415A91267001CF9F8 /* Project-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Project-Debug.xcconfig"; sourceTree = "<group>"; };
@@ -230,7 +226,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C560D4515A9419800A05BC2 /* libSMJShared.a in Frameworks */,
-				3C560D4115A9419800A05BC2 /* SenTestingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,7 +242,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C560D8A15A9440500A05BC2 /* libSMJService.a in Frameworks */,
-				3C560D6815A941A300A05BC2 /* SenTestingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +262,6 @@
 			files = (
 				3CA1508F15A91179001CF9F8 /* SMJobKit.framework in Frameworks */,
 				3CA150B115A93C98001CF9F8 /* Foundation.framework in Frameworks */,
-				3CA1508B15A91179001CF9F8 /* SenTestingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,11 +436,11 @@
 			isa = PBXGroup;
 			children = (
 				3CA1507115A91179001CF9F8 /* SMJobKit.framework */,
-				3CA1508915A91179001CF9F8 /* SMJobKitTests.octest */,
+				3CA1508915A91179001CF9F8 /* SMJobKitTests.xctest */,
 				3C560D2E15A9419800A05BC2 /* libSMJShared.a */,
-				3C560D4015A9419800A05BC2 /* SMJSharedTests.octest */,
+				3C560D4015A9419800A05BC2 /* SMJSharedTests.xctest */,
 				3C560D5A15A941A300A05BC2 /* libSMJService.a */,
-				3C560D6715A941A300A05BC2 /* SMJServiceTests.octest */,
+				3C560D6715A941A300A05BC2 /* SMJServiceTests.xctest */,
 				3C2BFAB015AB33020011FA52 /* net.nevir.SMJobKitTests.TestService */,
 			);
 			name = Products;
@@ -458,7 +451,6 @@
 			children = (
 				3CA1507915A91179001CF9F8 /* Foundation.framework */,
 				3C2BFA9315AB2FA50011FA52 /* Security.framework */,
-				3CA1508A15A91179001CF9F8 /* SenTestingKit.framework */,
 				3C2BFA8F15AB2F6D0011FA52 /* ServiceManagement.framework */,
 			);
 			name = Frameworks;
@@ -626,7 +618,7 @@
 			);
 			name = SMJSharedTests;
 			productName = SMJSharedTests;
-			productReference = 3C560D4015A9419800A05BC2 /* SMJSharedTests.octest */;
+			productReference = 3C560D4015A9419800A05BC2 /* SMJSharedTests.xctest */;
 			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 		3C560D5915A941A300A05BC2 /* SMJService */ = {
@@ -664,7 +656,7 @@
 			);
 			name = SMJServiceTests;
 			productName = SMJServiceTests;
-			productReference = 3C560D6715A941A300A05BC2 /* SMJServiceTests.octest */;
+			productReference = 3C560D6715A941A300A05BC2 /* SMJServiceTests.xctest */;
 			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 		3CA1507015A91179001CF9F8 /* SMJobKit */ = {
@@ -703,7 +695,7 @@
 			);
 			name = SMJobKitTests;
 			productName = SMJobKitTests;
-			productReference = 3CA1508915A91179001CF9F8 /* SMJobKitTests.octest */;
+			productReference = 3CA1508915A91179001CF9F8 /* SMJobKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */

@@ -1,7 +1,8 @@
 #import "NSArray+XPCInterop.h"
+#import "TestHelpers.h"
+@import XCTest;
 
-
-@interface NSArrayInteropTests : SenTestCase {
+@interface NSArrayInteropTests : XCTestCase {
   xpc_object_t xpcArray;
 }
 
@@ -70,7 +71,7 @@
   xpcArray = xpc_array_create(NULL, 0);
   NSArray* array = [NSArray arrayWithXPCArray:xpcArray];
   
-  STAssertEquals(array.count, (NSUInteger)0, @"Bad array count");
+  XCTAssertEqual(array.count, (NSUInteger)0, @"Bad array count");
 }
 
 - (void) testPopulatedToNS
@@ -81,9 +82,9 @@
   
   NSArray* array = [NSArray arrayWithXPCArray:xpcArray];
   
-  STAssertEquals(array.count, (NSUInteger)2, @"Bad array count");
-  STAssertEqualObjects([array objectAtIndex:0], [NSNumber numberWithBool:YES], @"basic boolean");
-  STAssertEqualObjects([array objectAtIndex:1], @"안녕", @"basic string");
+  XCTAssertEqual(array.count, (NSUInteger)2, @"Bad array count");
+  XCTAssertEqualObjects([array objectAtIndex:0], [NSNumber numberWithBool:YES], @"basic boolean");
+  XCTAssertEqualObjects([array objectAtIndex:1], @"안녕", @"basic string");
 }
 
 - (void) testComplexToNS
@@ -101,16 +102,16 @@
   
   NSArray* array = [NSArray arrayWithXPCArray:xpcArray];
   
-  STAssertEquals(array.count, (NSUInteger)2, @"Bad array count");
+  XCTAssertEqual(array.count, (NSUInteger)2, @"Bad array count");
 
   NSDictionary* nestedDict = [array objectAtIndex:0];
-  STAssertEquals(nestedDict.count, (NSUInteger)2, @"Bad nested dictionary count");
-  STAssertEqualObjects([nestedDict objectForKey:@"someKey"], @"foo bar", @"basic string");
-  STAssertEqualObjects([nestedDict objectForKey:@"otherKey"], [NSNumber numberWithInt:12345], @"basic number");
+  XCTAssertEqual(nestedDict.count, (NSUInteger)2, @"Bad nested dictionary count");
+  XCTAssertEqualObjects([nestedDict objectForKey:@"someKey"], @"foo bar", @"basic string");
+  XCTAssertEqualObjects([nestedDict objectForKey:@"otherKey"], [NSNumber numberWithInt:12345], @"basic number");
   
   NSArray* nestedArray = [array objectAtIndex:1];
-  STAssertEquals(nestedArray.count, (NSUInteger)1, @"Bad nested array count");
-  STAssertEqualObjects([nestedArray objectAtIndex:0], [NSNumber numberWithDouble:27.38237], @"basic double");
+  XCTAssertEqual(nestedArray.count, (NSUInteger)1, @"Bad nested array count");
+  XCTAssertEqualObjects([nestedArray objectAtIndex:0], [NSNumber numberWithDouble:27.38237], @"basic double");
 }
 
 @end

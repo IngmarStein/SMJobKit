@@ -1,7 +1,8 @@
 #import "NSDictionary+XPCInterop.h"
+#import "TestHelpers.h"
+@import XCTest;
 
-
-@interface NSDictionaryInteropTests : SenTestCase {
+@interface NSDictionaryInteropTests : XCTestCase {
   xpc_object_t xpcDictionary;
 }
 
@@ -68,7 +69,7 @@
   xpcDictionary = xpc_dictionary_create(NULL, NULL, 0);
   NSDictionary* dict = [NSDictionary dictionaryWithXPCDictionary:xpcDictionary];
   
-  STAssertEquals(dict.count, (NSUInteger)0, @"Bad dictionary count");
+  XCTAssertEqual(dict.count, (NSUInteger)0, @"Bad dictionary count");
 }
 
 - (void) testPopulatedToNS
@@ -79,10 +80,10 @@
   
   NSDictionary* dict = [NSDictionary dictionaryWithXPCDictionary:xpcDictionary];
   
-  STAssertEquals(dict.count, (NSUInteger)2, @"Bad dictionary count");
+  XCTAssertEqual(dict.count, (NSUInteger)2, @"Bad dictionary count");
   
-  STAssertEqualObjects([dict objectForKey:@"someKey"], [NSNumber numberWithBool:YES], @"basic boolean");
-  STAssertEqualObjects([dict objectForKey:@"안녕"], @"it means hi", @"basic string");
+  XCTAssertEqualObjects([dict objectForKey:@"someKey"], [NSNumber numberWithBool:YES], @"basic boolean");
+  XCTAssertEqualObjects([dict objectForKey:@"안녕"], @"it means hi", @"basic string");
 }
 
 - (void) testComplexToNS
@@ -100,16 +101,16 @@
 
   NSDictionary* dict = [NSDictionary dictionaryWithXPCDictionary:xpcDictionary];
   
-  STAssertEquals(dict.count, (NSUInteger)2, @"Bad dictionary count");
+  XCTAssertEqual(dict.count, (NSUInteger)2, @"Bad dictionary count");
   
   NSDictionary* nestedDict = [dict objectForKey:@"dict"];
-  STAssertEquals(nestedDict.count, (NSUInteger)2, @"Bad nested dictionary count");
-  STAssertEqualObjects([nestedDict objectForKey:@"someKey"], @"foo bar", @"basic string");
-  STAssertEqualObjects([nestedDict objectForKey:@"otherKey"], [NSNumber numberWithInt:12345], @"basic number");
+  XCTAssertEqual(nestedDict.count, (NSUInteger)2, @"Bad nested dictionary count");
+  XCTAssertEqualObjects([nestedDict objectForKey:@"someKey"], @"foo bar", @"basic string");
+  XCTAssertEqualObjects([nestedDict objectForKey:@"otherKey"], [NSNumber numberWithInt:12345], @"basic number");
   
   NSArray* nestedArray = [dict objectForKey:@"arr"];
-  STAssertEquals(nestedArray.count, (NSUInteger)1, @"Bad nested array count");
-  STAssertEqualObjects([nestedArray objectAtIndex:0], [NSNumber numberWithDouble:27.38237], @"basic double");
+  XCTAssertEqual(nestedArray.count, (NSUInteger)1, @"Bad nested array count");
+  XCTAssertEqualObjects([nestedArray objectAtIndex:0], [NSNumber numberWithDouble:27.38237], @"basic double");
 }
 
 @end
