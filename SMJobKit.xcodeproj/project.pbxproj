@@ -153,10 +153,8 @@
 		3C528CC715AA5B11000AB26E /* NSArrayInteropTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayInteropTests.m; sourceTree = "<group>"; };
 		3C52F29615AA68A7005A46A1 /* NSDictionaryInteropTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryInteropTests.m; sourceTree = "<group>"; };
 		3C560D2E15A9419800A05BC2 /* libSMJShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSMJShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C560D3715A9419800A05BC2 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		3C560D4015A9419800A05BC2 /* SMJSharedTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMJSharedTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C560D5A15A941A300A05BC2 /* libSMJService.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSMJService.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C560D5E15A941A300A05BC2 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		3C560D5F15A941A300A05BC2 /* SMJService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMJService.h; sourceTree = "<group>"; };
 		3C560D6015A941A300A05BC2 /* SMJService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMJService.m; sourceTree = "<group>"; };
 		3C560D6715A941A300A05BC2 /* SMJServiceTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMJServiceTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,14 +162,11 @@
 		3C560D7E15A9422400A05BC2 /* SMJShared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SMJShared.xcconfig; sourceTree = "<group>"; };
 		3C560D8115A9428900A05BC2 /* Tests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Tests.xcconfig; sourceTree = "<group>"; };
 		3C560DAD15A9460E00A05BC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C560DAE15A9460E00A05BC2 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		3C560DB015A9460E00A05BC2 /* SMJClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMJClientTests.m; sourceTree = "<group>"; };
 		3C560DB215A9460E00A05BC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C560DB315A9460E00A05BC2 /* SMJServiceTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMJServiceTests.h; sourceTree = "<group>"; };
 		3C560DB415A9460E00A05BC2 /* SMJServiceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMJServiceTests.m; sourceTree = "<group>"; };
 		3C560DB615A9460E00A05BC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C560DBC15A9467A00A05BC2 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
-		3C560DBE15A9468200A05BC2 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		3C560DCC15A9480300A05BC2 /* NSString+XPCInterop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XPCInterop.h"; sourceTree = "<group>"; };
 		3C560DCD15A9480300A05BC2 /* NSString+XPCInterop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XPCInterop.m"; sourceTree = "<group>"; };
 		3C560DD115A94A4B00A05BC2 /* NSStringInteropTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringInteropTests.m; sourceTree = "<group>"; };
@@ -314,7 +309,6 @@
 			isa = PBXGroup;
 			children = (
 				3C560DB615A9460E00A05BC2 /* Info.plist */,
-				3C560DBE15A9468200A05BC2 /* Prefix.pch */,
 				3C560DE915AA3DD700A05BC2 /* TestHelpers.h */,
 			);
 			name = "Supporting Files";
@@ -324,7 +318,6 @@
 			isa = PBXGroup;
 			children = (
 				3C560DB215A9460E00A05BC2 /* Info.plist */,
-				3C560DBC15A9467A00A05BC2 /* Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -333,7 +326,6 @@
 			isa = PBXGroup;
 			children = (
 				3C560DAD15A9460E00A05BC2 /* Info.plist */,
-				3C560DAE15A9460E00A05BC2 /* Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -362,7 +354,6 @@
 		3C560D3515A9419800A05BC2 /* SMJShared */ = {
 			isa = PBXGroup;
 			children = (
-				3C560D3715A9419800A05BC2 /* Prefix.pch */,
 				3C560DDC15A952D100A05BC2 /* NSArray+XPCInterop.h */,
 				3C560DDD15A952D100A05BC2 /* NSArray+XPCInterop.m */,
 				3C560DE015A952E400A05BC2 /* NSDictionary+XPCInterop.h */,
@@ -385,17 +376,8 @@
 			children = (
 				3C560D5F15A941A300A05BC2 /* SMJService.h */,
 				3C560D6015A941A300A05BC2 /* SMJService.m */,
-				3C560D5D15A941A300A05BC2 /* Supporting Files */,
 			);
 			path = SMJService;
-			sourceTree = "<group>";
-		};
-		3C560D5D15A941A300A05BC2 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3C560D5E15A941A300A05BC2 /* Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		3C560DAB15A9460E00A05BC2 /* Tests */ = {
