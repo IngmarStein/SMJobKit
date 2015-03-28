@@ -1018,6 +1018,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3CA150A415A91267001CF9F8 /* Project-Debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1037,6 +1038,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3CA150A515A91267001CF9F8 /* Project-Release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;

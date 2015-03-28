@@ -54,7 +54,6 @@
 		3CE185A215C64C1000A8FB57 /* SampleApplication-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SampleApplication-Info.plist"; sourceTree = "<group>"; };
 		3CE185A415C64C1000A8FB57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3CE185A615C64C1000A8FB57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3CE185A815C64C1000A8FB57 /* SampleApplication-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SampleApplication-Prefix.pch"; sourceTree = "<group>"; };
 		3CE185AA15C64C1000A8FB57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		3CE185AC15C64C1000A8FB57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3CE185AD15C64C1000A8FB57 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -151,7 +150,6 @@
 				3CE185A215C64C1000A8FB57 /* SampleApplication-Info.plist */,
 				3CE185A315C64C1000A8FB57 /* InfoPlist.strings */,
 				3CE185A615C64C1000A8FB57 /* main.m */,
-				3CE185A815C64C1000A8FB57 /* SampleApplication-Prefix.pch */,
 				3CE185A915C64C1000A8FB57 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
