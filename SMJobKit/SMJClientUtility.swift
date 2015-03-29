@@ -62,14 +62,10 @@ class SMJClientUtility {
 		var environment = AuthorizationEnvironment(count: 0, items: nil)
 
 		if let prompt = prompt {
-			kAuthorizationEnvironmentPrompt.withCString { authorizationEnvironmentPrompt -> Void in
-				if let data = prompt.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true) {
-					let mutableData = data.mutableCopy() as! NSMutableData
-					var envItem = AuthorizationItem(name: authorizationEnvironmentPrompt, valueLength: mutableData.length, value: mutableData.mutableBytes, flags: UInt32(0))
-
-					environment = AuthorizationEnvironment(count: 1, items: &envItem)
-				}
-			}
+			let authorizationEnvironmentPrompt = (kAuthorizationEnvironmentPrompt as NSString).UTF8String
+			let promptString = (prompt as NSString).UTF8String
+			var envItem = AuthorizationItem(name: authorizationEnvironmentPrompt, valueLength: prompt.lengthOfBytesUsingEncoding(NSUTF8StringEncoding), value: UnsafeMutablePointer(promptString), flags: UInt32(0))
+			environment = AuthorizationEnvironment(count: 1, items: &envItem)
 		}
 
 		let flags = AuthorizationFlags(kAuthorizationFlagDefaults

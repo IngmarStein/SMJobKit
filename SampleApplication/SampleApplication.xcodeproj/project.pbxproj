@@ -173,7 +173,6 @@
 				3CE1859015C64C1000A8FB57 /* Sources */,
 				3CE1859115C64C1000A8FB57 /* Frameworks */,
 				3CE1859215C64C1000A8FB57 /* Resources */,
-				3CE1859315C64C1000A8FB57 /* Postprocess Info.plist */,
 				3CE1859415C64C1000A8FB57 /* Copy Services */,
 			);
 			buildRules = (
@@ -244,20 +243,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3CE1859315C64C1000A8FB57 /* Postprocess Info.plist */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Postprocess Info.plist";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = "/usr/bin/env ruby";
-			shellScript = "# Postprocessing for your info.plist.  Primarily so that we can inject your full dev certificate name.\n\nrequire 'cgi'\nrequire 'fileutils'\n\nmissing_keys = ['BUILD_DIR', 'CODE_SIGN_IDENTITY', 'TARGET_BUILD_DIR', 'INFOPLIST_PATH'] - ENV.keys\nraise \"Missing required ENV values: #{missing_keys.inspect}\" if missing_keys.size > 0\n\nfiles_to_postprocess = [ENV['INFOPLIST_PATH']]\n\n\n# FULL_CODE_SIGN_IDENTITY\n# -----------------------\ndummy_path = \"#{ENV['BUILD_DIR']}/SMJobKitCodeSigningDummy\"\n\nidentity = ENV['CODE_SIGN_IDENTITY']\n# If you use the generic code signing identity, chances are that it'll conflict.\nidentity = \"#{identity}:\" if identity.end_with? ' Developer'\n\n# We can't seem to get direct access to the code signing certificate that Xcode has\n# selected at this point :(\n`touch #{dummy_path}`\n`codesign --force --sign \"#{identity}\" \"#{dummy_path}\"`\nresult = `codesign --display --verbose --verbose \"#{dummy_path}\" 2>&1`\n`rm #{dummy_path}`\n\nENV['FULL_CODE_SIGN_IDENTITY'] = result[/Authority\\=(.*#{Regexp.escape(identity)}.*)/, 1]\n\n\n# Actual Preprocessing\n# --------------------\n\nfiles_to_postprocess.each do |path|\n  target_path = File.join(ENV['TARGET_BUILD_DIR'], path)\n\n  input = open(target_path).read\n  open(target_path, 'w') do |output|\n    # Specify macros via [[[VAR_NAME]]] to avoid clashes w/ regular plist preprocessing.\n    output.write input.gsub(/\\[\\[\\[([A-Z_]+)\\]\\]\\]/) { CGI.escapeHTML(ENV[$1]) }\n  end\nend";
-		};
 		3CE185B815C64C1000A8FB57 /* Preprocess Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -385,10 +370,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Developer ID Application";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/SMJobKit-fliesfietiliwshiebehkxithcjq/Build/Products/Debug\"",
-				);
 				OTHER_LDFLAGS = (
 					"-sectcreate",
 					__TEXT,
@@ -410,10 +391,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Developer ID Application";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/SMJobKit-fliesfietiliwshiebehkxithcjq/Build/Products/Debug\"",
-				);
 				OTHER_LDFLAGS = (
 					"-sectcreate",
 					__TEXT,
@@ -437,10 +414,6 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/SMJobKit-fliesfietiliwshiebehkxithcjq/Build/Products/Debug\"",
-				);
 				INFOPLIST_FILE = "SampleApplication/SampleApplication-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -456,10 +429,6 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/SMJobKit-fliesfietiliwshiebehkxithcjq/Build/Products/Debug\"",
-				);
 				INFOPLIST_FILE = "SampleApplication/SampleApplication-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
