@@ -9,16 +9,14 @@
 /* Begin PBXBuildFile section */
 		3CE1859B15C64C1000A8FB57 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE1859A15C64C1000A8FB57 /* Cocoa.framework */; };
 		3CE185A515C64C1000A8FB57 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CE185A315C64C1000A8FB57 /* InfoPlist.strings */; };
-		3CE185A715C64C1000A8FB57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE185A615C64C1000A8FB57 /* main.m */; };
 		3CE185AB15C64C1000A8FB57 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3CE185A915C64C1000A8FB57 /* Credits.rtf */; };
-		3CE185AE15C64C1000A8FB57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE185AD15C64C1000A8FB57 /* AppDelegate.m */; };
 		3CE185B115C64C1000A8FB57 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CE185AF15C64C1000A8FB57 /* MainMenu.xib */; };
-		3CE185B715C64C1000A8FB57 /* SampleService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE185B615C64C1000A8FB57 /* SampleService.m */; };
-		3CE185C115C64C1000A8FB57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE185C015C64C1000A8FB57 /* Foundation.framework */; };
 		3CE185C415C64C1000A8FB57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE185C315C64C1000A8FB57 /* main.m */; };
 		3CE185CF15C64C2A00A8FB57 /* net.nevir.SMJobKit.SampleApplication.SampleService in Copy Services */ = {isa = PBXBuildFile; fileRef = 3CE185BC15C64C1000A8FB57 /* net.nevir.SMJobKit.SampleApplication.SampleService */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3CE185D115C64CA500A8FB57 /* SMJobKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE185D015C64CA500A8FB57 /* SMJobKit.framework */; };
 		3CE185D315C64CAA00A8FB57 /* libSMJService.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE185D215C64CAA00A8FB57 /* libSMJService.a */; };
+		9591AC7F1AC88345000C58EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591AC7E1AC88345000C58EC /* AppDelegate.swift */; };
+		9591AC811AC8858E000C58EC /* SampleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591AC801AC8858E000C58EC /* SampleService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,24 +47,20 @@
 		3CE1859615C64C1000A8FB57 /* SampleApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE1859A15C64C1000A8FB57 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3CE1859D15C64C1000A8FB57 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		3CE1859E15C64C1000A8FB57 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3CE1859F15C64C1000A8FB57 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3CE185A215C64C1000A8FB57 /* SampleApplication-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SampleApplication-Info.plist"; sourceTree = "<group>"; };
 		3CE185A415C64C1000A8FB57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3CE185A615C64C1000A8FB57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3CE185AA15C64C1000A8FB57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		3CE185AC15C64C1000A8FB57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		3CE185AD15C64C1000A8FB57 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3CE185B015C64C1000A8FB57 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		3CE185B515C64C1000A8FB57 /* SampleService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleService.h; sourceTree = "<group>"; };
-		3CE185B615C64C1000A8FB57 /* SampleService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleService.m; sourceTree = "<group>"; };
 		3CE185BC15C64C1000A8FB57 /* net.nevir.SMJobKit.SampleApplication.SampleService */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = net.nevir.SMJobKit.SampleApplication.SampleService; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CE185C015C64C1000A8FB57 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		3CE185C315C64C1000A8FB57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3CE185C515C64C1000A8FB57 /* SampleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SampleService-Info.plist"; sourceTree = "<group>"; };
 		3CE185C615C64C1000A8FB57 /* SampleService-Launchd.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SampleService-Launchd.plist"; sourceTree = "<group>"; };
 		3CE185D015C64CA500A8FB57 /* SMJobKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMJobKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/SMJobKit-fliesfietiliwshiebehkxithcjq/Build/Products/Debug/SMJobKit.framework"; sourceTree = "<group>"; };
 		3CE185D215C64CAA00A8FB57 /* libSMJService.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSMJService.a; path = "../../../Library/Developer/Xcode/DerivedData/SMJobKit-fliesfietiliwshiebehkxithcjq/Build/Products/Debug/libSMJService.a"; sourceTree = "<group>"; };
+		9591AC7D1AC88345000C58EC /* SampleApplication-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SampleApplication-Bridging-Header.h"; sourceTree = "<group>"; };
+		9591AC7E1AC88345000C58EC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9591AC801AC8858E000C58EC /* SampleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +78,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CE185D315C64CAA00A8FB57 /* libSMJService.a in Frameworks */,
-				3CE185C115C64C1000A8FB57 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,7 +109,6 @@
 				3CE185D215C64CAA00A8FB57 /* libSMJService.a */,
 				3CE185D015C64CA500A8FB57 /* SMJobKit.framework */,
 				3CE1859A15C64C1000A8FB57 /* Cocoa.framework */,
-				3CE185C015C64C1000A8FB57 /* Foundation.framework */,
 				3CE1859C15C64C1000A8FB57 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -126,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				3CE1859D15C64C1000A8FB57 /* AppKit.framework */,
-				3CE1859E15C64C1000A8FB57 /* CoreData.framework */,
 				3CE1859F15C64C1000A8FB57 /* Foundation.framework */,
 			);
 			name = "Other Frameworks";
@@ -135,8 +126,7 @@
 		3CE185A015C64C1000A8FB57 /* SampleApplication */ = {
 			isa = PBXGroup;
 			children = (
-				3CE185AC15C64C1000A8FB57 /* AppDelegate.h */,
-				3CE185AD15C64C1000A8FB57 /* AppDelegate.m */,
+				9591AC7E1AC88345000C58EC /* AppDelegate.swift */,
 				3CE185AF15C64C1000A8FB57 /* MainMenu.xib */,
 				3CE185B415C64C1000A8FB57 /* Service Clients */,
 				3CE185A115C64C1000A8FB57 /* Supporting Files */,
@@ -147,10 +137,10 @@
 		3CE185A115C64C1000A8FB57 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3CE185A215C64C1000A8FB57 /* SampleApplication-Info.plist */,
-				3CE185A315C64C1000A8FB57 /* InfoPlist.strings */,
-				3CE185A615C64C1000A8FB57 /* main.m */,
 				3CE185A915C64C1000A8FB57 /* Credits.rtf */,
+				3CE185A315C64C1000A8FB57 /* InfoPlist.strings */,
+				9591AC7D1AC88345000C58EC /* SampleApplication-Bridging-Header.h */,
+				3CE185A215C64C1000A8FB57 /* SampleApplication-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -158,8 +148,7 @@
 		3CE185B415C64C1000A8FB57 /* Service Clients */ = {
 			isa = PBXGroup;
 			children = (
-				3CE185B515C64C1000A8FB57 /* SampleService.h */,
-				3CE185B615C64C1000A8FB57 /* SampleService.m */,
+				9591AC801AC8858E000C58EC /* SampleService.swift */,
 			);
 			name = "Service Clients";
 			sourceTree = "<group>";
@@ -290,9 +279,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CE185A715C64C1000A8FB57 /* main.m in Sources */,
-				3CE185AE15C64C1000A8FB57 /* AppDelegate.m in Sources */,
-				3CE185B715C64C1000A8FB57 /* SampleService.m in Sources */,
+				9591AC7F1AC88345000C58EC /* AppDelegate.swift in Sources */,
+				9591AC811AC8858E000C58EC /* SampleService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,7 +353,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -388,7 +376,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -446,6 +434,7 @@
 		3CE185CD15C64C1000A8FB57 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -453,7 +442,10 @@
 					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/SMJobKit-fliesfietiliwshiebehkxithcjq/Build/Products/Debug\"",
 				);
 				INFOPLIST_FILE = "SampleApplication/SampleApplication-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SampleApplication/SampleApplication-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -461,6 +453,7 @@
 		3CE185CE15C64C1000A8FB57 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -468,7 +461,9 @@
 					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/SMJobKit-fliesfietiliwshiebehkxithcjq/Build/Products/Debug\"",
 				);
 				INFOPLIST_FILE = "SampleApplication/SampleApplication-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SampleApplication/SampleApplication-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
