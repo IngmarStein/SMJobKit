@@ -34,7 +34,7 @@ public class SMJClient: NSObject {
 		return false
 	}
 
-	public class func installWithPrompt(prompt:String, error:NSErrorPointer) -> Bool {
+	public class func installWithPrompt(prompt:String?, error:NSErrorPointer) -> Bool {
 		if isLatestVersionInstalled() {
 			NSLog("%@ (%@) is already current, skipping install.", serviceIdentifier, bundledVersion!)
 			return true
@@ -63,7 +63,7 @@ public class SMJClient: NSObject {
 		return true
 	}
 
-	public class func uninstallWithPrompt(prompt : String, error:NSErrorPointer) -> Bool {
+	public class func uninstallWithPrompt(prompt : String?, error:NSErrorPointer) -> Bool {
 		if installedVersion == nil {
 			NSLog("%@ is not installed, skipping uninstall.", serviceIdentifier)
 			return true
