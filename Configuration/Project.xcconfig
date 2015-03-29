@@ -9,7 +9,7 @@ GCC_VERSION = com.apple.compilers.llvm.clang.1_0
 
 // Deployment
 // ==========
-MACOSX_DEPLOYMENT_TARGET = 10.7
+MACOSX_DEPLOYMENT_TARGET = 10.9
 COMBINE_HIDPI_IMAGES     = YES
 
 // Packaging

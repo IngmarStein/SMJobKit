@@ -21,27 +21,19 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		3C2BFA8D15AB2EC00011FA52 /* SMJClientUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C2BFA8B15AB2EC00011FA52 /* SMJClientUtility.h */; };
-		3C2BFA8E15AB2EC00011FA52 /* SMJClientUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2BFA8C15AB2EC00011FA52 /* SMJClientUtility.m */; };
 		3C2BFA9015AB2F6D0011FA52 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2BFA8F15AB2F6D0011FA52 /* ServiceManagement.framework */; };
 		3C2BFA9415AB2FA50011FA52 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2BFA9315AB2FA50011FA52 /* Security.framework */; };
-		3C2BFAAC15AB31390011FA52 /* SMJTestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2BFAAB15AB31390011FA52 /* SMJTestClient.m */; };
 		3C2BFAB215AB33020011FA52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA1507915A91179001CF9F8 /* Foundation.framework */; };
 		3C2BFAB515AB33020011FA52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2BFAB415AB33020011FA52 /* main.m */; };
 		3C2BFABE15AB33EF0011FA52 /* net.nevir.SMJobKitTests.TestService in Copy Services */ = {isa = PBXBuildFile; fileRef = 3C2BFAB015AB33020011FA52 /* net.nevir.SMJobKitTests.TestService */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3C4C2B0215ABEC2B00775A8B /* SMJCompatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C4C2B0115ABEC2B00775A8B /* SMJCompatibility.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		3C4C2B0515ABEFAD00775A8B /* SMJError.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C4C2B0315ABEFAD00775A8B /* SMJError.h */; };
-		3C4C2B0615ABEFAD00775A8B /* SMJError.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C2B0415ABEFAD00775A8B /* SMJError.m */; };
-		3C4C2B0815ABF3AB00775A8B /* SMJErrorTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C4C2B0715ABF3AB00775A8B /* SMJErrorTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C528CC815AA5B11000AB26E /* NSArrayInteropTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C528CC715AA5B11000AB26E /* NSArrayInteropTests.m */; };
 		3C52F29715AA68A7005A46A1 /* NSDictionaryInteropTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C52F29615AA68A7005A46A1 /* NSDictionaryInteropTests.m */; };
 		3C560D4515A9419800A05BC2 /* libSMJShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C560D2E15A9419800A05BC2 /* libSMJShared.a */; };
 		3C560D6115A941A300A05BC2 /* SMJService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560D6015A941A300A05BC2 /* SMJService.m */; };
 		3C560D8215A9435200A05BC2 /* libSMJShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C560D2E15A9419800A05BC2 /* libSMJShared.a */; };
 		3C560D8515A9436900A05BC2 /* SMJobKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CA1508115A91179001CF9F8 /* SMJobKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3C560D8615A9436B00A05BC2 /* SMJClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CA150AC15A93C3A001CF9F8 /* SMJClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C560D8A15A9440500A05BC2 /* libSMJService.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C560D5A15A941A300A05BC2 /* libSMJService.a */; };
-		3C560DB915A9461D00A05BC2 /* SMJClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560DB015A9460E00A05BC2 /* SMJClientTests.m */; };
 		3C560DBA15A9462000A05BC2 /* SMJServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560DB415A9460E00A05BC2 /* SMJServiceTests.m */; };
 		3C560DC215A9469A00A05BC2 /* libSMJShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C560D2E15A9419800A05BC2 /* libSMJShared.a */; };
 		3C560DCE15A9480300A05BC2 /* NSString+XPCInterop.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C560DCC15A9480300A05BC2 /* NSString+XPCInterop.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -58,11 +50,16 @@
 		3C560DE615AA304300A05BC2 /* NSNumberInteropTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560DE515AA304300A05BC2 /* NSNumberInteropTests.m */; };
 		3C560DEC15AA4E0700A05BC2 /* SMJDiagnostics.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C560DEA15AA4E0600A05BC2 /* SMJDiagnostics.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		3C560DED15AA4E0700A05BC2 /* SMJDiagnostics.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560DEB15AA4E0600A05BC2 /* SMJDiagnostics.m */; };
-		3C75ECC415AD39600041240E /* SMJMissingClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75ECC315AD39600041240E /* SMJMissingClient.m */; };
 		3CA1508F15A91179001CF9F8 /* SMJobKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA1507115A91179001CF9F8 /* SMJobKit.framework */; };
-		3CA150AF15A93C3A001CF9F8 /* SMJClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA150AD15A93C3A001CF9F8 /* SMJClient.m */; };
 		3CA150B015A93C5F001CF9F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA1507915A91179001CF9F8 /* Foundation.framework */; };
 		3CA150B115A93C98001CF9F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA1507915A91179001CF9F8 /* Foundation.framework */; };
+		95340BA01AC83B7E00DE4879 /* SMJError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95340B9F1AC83B7E00DE4879 /* SMJError.swift */; };
+		95340BA21AC83DB400DE4879 /* SMJErrorTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95340BA11AC83DB400DE4879 /* SMJErrorTypes.swift */; };
+		95340BA41AC84C9C00DE4879 /* SMJClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95340BA31AC84C9C00DE4879 /* SMJClient.swift */; };
+		95340BA61AC8555D00DE4879 /* SMJMissingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95340BA51AC8555D00DE4879 /* SMJMissingClient.swift */; };
+		95340BA81AC855A100DE4879 /* SMJTestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95340BA71AC855A100DE4879 /* SMJTestClient.swift */; };
+		95340BAA1AC855DE00DE4879 /* SMJClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95340BA91AC855DE00DE4879 /* SMJClientTests.swift */; };
+		956253011AC837A900D93E91 /* SMJClientUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956253001AC837A900D93E91 /* SMJClientUtility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,21 +129,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3C2BFA8B15AB2EC00011FA52 /* SMJClientUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMJClientUtility.h; sourceTree = "<group>"; };
-		3C2BFA8C15AB2EC00011FA52 /* SMJClientUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMJClientUtility.m; sourceTree = "<group>"; };
 		3C2BFA8F15AB2F6D0011FA52 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		3C2BFA9315AB2FA50011FA52 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		3C2BFAAA15AB31390011FA52 /* SMJTestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMJTestClient.h; sourceTree = "<group>"; };
-		3C2BFAAB15AB31390011FA52 /* SMJTestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMJTestClient.m; sourceTree = "<group>"; };
 		3C2BFAB015AB33020011FA52 /* net.nevir.SMJobKitTests.TestService */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = net.nevir.SMJobKitTests.TestService; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C2BFAB415AB33020011FA52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3C2BFAB615AB33020011FA52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C2BFAB715AB33020011FA52 /* Launchd.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Launchd.plist; sourceTree = "<group>"; };
 		3C2BFAC115AB35070011FA52 /* TestService.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = TestService.xcconfig; sourceTree = "<group>"; };
 		3C4C2B0115ABEC2B00775A8B /* SMJCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMJCompatibility.h; sourceTree = "<group>"; };
-		3C4C2B0315ABEFAD00775A8B /* SMJError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMJError.h; sourceTree = "<group>"; };
-		3C4C2B0415ABEFAD00775A8B /* SMJError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMJError.m; sourceTree = "<group>"; };
-		3C4C2B0715ABF3AB00775A8B /* SMJErrorTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMJErrorTypes.h; sourceTree = "<group>"; };
 		3C528CC715AA5B11000AB26E /* NSArrayInteropTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayInteropTests.m; sourceTree = "<group>"; };
 		3C52F29615AA68A7005A46A1 /* NSDictionaryInteropTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryInteropTests.m; sourceTree = "<group>"; };
 		3C560D2E15A9419800A05BC2 /* libSMJShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSMJShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,7 +149,6 @@
 		3C560D7E15A9422400A05BC2 /* SMJShared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SMJShared.xcconfig; sourceTree = "<group>"; };
 		3C560D8115A9428900A05BC2 /* Tests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Tests.xcconfig; sourceTree = "<group>"; };
 		3C560DAD15A9460E00A05BC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C560DB015A9460E00A05BC2 /* SMJClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMJClientTests.m; sourceTree = "<group>"; };
 		3C560DB215A9460E00A05BC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C560DB315A9460E00A05BC2 /* SMJServiceTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMJServiceTests.h; sourceTree = "<group>"; };
 		3C560DB415A9460E00A05BC2 /* SMJServiceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMJServiceTests.m; sourceTree = "<group>"; };
@@ -181,8 +170,6 @@
 		3C560DEB15AA4E0600A05BC2 /* SMJDiagnostics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMJDiagnostics.m; sourceTree = "<group>"; };
 		3C6A266715C628B300F4ADDC /* ___VARIABLE_smjServiceName:RFC1034Identifier___.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "___VARIABLE_smjServiceName:RFC1034Identifier___.h"; sourceTree = "<group>"; };
 		3C6A266815C628B300F4ADDC /* ___VARIABLE_smjServiceName:RFC1034Identifier___.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___VARIABLE_smjServiceName:RFC1034Identifier___.m"; sourceTree = "<group>"; };
-		3C75ECC215AD39600041240E /* SMJMissingClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMJMissingClient.h; sourceTree = "<group>"; };
-		3C75ECC315AD39600041240E /* SMJMissingClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMJMissingClient.m; sourceTree = "<group>"; };
 		3CA1507115A91179001CF9F8 /* SMJobKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SMJobKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA1507915A91179001CF9F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3CA1507C15A91179001CF9F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -194,8 +181,6 @@
 		3CA150A515A91267001CF9F8 /* Project-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Project-Release.xcconfig"; sourceTree = "<group>"; };
 		3CA150A615A91267001CF9F8 /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
 		3CA150A715A91267001CF9F8 /* SMJobKit.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SMJobKit.xcconfig; sourceTree = "<group>"; };
-		3CA150AC15A93C3A001CF9F8 /* SMJClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMJClient.h; sourceTree = "<group>"; };
-		3CA150AD15A93C3A001CF9F8 /* SMJClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMJClient.m; sourceTree = "<group>"; };
 		3CCC06D515AA837E00C84BE1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3CCC06D615AA837E00C84BE1 /* TemplateIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = TemplateIcon.icns; sourceTree = "<group>"; };
 		3CCC06D715AA837E00C84BE1 /* TemplateInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TemplateInfo.plist; sourceTree = "<group>"; };
@@ -203,6 +188,13 @@
 		3CD9BC9915B2503F00F0007B /* ___PACKAGENAMEASIDENTIFIER___-Launchd.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "___PACKAGENAMEASIDENTIFIER___-Launchd.plist"; sourceTree = "<group>"; };
 		3CD9BCD315B2632D00F0007B /* TemplateInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TemplateInfo.plist; sourceTree = "<group>"; };
 		3CFB0E2015B37DE400FA0E6B /* README-SMJobKit.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = "README-SMJobKit.md"; sourceTree = "<group>"; };
+		95340B9F1AC83B7E00DE4879 /* SMJError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMJError.swift; sourceTree = "<group>"; };
+		95340BA11AC83DB400DE4879 /* SMJErrorTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMJErrorTypes.swift; sourceTree = "<group>"; };
+		95340BA31AC84C9C00DE4879 /* SMJClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMJClient.swift; sourceTree = "<group>"; };
+		95340BA51AC8555D00DE4879 /* SMJMissingClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMJMissingClient.swift; sourceTree = "<group>"; };
+		95340BA71AC855A100DE4879 /* SMJTestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMJTestClient.swift; sourceTree = "<group>"; };
+		95340BA91AC855DE00DE4879 /* SMJClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMJClientTests.swift; sourceTree = "<group>"; };
+		956253001AC837A900D93E91 /* SMJClientUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMJClientUtility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,10 +271,9 @@
 		3C2BFA8915AB2E870011FA52 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				95340BA31AC84C9C00DE4879 /* SMJClient.swift */,
+				95340BA11AC83DB400DE4879 /* SMJErrorTypes.swift */,
 				3CA1508115A91179001CF9F8 /* SMJobKit.h */,
-				3CA150AC15A93C3A001CF9F8 /* SMJClient.h */,
-				3CA150AD15A93C3A001CF9F8 /* SMJClient.m */,
-				3C4C2B0715ABF3AB00775A8B /* SMJErrorTypes.h */,
 			);
 			name = Public;
 			sourceTree = "<group>";
@@ -290,10 +281,8 @@
 		3C2BFA8A15AB2E8F0011FA52 /* Private */ = {
 			isa = PBXGroup;
 			children = (
-				3C2BFA8B15AB2EC00011FA52 /* SMJClientUtility.h */,
-				3C2BFA8C15AB2EC00011FA52 /* SMJClientUtility.m */,
-				3C4C2B0315ABEFAD00775A8B /* SMJError.h */,
-				3C4C2B0415ABEFAD00775A8B /* SMJError.m */,
+				956253001AC837A900D93E91 /* SMJClientUtility.swift */,
+				95340B9F1AC83B7E00DE4879 /* SMJError.swift */,
 			);
 			name = Private;
 			sourceTree = "<group>";
@@ -326,10 +315,8 @@
 		3C2BFAA915AB31240011FA52 /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
-				3C75ECC215AD39600041240E /* SMJMissingClient.h */,
-				3C75ECC315AD39600041240E /* SMJMissingClient.m */,
-				3C2BFAAA15AB31390011FA52 /* SMJTestClient.h */,
-				3C2BFAAB15AB31390011FA52 /* SMJTestClient.m */,
+				95340BA51AC8555D00DE4879 /* SMJMissingClient.swift */,
+				95340BA71AC855A100DE4879 /* SMJTestClient.swift */,
 			);
 			name = Fixtures;
 			sourceTree = "<group>";
@@ -387,7 +374,7 @@
 		3C560DAC15A9460E00A05BC2 /* SMJobKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				3C560DB015A9460E00A05BC2 /* SMJClientTests.m */,
+				95340BA91AC855DE00DE4879 /* SMJClientTests.swift */,
 				3C2BFAA915AB31240011FA52 /* Fixtures */,
 				3C2BFAA815AB30EB0011FA52 /* Supporting Files */,
 			);
@@ -558,10 +545,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C560D8515A9436900A05BC2 /* SMJobKit.h in Headers */,
-				3C560D8615A9436B00A05BC2 /* SMJClient.h in Headers */,
-				3C4C2B0815ABF3AB00775A8B /* SMJErrorTypes.h in Headers */,
-				3C2BFA8D15AB2EC00011FA52 /* SMJClientUtility.h in Headers */,
-				3C4C2B0515ABEFAD00775A8B /* SMJError.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,7 +602,7 @@
 			name = SMJSharedTests;
 			productName = SMJSharedTests;
 			productReference = 3C560D4015A9419800A05BC2 /* SMJSharedTests.xctest */;
-			productType = "com.apple.product-type.bundle.ocunit-test";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		3C560D5915A941A300A05BC2 /* SMJService */ = {
 			isa = PBXNativeTarget;
@@ -657,7 +640,7 @@
 			name = SMJServiceTests;
 			productName = SMJServiceTests;
 			productReference = 3C560D6715A941A300A05BC2 /* SMJServiceTests.xctest */;
-			productType = "com.apple.product-type.bundle.ocunit-test";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		3CA1507015A91179001CF9F8 /* SMJobKit */ = {
 			isa = PBXNativeTarget;
@@ -696,7 +679,7 @@
 			name = SMJobKitTests;
 			productName = SMJobKitTests;
 			productReference = 3CA1508915A91179001CF9F8 /* SMJobKitTests.xctest */;
-			productType = "com.apple.product-type.bundle.ocunit-test";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -879,9 +862,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CA150AF15A93C3A001CF9F8 /* SMJClient.m in Sources */,
-				3C2BFA8E15AB2EC00011FA52 /* SMJClientUtility.m in Sources */,
-				3C4C2B0615ABEFAD00775A8B /* SMJError.m in Sources */,
+				95340BA41AC84C9C00DE4879 /* SMJClient.swift in Sources */,
+				95340BA01AC83B7E00DE4879 /* SMJError.swift in Sources */,
+				95340BA21AC83DB400DE4879 /* SMJErrorTypes.swift in Sources */,
+				956253011AC837A900D93E91 /* SMJClientUtility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -889,9 +873,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C560DB915A9461D00A05BC2 /* SMJClientTests.m in Sources */,
-				3C2BFAAC15AB31390011FA52 /* SMJTestClient.m in Sources */,
-				3C75ECC415AD39600041240E /* SMJMissingClient.m in Sources */,
+				95340BA61AC8555D00DE4879 /* SMJMissingClient.swift in Sources */,
+				95340BA81AC855A100DE4879 /* SMJTestClient.swift in Sources */,
+				95340BAA1AC855DE00DE4879 /* SMJClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -940,6 +924,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3C2BFAC115AB35070011FA52 /* TestService.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 			};
 			name = Debug;
 		};
@@ -947,6 +932,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3C2BFAC115AB35070011FA52 /* TestService.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 			};
 			name = Release;
 		};
@@ -1022,6 +1008,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
@@ -1042,6 +1029,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 			};
 			name = Release;
 		};
@@ -1049,7 +1037,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3CA150A715A91267001CF9F8 /* SMJobKit.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -1057,7 +1049,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3CA150A715A91267001CF9F8 /* SMJobKit.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 			};
 			name = Release;
 		};
@@ -1065,6 +1060,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3C560D8115A9428900A05BC2 /* Tests.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -1072,6 +1070,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3C560D8115A9428900A05BC2 /* Tests.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 			};
 			name = Release;
 		};
