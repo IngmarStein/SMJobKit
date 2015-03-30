@@ -26,30 +26,7 @@
 		3C2BFAB215AB33020011FA52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA1507915A91179001CF9F8 /* Foundation.framework */; };
 		3C2BFAB515AB33020011FA52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2BFAB415AB33020011FA52 /* main.m */; };
 		3C2BFABE15AB33EF0011FA52 /* net.nevir.SMJobKitTests.TestService in Copy Services */ = {isa = PBXBuildFile; fileRef = 3C2BFAB015AB33020011FA52 /* net.nevir.SMJobKitTests.TestService */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		3C4C2B0215ABEC2B00775A8B /* SMJCompatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C4C2B0115ABEC2B00775A8B /* SMJCompatibility.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		3C528CC815AA5B11000AB26E /* NSArrayInteropTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C528CC715AA5B11000AB26E /* NSArrayInteropTests.m */; };
-		3C52F29715AA68A7005A46A1 /* NSDictionaryInteropTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C52F29615AA68A7005A46A1 /* NSDictionaryInteropTests.m */; };
-		3C560D4515A9419800A05BC2 /* libSMJShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C560D2E15A9419800A05BC2 /* libSMJShared.a */; };
-		3C560D6115A941A300A05BC2 /* SMJService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560D6015A941A300A05BC2 /* SMJService.m */; };
-		3C560D8215A9435200A05BC2 /* libSMJShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C560D2E15A9419800A05BC2 /* libSMJShared.a */; };
 		3C560D8515A9436900A05BC2 /* SMJobKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CA1508115A91179001CF9F8 /* SMJobKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3C560D8A15A9440500A05BC2 /* libSMJService.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C560D5A15A941A300A05BC2 /* libSMJService.a */; };
-		3C560DBA15A9462000A05BC2 /* SMJServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560DB415A9460E00A05BC2 /* SMJServiceTests.m */; };
-		3C560DC215A9469A00A05BC2 /* libSMJShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C560D2E15A9419800A05BC2 /* libSMJShared.a */; };
-		3C560DCE15A9480300A05BC2 /* NSString+XPCInterop.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C560DCC15A9480300A05BC2 /* NSString+XPCInterop.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3C560DCF15A9480300A05BC2 /* NSString+XPCInterop.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560DCD15A9480300A05BC2 /* NSString+XPCInterop.m */; };
-		3C560DD215A94A4B00A05BC2 /* NSStringInteropTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560DD115A94A4B00A05BC2 /* NSStringInteropTests.m */; };
-		3C560DD615A952B100A05BC2 /* NSNumber+XPCInterop.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C560DD415A952B100A05BC2 /* NSNumber+XPCInterop.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3C560DD715A952B100A05BC2 /* NSNumber+XPCInterop.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560DD515A952B100A05BC2 /* NSNumber+XPCInterop.m */; };
-		3C560DDA15A952BE00A05BC2 /* NSObject+XPCInterop.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C560DD815A952BE00A05BC2 /* NSObject+XPCInterop.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3C560DDB15A952BE00A05BC2 /* NSObject+XPCInterop.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560DD915A952BE00A05BC2 /* NSObject+XPCInterop.m */; };
-		3C560DDE15A952D100A05BC2 /* NSArray+XPCInterop.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C560DDC15A952D100A05BC2 /* NSArray+XPCInterop.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3C560DDF15A952D100A05BC2 /* NSArray+XPCInterop.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560DDD15A952D100A05BC2 /* NSArray+XPCInterop.m */; };
-		3C560DE215A952E500A05BC2 /* NSDictionary+XPCInterop.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C560DE015A952E400A05BC2 /* NSDictionary+XPCInterop.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3C560DE315A952E500A05BC2 /* NSDictionary+XPCInterop.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560DE115A952E500A05BC2 /* NSDictionary+XPCInterop.m */; };
-		3C560DE615AA304300A05BC2 /* NSNumberInteropTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560DE515AA304300A05BC2 /* NSNumberInteropTests.m */; };
-		3C560DEC15AA4E0700A05BC2 /* SMJDiagnostics.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C560DEA15AA4E0600A05BC2 /* SMJDiagnostics.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		3C560DED15AA4E0700A05BC2 /* SMJDiagnostics.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C560DEB15AA4E0600A05BC2 /* SMJDiagnostics.m */; };
 		3CA1508F15A91179001CF9F8 /* SMJobKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA1507115A91179001CF9F8 /* SMJobKit.framework */; };
 		3CA150B015A93C5F001CF9F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA1507915A91179001CF9F8 /* Foundation.framework */; };
 		3CA150B115A93C98001CF9F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA1507915A91179001CF9F8 /* Foundation.framework */; };
@@ -63,47 +40,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3C2BFA6E15AA95D20011FA52 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3CA1506715A91179001CF9F8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3CCC06D015AA823000C84BE1;
-			remoteInfo = "Xcode Templates";
-		};
 		3C2BFABF15AB34070011FA52 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3CA1506715A91179001CF9F8 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3C2BFAAF15AB33020011FA52;
 			remoteInfo = TestService;
-		};
-		3C560D4315A9419800A05BC2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3CA1506715A91179001CF9F8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3C560D2D15A9419800A05BC2;
-			remoteInfo = SMJShared;
-		};
-		3C560D6A15A941A300A05BC2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3CA1506715A91179001CF9F8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3C560D5915A941A300A05BC2;
-			remoteInfo = SMJService;
-		};
-		3C560D8315A9435800A05BC2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3CA1506715A91179001CF9F8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3C560D2D15A9419800A05BC2;
-			remoteInfo = SMJShared;
-		};
-		3C560DC015A9469700A05BC2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3CA1506715A91179001CF9F8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3C560D2D15A9419800A05BC2;
-			remoteInfo = SMJShared;
 		};
 		3CA1508D15A91179001CF9F8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -136,38 +78,8 @@
 		3C2BFAB615AB33020011FA52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C2BFAB715AB33020011FA52 /* Launchd.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Launchd.plist; sourceTree = "<group>"; };
 		3C2BFAC115AB35070011FA52 /* TestService.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = TestService.xcconfig; sourceTree = "<group>"; };
-		3C4C2B0115ABEC2B00775A8B /* SMJCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMJCompatibility.h; sourceTree = "<group>"; };
-		3C528CC715AA5B11000AB26E /* NSArrayInteropTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayInteropTests.m; sourceTree = "<group>"; };
-		3C52F29615AA68A7005A46A1 /* NSDictionaryInteropTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryInteropTests.m; sourceTree = "<group>"; };
-		3C560D2E15A9419800A05BC2 /* libSMJShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSMJShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C560D4015A9419800A05BC2 /* SMJSharedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMJSharedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C560D5A15A941A300A05BC2 /* libSMJService.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSMJService.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C560D5F15A941A300A05BC2 /* SMJService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMJService.h; sourceTree = "<group>"; };
-		3C560D6015A941A300A05BC2 /* SMJService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMJService.m; sourceTree = "<group>"; };
-		3C560D6715A941A300A05BC2 /* SMJServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMJServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C560D7C15A9422400A05BC2 /* SMJService.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SMJService.xcconfig; sourceTree = "<group>"; };
-		3C560D7E15A9422400A05BC2 /* SMJShared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SMJShared.xcconfig; sourceTree = "<group>"; };
 		3C560D8115A9428900A05BC2 /* Tests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Tests.xcconfig; sourceTree = "<group>"; };
 		3C560DAD15A9460E00A05BC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C560DB215A9460E00A05BC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C560DB315A9460E00A05BC2 /* SMJServiceTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMJServiceTests.h; sourceTree = "<group>"; };
-		3C560DB415A9460E00A05BC2 /* SMJServiceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMJServiceTests.m; sourceTree = "<group>"; };
-		3C560DB615A9460E00A05BC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C560DCC15A9480300A05BC2 /* NSString+XPCInterop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XPCInterop.h"; sourceTree = "<group>"; };
-		3C560DCD15A9480300A05BC2 /* NSString+XPCInterop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XPCInterop.m"; sourceTree = "<group>"; };
-		3C560DD115A94A4B00A05BC2 /* NSStringInteropTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringInteropTests.m; sourceTree = "<group>"; };
-		3C560DD415A952B100A05BC2 /* NSNumber+XPCInterop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+XPCInterop.h"; sourceTree = "<group>"; };
-		3C560DD515A952B100A05BC2 /* NSNumber+XPCInterop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+XPCInterop.m"; sourceTree = "<group>"; };
-		3C560DD815A952BE00A05BC2 /* NSObject+XPCInterop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+XPCInterop.h"; sourceTree = "<group>"; };
-		3C560DD915A952BE00A05BC2 /* NSObject+XPCInterop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XPCInterop.m"; sourceTree = "<group>"; };
-		3C560DDC15A952D100A05BC2 /* NSArray+XPCInterop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+XPCInterop.h"; sourceTree = "<group>"; };
-		3C560DDD15A952D100A05BC2 /* NSArray+XPCInterop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+XPCInterop.m"; sourceTree = "<group>"; };
-		3C560DE015A952E400A05BC2 /* NSDictionary+XPCInterop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+XPCInterop.h"; sourceTree = "<group>"; };
-		3C560DE115A952E500A05BC2 /* NSDictionary+XPCInterop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+XPCInterop.m"; sourceTree = "<group>"; };
-		3C560DE515AA304300A05BC2 /* NSNumberInteropTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNumberInteropTests.m; sourceTree = "<group>"; };
-		3C560DE915AA3DD700A05BC2 /* TestHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestHelpers.h; sourceTree = "<group>"; };
-		3C560DEA15AA4E0600A05BC2 /* SMJDiagnostics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMJDiagnostics.h; sourceTree = "<group>"; };
-		3C560DEB15AA4E0600A05BC2 /* SMJDiagnostics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMJDiagnostics.m; sourceTree = "<group>"; };
 		3CA1507115A91179001CF9F8 /* SMJobKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SMJobKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA1507915A91179001CF9F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3CA1507C15A91179001CF9F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -205,42 +117,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3C560D2B15A9419800A05BC2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3C560D3C15A9419800A05BC2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3C560D4515A9419800A05BC2 /* libSMJShared.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3C560D5715A941A300A05BC2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3C560DC215A9469A00A05BC2 /* libSMJShared.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3C560D6315A941A300A05BC2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3C560D8A15A9440500A05BC2 /* libSMJService.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3CA1506D15A91179001CF9F8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C560D8215A9435200A05BC2 /* libSMJShared.a in Frameworks */,
 				3CA150B015A93C5F001CF9F8 /* Foundation.framework in Frameworks */,
 				3C2BFA9015AB2F6D0011FA52 /* ServiceManagement.framework in Frameworks */,
 				3C2BFA9415AB2FA50011FA52 /* Security.framework in Frameworks */,
@@ -286,23 +166,6 @@
 			name = Private;
 			sourceTree = "<group>";
 		};
-		3C2BFAA615AB30C70011FA52 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3C560DB615A9460E00A05BC2 /* Info.plist */,
-				3C560DE915AA3DD700A05BC2 /* TestHelpers.h */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		3C2BFAA715AB30DD0011FA52 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3C560DB215A9460E00A05BC2 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		3C2BFAA815AB30EB0011FA52 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,41 +193,10 @@
 			path = TestService;
 			sourceTree = "<group>";
 		};
-		3C560D3515A9419800A05BC2 /* SMJShared */ = {
-			isa = PBXGroup;
-			children = (
-				3C560DDC15A952D100A05BC2 /* NSArray+XPCInterop.h */,
-				3C560DDD15A952D100A05BC2 /* NSArray+XPCInterop.m */,
-				3C560DE015A952E400A05BC2 /* NSDictionary+XPCInterop.h */,
-				3C560DE115A952E500A05BC2 /* NSDictionary+XPCInterop.m */,
-				3C560DD415A952B100A05BC2 /* NSNumber+XPCInterop.h */,
-				3C560DD515A952B100A05BC2 /* NSNumber+XPCInterop.m */,
-				3C560DD815A952BE00A05BC2 /* NSObject+XPCInterop.h */,
-				3C560DD915A952BE00A05BC2 /* NSObject+XPCInterop.m */,
-				3C560DCC15A9480300A05BC2 /* NSString+XPCInterop.h */,
-				3C560DCD15A9480300A05BC2 /* NSString+XPCInterop.m */,
-				3C4C2B0115ABEC2B00775A8B /* SMJCompatibility.h */,
-				3C560DEA15AA4E0600A05BC2 /* SMJDiagnostics.h */,
-				3C560DEB15AA4E0600A05BC2 /* SMJDiagnostics.m */,
-			);
-			path = SMJShared;
-			sourceTree = "<group>";
-		};
-		3C560D5C15A941A300A05BC2 /* SMJService */ = {
-			isa = PBXGroup;
-			children = (
-				3C560D5F15A941A300A05BC2 /* SMJService.h */,
-				3C560D6015A941A300A05BC2 /* SMJService.m */,
-			);
-			path = SMJService;
-			sourceTree = "<group>";
-		};
 		3C560DAB15A9460E00A05BC2 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				3C560DAC15A9460E00A05BC2 /* SMJobKitTests */,
-				3C560DB115A9460E00A05BC2 /* SMJServiceTests */,
-				3C560DB515A9460E00A05BC2 /* SMJSharedTests */,
 				3C2BFAB315AB33020011FA52 /* TestService */,
 			);
 			path = Tests;
@@ -380,28 +212,6 @@
 			path = SMJobKitTests;
 			sourceTree = "<group>";
 		};
-		3C560DB115A9460E00A05BC2 /* SMJServiceTests */ = {
-			isa = PBXGroup;
-			children = (
-				3C560DB315A9460E00A05BC2 /* SMJServiceTests.h */,
-				3C560DB415A9460E00A05BC2 /* SMJServiceTests.m */,
-				3C2BFAA715AB30DD0011FA52 /* Supporting Files */,
-			);
-			path = SMJServiceTests;
-			sourceTree = "<group>";
-		};
-		3C560DB515A9460E00A05BC2 /* SMJSharedTests */ = {
-			isa = PBXGroup;
-			children = (
-				3C528CC715AA5B11000AB26E /* NSArrayInteropTests.m */,
-				3C52F29615AA68A7005A46A1 /* NSDictionaryInteropTests.m */,
-				3C560DD115A94A4B00A05BC2 /* NSStringInteropTests.m */,
-				3C560DE515AA304300A05BC2 /* NSNumberInteropTests.m */,
-				3C2BFAA615AB30C70011FA52 /* Supporting Files */,
-			);
-			path = SMJSharedTests;
-			sourceTree = "<group>";
-		};
 		3CA1506515A91179001CF9F8 = {
 			isa = PBXGroup;
 			children = (
@@ -409,8 +219,6 @@
 				3CA150A215A911A7001CF9F8 /* LICENSE.txt */,
 				3CA150A315A91267001CF9F8 /* Configuration */,
 				3CA1507A15A91179001CF9F8 /* SMJobKit */,
-				3C560D5C15A941A300A05BC2 /* SMJService */,
-				3C560D3515A9419800A05BC2 /* SMJShared */,
 				3C560DAB15A9460E00A05BC2 /* Tests */,
 				3CCC07AA15AA949400C84BE1 /* Xcode Templates */,
 				3CA1507315A91179001CF9F8 /* Frameworks */,
@@ -423,10 +231,6 @@
 			children = (
 				3CA1507115A91179001CF9F8 /* SMJobKit.framework */,
 				3CA1508915A91179001CF9F8 /* SMJobKitTests.xctest */,
-				3C560D2E15A9419800A05BC2 /* libSMJShared.a */,
-				3C560D4015A9419800A05BC2 /* SMJSharedTests.xctest */,
-				3C560D5A15A941A300A05BC2 /* libSMJService.a */,
-				3C560D6715A941A300A05BC2 /* SMJServiceTests.xctest */,
 				3C2BFAB015AB33020011FA52 /* net.nevir.SMJobKitTests.TestService */,
 			);
 			name = Products;
@@ -460,8 +264,6 @@
 				3CA150A515A91267001CF9F8 /* Project-Release.xcconfig */,
 				3C560D8115A9428900A05BC2 /* Tests.xcconfig */,
 				3CA150A715A91267001CF9F8 /* SMJobKit.xcconfig */,
-				3C560D7C15A9422400A05BC2 /* SMJService.xcconfig */,
-				3C560D7E15A9422400A05BC2 /* SMJShared.xcconfig */,
 				3C2BFAC115AB35070011FA52 /* TestService.xcconfig */,
 			);
 			path = Configuration;
@@ -517,27 +319,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3C560D2C15A9419800A05BC2 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3C560DDE15A952D100A05BC2 /* NSArray+XPCInterop.h in Headers */,
-				3C560DE215A952E500A05BC2 /* NSDictionary+XPCInterop.h in Headers */,
-				3C560DD615A952B100A05BC2 /* NSNumber+XPCInterop.h in Headers */,
-				3C560DDA15A952BE00A05BC2 /* NSObject+XPCInterop.h in Headers */,
-				3C560DCE15A9480300A05BC2 /* NSString+XPCInterop.h in Headers */,
-				3C4C2B0215ABEC2B00775A8B /* SMJCompatibility.h in Headers */,
-				3C560DEC15AA4E0700A05BC2 /* SMJDiagnostics.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3C560D5815A941A300A05BC2 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3CA1506E15A91179001CF9F8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -566,80 +347,6 @@
 			productReference = 3C2BFAB015AB33020011FA52 /* net.nevir.SMJobKitTests.TestService */;
 			productType = "com.apple.product-type.tool";
 		};
-		3C560D2D15A9419800A05BC2 /* SMJShared */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3C560D5315A9419800A05BC2 /* Build configuration list for PBXNativeTarget "SMJShared" */;
-			buildPhases = (
-				3C560D2A15A9419800A05BC2 /* Sources */,
-				3C560D2B15A9419800A05BC2 /* Frameworks */,
-				3C560D2C15A9419800A05BC2 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SMJShared;
-			productName = SMJShared;
-			productReference = 3C560D2E15A9419800A05BC2 /* libSMJShared.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		3C560D3F15A9419800A05BC2 /* SMJSharedTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3C560D5415A9419800A05BC2 /* Build configuration list for PBXNativeTarget "SMJSharedTests" */;
-			buildPhases = (
-				3C560D3B15A9419800A05BC2 /* Sources */,
-				3C560D3C15A9419800A05BC2 /* Frameworks */,
-				3C560D3D15A9419800A05BC2 /* Resources */,
-				3C560D3E15A9419800A05BC2 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3C560D4415A9419800A05BC2 /* PBXTargetDependency */,
-			);
-			name = SMJSharedTests;
-			productName = SMJSharedTests;
-			productReference = 3C560D4015A9419800A05BC2 /* SMJSharedTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		3C560D5915A941A300A05BC2 /* SMJService */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3C560D7615A941A300A05BC2 /* Build configuration list for PBXNativeTarget "SMJService" */;
-			buildPhases = (
-				3C560D5615A941A300A05BC2 /* Sources */,
-				3C560D5715A941A300A05BC2 /* Frameworks */,
-				3C560D5815A941A300A05BC2 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3C2BFA6F15AA95D20011FA52 /* PBXTargetDependency */,
-				3C560DC115A9469700A05BC2 /* PBXTargetDependency */,
-			);
-			name = SMJService;
-			productName = SMJService;
-			productReference = 3C560D5A15A941A300A05BC2 /* libSMJService.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		3C560D6615A941A300A05BC2 /* SMJServiceTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3C560D7915A941A300A05BC2 /* Build configuration list for PBXNativeTarget "SMJServiceTests" */;
-			buildPhases = (
-				3C560D6215A941A300A05BC2 /* Sources */,
-				3C560D6315A941A300A05BC2 /* Frameworks */,
-				3C560D6415A941A300A05BC2 /* Resources */,
-				3C560D6515A941A300A05BC2 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3C560D6B15A941A300A05BC2 /* PBXTargetDependency */,
-			);
-			name = SMJServiceTests;
-			productName = SMJServiceTests;
-			productReference = 3C560D6715A941A300A05BC2 /* SMJServiceTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		3CA1507015A91179001CF9F8 /* SMJobKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CA1509B15A91179001CF9F8 /* Build configuration list for PBXNativeTarget "SMJobKit" */;
@@ -652,7 +359,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				3C560D8415A9435800A05BC2 /* PBXTargetDependency */,
 			);
 			name = SMJobKit;
 			productName = SMJobKit;
@@ -702,11 +408,7 @@
 			projectRoot = "";
 			targets = (
 				3CA1507015A91179001CF9F8 /* SMJobKit */,
-				3C560D5915A941A300A05BC2 /* SMJService */,
-				3C560D2D15A9419800A05BC2 /* SMJShared */,
 				3CA1508815A91179001CF9F8 /* SMJobKitTests */,
-				3C560D6615A941A300A05BC2 /* SMJServiceTests */,
-				3C560D3F15A9419800A05BC2 /* SMJSharedTests */,
 				3C2BFAAF15AB33020011FA52 /* TestService */,
 				3CCC06D015AA823000C84BE1 /* Xcode Templates */,
 			);
@@ -714,20 +416,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3C560D3D15A9419800A05BC2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3C560D6415A941A300A05BC2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3CA1506F15A91179001CF9F8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -751,32 +439,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/usr/bin/env ruby";
 			shellScript = "# Generic preprocessing for ${ENV_VAR} with output to the build dir.\n\nrequire 'cgi'\nrequire 'fileutils'\n\nmissing_keys = ['BUILD_DIR', 'CODE_SIGN_IDENTITY', 'SMJ_PREPROCESS_FILES', 'SMJ_PREPROCESS_DIR'] - ENV.keys\nraise \"Missing required ENV values: #{missing_keys.inspect}\" if missing_keys.size > 0\n\n# SMJ_PREPROCESS_FILES is a comma-separated list of *relative* file paths to preprocess\n#  and spit out into the SMJ_PREPROCESS_DIR (w/ the same relative paths as given)\nfiles_to_preprocess = ENV['SMJ_PREPROCESS_FILES'].split(',').map(&:strip)\n\n\n# Environment Cleanup\n# -------------------\ndummy_path = \"#{ENV['BUILD_DIR']}/SMJobKitCodeSigningDummy\"\n\nidentity = ENV['CODE_SIGN_IDENTITY']\n# If you use the generic code signing identity, chances are that it'll conflict.\nidentity = \"#{identity}:\" if identity.end_with? ' Developer'\n\n# We can't seem to get direct access to the code signing certificate that Xcode has\n# selected at this point :(\n`touch #{dummy_path}`\n`codesign --force --sign \"#{identity}\" \"#{dummy_path}\"`\nresult = `codesign --display --verbose --verbose \"#{dummy_path}\" 2>&1`\n`rm #{dummy_path}`\n\nENV['CODE_SIGN_IDENTITY'] = result[/Authority\\=(.*#{Regexp.escape(identity)}.*)/, 1]\n\n\n# Actual Preprocessing\n# --------------------\n\nfiles_to_preprocess.each do |path|\n  target_path = File.join(ENV['SMJ_PREPROCESS_DIR'], path)\n  FileUtils.mkpath File.dirname(target_path)\n\n  open(path) do |input|\n    open(target_path, 'w') do |output|\n      # Specify macros via ${VAR_NAME} in the preprocessed file.  Same as regular\n      # Info.plist preprocessing.\n      output.write input.read.gsub(/\\$\\{([A-Z_]+)\\}/) { CGI.escapeHTML(ENV[$1]) }\n    end\n    puts target_path\n  end\nend\n";
-		};
-		3C560D3E15A9419800A05BC2 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-		3C560D6515A941A300A05BC2 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
 		3CA1508715A91179001CF9F8 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -816,46 +478,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3C560D2A15A9419800A05BC2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3C560DCF15A9480300A05BC2 /* NSString+XPCInterop.m in Sources */,
-				3C560DD715A952B100A05BC2 /* NSNumber+XPCInterop.m in Sources */,
-				3C560DDB15A952BE00A05BC2 /* NSObject+XPCInterop.m in Sources */,
-				3C560DDF15A952D100A05BC2 /* NSArray+XPCInterop.m in Sources */,
-				3C560DE315A952E500A05BC2 /* NSDictionary+XPCInterop.m in Sources */,
-				3C560DED15AA4E0700A05BC2 /* SMJDiagnostics.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3C560D3B15A9419800A05BC2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3C560DD215A94A4B00A05BC2 /* NSStringInteropTests.m in Sources */,
-				3C560DE615AA304300A05BC2 /* NSNumberInteropTests.m in Sources */,
-				3C528CC815AA5B11000AB26E /* NSArrayInteropTests.m in Sources */,
-				3C52F29715AA68A7005A46A1 /* NSDictionaryInteropTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3C560D5615A941A300A05BC2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3C560D6115A941A300A05BC2 /* SMJService.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3C560D6215A941A300A05BC2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3C560DBA15A9462000A05BC2 /* SMJServiceTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3CA1506C15A91179001CF9F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -880,35 +502,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3C2BFA6F15AA95D20011FA52 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3CCC06D015AA823000C84BE1 /* Xcode Templates */;
-			targetProxy = 3C2BFA6E15AA95D20011FA52 /* PBXContainerItemProxy */;
-		};
 		3C2BFAC015AB34070011FA52 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3C2BFAAF15AB33020011FA52 /* TestService */;
 			targetProxy = 3C2BFABF15AB34070011FA52 /* PBXContainerItemProxy */;
-		};
-		3C560D4415A9419800A05BC2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3C560D2D15A9419800A05BC2 /* SMJShared */;
-			targetProxy = 3C560D4315A9419800A05BC2 /* PBXContainerItemProxy */;
-		};
-		3C560D6B15A941A300A05BC2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3C560D5915A941A300A05BC2 /* SMJService */;
-			targetProxy = 3C560D6A15A941A300A05BC2 /* PBXContainerItemProxy */;
-		};
-		3C560D8415A9435800A05BC2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3C560D2D15A9419800A05BC2 /* SMJShared */;
-			targetProxy = 3C560D8315A9435800A05BC2 /* PBXContainerItemProxy */;
-		};
-		3C560DC115A9469700A05BC2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3C560D2D15A9419800A05BC2 /* SMJShared */;
-			targetProxy = 3C560DC015A9469700A05BC2 /* PBXContainerItemProxy */;
 		};
 		3CA1508E15A91179001CF9F8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -931,62 +528,6 @@
 			baseConfigurationReference = 3C2BFAC115AB35070011FA52 /* TestService.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Developer ID Application";
-			};
-			name = Release;
-		};
-		3C560D4F15A9419800A05BC2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C560D7E15A9422400A05BC2 /* SMJShared.xcconfig */;
-			buildSettings = {
-			};
-			name = Debug;
-		};
-		3C560D5015A9419800A05BC2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C560D7E15A9422400A05BC2 /* SMJShared.xcconfig */;
-			buildSettings = {
-			};
-			name = Release;
-		};
-		3C560D5115A9419800A05BC2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C560D8115A9428900A05BC2 /* Tests.xcconfig */;
-			buildSettings = {
-			};
-			name = Debug;
-		};
-		3C560D5215A9419800A05BC2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C560D8115A9428900A05BC2 /* Tests.xcconfig */;
-			buildSettings = {
-			};
-			name = Release;
-		};
-		3C560D7715A941A300A05BC2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C560D7C15A9422400A05BC2 /* SMJService.xcconfig */;
-			buildSettings = {
-			};
-			name = Debug;
-		};
-		3C560D7815A941A300A05BC2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C560D7C15A9422400A05BC2 /* SMJService.xcconfig */;
-			buildSettings = {
-			};
-			name = Release;
-		};
-		3C560D7A15A941A300A05BC2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C560D8115A9428900A05BC2 /* Tests.xcconfig */;
-			buildSettings = {
-			};
-			name = Debug;
-		};
-		3C560D7B15A941A300A05BC2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C560D8115A9428900A05BC2 /* Tests.xcconfig */;
-			buildSettings = {
 			};
 			name = Release;
 		};
@@ -1093,42 +634,6 @@
 			buildConfigurations = (
 				3C2BFAB915AB33020011FA52 /* Debug */,
 				3C2BFABA15AB33020011FA52 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3C560D5315A9419800A05BC2 /* Build configuration list for PBXNativeTarget "SMJShared" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3C560D4F15A9419800A05BC2 /* Debug */,
-				3C560D5015A9419800A05BC2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3C560D5415A9419800A05BC2 /* Build configuration list for PBXNativeTarget "SMJSharedTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3C560D5115A9419800A05BC2 /* Debug */,
-				3C560D5215A9419800A05BC2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3C560D7615A941A300A05BC2 /* Build configuration list for PBXNativeTarget "SMJService" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3C560D7715A941A300A05BC2 /* Debug */,
-				3C560D7815A941A300A05BC2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3C560D7915A941A300A05BC2 /* Build configuration list for PBXNativeTarget "SMJServiceTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3C560D7A15A941A300A05BC2 /* Debug */,
-				3C560D7B15A941A300A05BC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

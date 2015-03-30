@@ -25,7 +25,7 @@ causes the Xcode template to install its self into `~/Library/Developer/Xcode/Te
 Next, you should set up your service helper/target: Add a new _SMJobKit Service_ target to the
 project.  This is relatively configuration-heavy, so you should probably build it right away to make
 sure everything is properly configured (and your code signing certificates are in order).  You may
-want to review the [template's documentation](https://github.com/nevir/XMJobKit/tree/master/SMJobKit Service.xctemplate)
+want to review the [template's documentation](https://github.com/IngmarStein/SMJobKit/tree/master/Xcode%20Templates/Framework%20%26%20Library/SMJobKit%20Service.xctemplate)
 for an in-depth explanation of what it is doing for you.
 
 Finally, you need to add a Copy Files build phase to your application target.  The destination
@@ -38,9 +38,5 @@ And, hopefully, that's all you need to do in order to configure your project!
 Client Abstraction
 ------------------
 
-You'll want to create a subclass of `SMJClient` in your application, and override
+You'll want to create a subclass of `Client` in your application, and override
 `serviceIdentifier` at the very least.
-
-
-Service Implementation
-----------------------
