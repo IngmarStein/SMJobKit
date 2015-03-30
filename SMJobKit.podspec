@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.authors      = { "Ian MacLeod" => "ian@nevir.net", "Ingmar Stein" => "IngmarStein@gmail.com" }
   s.source       = { :git => "https://github.com/IngmarStein/SMJobKit.git" }
   s.platform     = :osx, 10.9
-  s.source_files = 'SMJobKit/**/*.{h,m,swift}'
+  s.source_files = 'SMJobKit/**/*.{h,swift}'
   s.framework    = 'ServiceManagement', 'Security'
   s.requires_arc = true
   s.public_header_files = 'SMJobKit/*.h'

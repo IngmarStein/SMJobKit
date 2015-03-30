@@ -30,19 +30,19 @@
 				<key>true</key>
 				<array>
 					<dict>
-            <key>Components</key>
-            <array>
-              <dict>
-                <key>Identifier</key>
-                <string>net.nevir.SMJobKit.Service</string>
-                <key>Name</key>
-                <string>___VARIABLE_smjServiceName:RFC1034Identifier___</string>
-                <key>Dependents</key>
-                <array>
-                  <string>0</string>
-                </array>
-              </dict>
-            </array>
+						<key>Components</key>
+						<array>
+							<dict>
+								<key>Identifier</key>
+								<string>net.nevir.SMJobKit.Service</string>
+								<key>Name</key>
+								<string>___VARIABLE_smjServiceName:RFC1034Identifier___</string>
+								<key>Dependents</key>
+								<array>
+									<string>0</string>
+								</array>
+							</dict>
+						</array>
 						<key>Targets</key>
 						<array>
 							<dict>
@@ -95,14 +95,13 @@ files_to_postprocess.each do |path|
   target_path = File.join(ENV[&apos;TARGET_BUILD_DIR&apos;], path)
 
   input = open(target_path).read
-  open(target_path, 'w') do |output|
+  open(target_path, &apos;w&apos;) do |output|
     # Specify macros via [[[VAR_NAME]]] to avoid clashes w/ regular plist preprocessing.
     output.write input.gsub(/\[\[\[([A-Z_]+)\]\]\]/) { CGI.escapeHTML(ENV[$1]) }
   end
 end</string>
 									</dict>
 									<dict>
-                    <!-- http://stackoverflow.com/questions/7236469/ -->
 										<key>Class</key>
 										<string>CopyFiles</string>
 										<key>DstPath</key>
@@ -116,13 +115,11 @@ end</string>
 						<key>Nodes</key>
 						<array>
 							<string>README-SMJobKit.md</string>
-              <string>___PACKAGENAME___-Info.plist:SMPrivilegedExecutables</string>
-              <string>___VARIABLE_smjServiceName:RFC1034Identifier___.h</string>
-              <string>___VARIABLE_smjServiceName:RFC1034Identifier___.m</string>
-              <string>___VARIABLE_classPrefix:identifier___AppDelegate.m:import:___VARIABLE_smjServiceName:RFC1034Identifier___.h</string>
-              <string>___VARIABLE_classPrefix:identifier___AppDelegate.m:applicationDidFinishLaunching:installSMJServices</string>
-              <string>___VARIABLE_classPrefix:identifier___AppDelegate.m:installServices</string>
-              <string>___VARIABLE_classPrefix:identifier___AppDelegate.m:installServices:___VARIABLE_smjServiceName:RFC1034Identifier___</string>
+							<string>Info.plist:SMPrivilegedExecutables</string>
+							<string>___VARIABLE_smjServiceName:RFC1034Identifier___.swift</string>
+							<string>AppDelegate.swift:implementation:methods:applicationDidFinishLaunching:installSMJServices</string>
+							<string>AppDelegate.swift:implementation:methods:installServices</string>
+							<string>AppDelegate.swift:implementation:methods:installServices:___VARIABLE_smjServiceName:RFC1034Identifier___</string>
 						</array>
 						<key>Definitions</key>
 						<dict>
@@ -131,53 +128,46 @@ end</string>
 								<key>Path</key>
 								<string>README-SMJobKit.md</string>
 							</dict>
-              <key>___PACKAGENAME___-Info.plist:SMPrivilegedExecutables</key>
-              <string>
+							<key>Info.plist:SMPrivilegedExecutables</key>
+							<string>
                 &lt;key&gt;SMPrivilegedExecutables&lt;/key&gt;
                 &lt;dict&gt;
                 &lt;key&gt;___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.[[[PROJECT_NAME]]].___VARIABLE_smjServiceName:RFC1034Identifier___&lt;/key&gt;
                 &lt;string&gt;identifier ___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.[[[PROJECT_NAME]]].___VARIABLE_smjServiceName:RFC1034Identifier___ and certificate leaf[subject.CN] = &quot;[[[FULL_CODE_SIGN_IDENTITY]]]&quot;&lt;/string&gt;
                 &lt;/dict&gt;
               </string>
-              <key>___VARIABLE_smjServiceName:RFC1034Identifier___.h</key>
-              <dict>
-                <key>Path</key>
-                <string>___VARIABLE_smjServiceName:RFC1034Identifier___.h</string>
-                <key>Group</key>
-                <string>Service Clients</string>
-              </dict>
-              <key>___VARIABLE_smjServiceName:RFC1034Identifier___.m</key>
-              <dict>
-                <key>Path</key>
-                <string>___VARIABLE_smjServiceName:RFC1034Identifier___.m</string>
-                <key>Group</key>
-                <string>Service Clients</string>
-              </dict>
-              <key>___VARIABLE_classPrefix:identifier___AppDelegate.m:installServices</key>
-              <dict>
-                <key>Beginning</key>
-                <string>- (void)installServices
-{</string>
-                <key>End</key>
-                <string>}</string>
-                <key>Indent</key>
-                <integer>1</integer>
-              </dict>
-              <key>___VARIABLE_classPrefix:identifier___AppDelegate.m:installServices:___VARIABLE_smjServiceName:RFC1034Identifier___</key>
-              <string>if ([___VARIABLE_smjServiceName:RFC1034Identifier___ isLatestVersionInstalled]) return;
+							<key>___VARIABLE_smjServiceName:RFC1034Identifier___.swift</key>
+							<dict>
+								<key>Path</key>
+								<string>___VARIABLE_smjServiceName:RFC1034Identifier___.swift</string>
+								<key>Group</key>
+								<string>Service Clients</string>
+							</dict>
+							<key>AppDelegate.swift:implementation:methods:installServices</key>
+							<dict>
+								<key>Beginning</key>
+								<string>private func installServices() {</string>
+								<key>End</key>
+								<string>}</string>
+								<key>Indent</key>
+								<integer>1</integer>
+							</dict>
+							<key>AppDelegate.swift:implementation:methods:installServices:___VARIABLE_smjServiceName:RFC1034Identifier___</key>
+							<string>if ___VARIABLE_smjServiceName:RFC1034Identifier___.isLatestVersionInstalled {
+	return
+}
 
-NSError *error;
+var error: NSError? = nil
 // The user will be prompted with the following:
 //
 // &lt;Your Custom Message Here&gt;
 // ___VARIABLE_productName___ is trying to install a new
 // helper tool.  Type your password to allow this.
-if (![___VARIABLE_smjServiceName:RFC1034Identifier___ installWithPrompt:@"&lt;Your Custom Message Here&gt;" error:&amp;error])
-{
-  // Let the user know something went wrong!
+if !___VARIABLE_smjServiceName:RFC1034Identifier___.installWithPrompt(&quot;&lt;Your Custom Message Here&gt;&quot;, error:&amp;error) {
+	// Let the user know something went wrong!
 }</string>
-              <key>___VARIABLE_classPrefix:identifier___AppDelegate.m:applicationDidFinishLaunching:installSMJServices</key>
-              <string>[self installServices];</string>
+							<key>AppDelegate.swift:implementation:methods:applicationDidFinishLaunching:installSMJServices</key>
+							<string>installServices()</string>
 						</dict>
 					</dict>
 				</array>

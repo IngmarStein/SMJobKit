@@ -9,7 +9,7 @@
 import Cocoa
 import SMJobKit
 
-class SampleService: SMJClient {
+class SampleService: Client {
 	override class var serviceIdentifier: String {
 		return "net.nevir.SMJobKit.SampleApplication.SampleService"
 	}

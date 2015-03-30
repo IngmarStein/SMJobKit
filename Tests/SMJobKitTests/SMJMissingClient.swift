@@ -8,7 +8,7 @@
 
 import SMJobKit
 
-class SMJMissingClient: SMJClient {
+class MissingClient: Client {
 
 	override class var serviceIdentifier: String {
 		return "net.nevir.SMJobKitTests.MissingService"

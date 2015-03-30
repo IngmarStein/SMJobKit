@@ -9,7 +9,7 @@
 import Cocoa
 import ServiceManagement
 
-public class SMJClient: NSObject {
+public class Client: NSObject {
 
 	//MARK: - Abstract Interface
 
@@ -20,11 +20,11 @@ public class SMJClient: NSObject {
 	//MARK: - Public Interface
 
 	public class var bundledVersion: String? {
-		return SMJClientUtility.versionForBundlePath(bundledServicePath)
+		return ClientUtility.versionForBundlePath(bundledServicePath)
 	}
 
 	public class var installedVersion: String? {
-		return installedServicePath.flatMap { SMJClientUtility.versionForBundlePath($0) }
+		return installedServicePath.flatMap { ClientUtility.versionForBundlePath($0) }
 	}
 
 	public class func isLatestVersionInstalled() -> Bool {
@@ -46,7 +46,7 @@ public class SMJClient: NSObject {
 			}
 		}
   
-		let authRef = SMJClientUtility.authWithRight(kSMRightBlessPrivilegedHelper, prompt:prompt, error:error)
+		let authRef = ClientUtility.authWithRight(kSMRightBlessPrivilegedHelper, prompt:prompt, error:error)
 		if authRef == nil {
 			return false
 		}
@@ -55,7 +55,7 @@ public class SMJClient: NSObject {
 		var cfError: Unmanaged<CFError>? = nil
 		if SMJobBless(kSMDomainSystemLaunchd, cfIdentifier, authRef, &cfError) == 0 {
 			let blessError = cfError!.takeRetainedValue() as AnyObject as! NSError
-			SET_ERROR(error, .UnableToBless, "SMJobBless Failure (code %ld): %@", blessError.code, blessError.localizedDescription)
+			SET_ERROR(error, .UnableToBless, "SMJobBless failure (code %ld): %@", blessError.code, blessError.localizedDescription)
 			return false
 		}
   
@@ -69,7 +69,7 @@ public class SMJClient: NSObject {
 			return true
 		}
   
-		let authRef = SMJClientUtility.authWithRight(kSMRightModifySystemDaemons, prompt:prompt, error:error)
+		let authRef = ClientUtility.authWithRight(kSMRightModifySystemDaemons, prompt:prompt, error:error)
 		if authRef == nil {
 			return false
 		}
@@ -77,7 +77,7 @@ public class SMJClient: NSObject {
 		var cfError: Unmanaged<CFError>? = nil
 		if SMJobRemove(kSMDomainSystemLaunchd, cfIdentifier, authRef, 1, &cfError) == 0 {
 			let removeError = cfError!.takeRetainedValue() as AnyObject as! NSError
-			SET_ERROR(error, .UnableToBless, "SMJobRemove Failure (code %ld): %@", removeError.code, removeError.localizedDescription)
+			SET_ERROR(error, .UnableToBless, "SMJobRemove failure (code %ld): %@", removeError.code, removeError.localizedDescription)
 			return false
 		}
   
@@ -92,7 +92,7 @@ public class SMJClient: NSObject {
 		var error: NSError? = nil
 		var errors = [NSError]()
   
-		SMJClientUtility.versionForBundlePath(bundledServicePath, error:&error)
+		ClientUtility.versionForBundlePath(bundledServicePath, error:&error)
 		if error != nil {
 			errors.append(error!)
 		}

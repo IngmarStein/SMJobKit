@@ -8,7 +8,7 @@
 
 import SMJobKit
 
-class SMJTestClient: SMJClient {
+class TestClient: Client {
 	override class var serviceIdentifier: String {
 		return "net.nevir.SMJobKitTests.TestService"
 	}

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum SMJErrorCode: Int {
+public enum ErrorCode: Int {
 	// A failure when referencing a bundle that doesn't exist (or bad perms)
 	case BundleNotFound = 1000
 	// A failure when trying to get the SecStaticCode for a bundle, but it is unsigned

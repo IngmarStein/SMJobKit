@@ -168,8 +168,6 @@
 		3C560DE915AA3DD700A05BC2 /* TestHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestHelpers.h; sourceTree = "<group>"; };
 		3C560DEA15AA4E0600A05BC2 /* SMJDiagnostics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMJDiagnostics.h; sourceTree = "<group>"; };
 		3C560DEB15AA4E0600A05BC2 /* SMJDiagnostics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMJDiagnostics.m; sourceTree = "<group>"; };
-		3C6A266715C628B300F4ADDC /* ___VARIABLE_smjServiceName:RFC1034Identifier___.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "___VARIABLE_smjServiceName:RFC1034Identifier___.h"; sourceTree = "<group>"; };
-		3C6A266815C628B300F4ADDC /* ___VARIABLE_smjServiceName:RFC1034Identifier___.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___VARIABLE_smjServiceName:RFC1034Identifier___.m"; sourceTree = "<group>"; };
 		3CA1507115A91179001CF9F8 /* SMJobKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SMJobKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA1507915A91179001CF9F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3CA1507C15A91179001CF9F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -195,6 +193,7 @@
 		95340BA71AC855A100DE4879 /* SMJTestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMJTestClient.swift; sourceTree = "<group>"; };
 		95340BA91AC855DE00DE4879 /* SMJClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMJClientTests.swift; sourceTree = "<group>"; };
 		956253001AC837A900D93E91 /* SMJClientUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMJClientUtility.swift; sourceTree = "<group>"; };
+		958CB2A81AC95B6300D4FE65 /* ___VARIABLE_smjServiceName:RFC1034Identifier___.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "___VARIABLE_smjServiceName:RFC1034Identifier___.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -508,8 +507,7 @@
 		3CD9BCD015B2632D00F0007B /* SMJobKit-Based Application.xctemplate */ = {
 			isa = PBXGroup;
 			children = (
-				3C6A266715C628B300F4ADDC /* ___VARIABLE_smjServiceName:RFC1034Identifier___.h */,
-				3C6A266815C628B300F4ADDC /* ___VARIABLE_smjServiceName:RFC1034Identifier___.m */,
+				958CB2A81AC95B6300D4FE65 /* ___VARIABLE_smjServiceName:RFC1034Identifier___.swift */,
 				3CFB0E2015B37DE400FA0E6B /* README-SMJobKit.md */,
 				3CD9BCD315B2632D00F0007B /* TemplateInfo.plist */,
 			);

@@ -9,7 +9,7 @@
 import Foundation
 import Security
 
-class SMJClientUtility {
+class ClientUtility {
 
 	//MARK -   Bundle Introspection
 

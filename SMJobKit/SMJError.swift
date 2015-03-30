@@ -8,8 +8,8 @@
 
 import Cocoa
 
-class SMJError : NSError {
-	init(code:SMJErrorCode, message:String) {
+class Error : NSError {
+	init(code:ErrorCode, message:String) {
 		let userInfo = [ NSLocalizedDescriptionKey:message ]
 
 		super.init(domain:"SMJobKit", code:code.rawValue, userInfo:userInfo)
@@ -20,10 +20,10 @@ class SMJError : NSError {
 	}
 }
 
-func SET_ERROR(error: NSErrorPointer, code: SMJErrorCode, messageFormat: String, arguments: CVarArgType...) {
+func SET_ERROR(error: NSErrorPointer, code: ErrorCode, messageFormat: String, arguments: CVarArgType...) {
 	if error != nil {
 		let message = String(format: messageFormat, arguments: arguments)
-		NSLog("[SMJKit Error] %@", message);
-		error.memory = SMJError(code:code, message:message)
+		NSLog("[SMJKit Error] %@", message)
+		error.memory = Error(code:code, message:message)
 	}
 }
