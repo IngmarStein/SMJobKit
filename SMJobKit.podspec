@@ -10,15 +10,7 @@ Pod::Spec.new do |s|
   s.framework    = 'ServiceManagement', 'Security'
   s.requires_arc = true
   s.public_header_files = 'SMJobKit/*.h'
-  s.license      = {
-    :type => "Apache License",
-    :text => <<-LICENSE
-           DO WHATEVER THE FUCK YOU WANT, PUBLIC LICENSE
-   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
-
-            0. You just DO WHATEVER THE FUCK YOU WANT.
-LICENSE
-  }
+  s.license      = { :type => "Apache License, Version 2.0", :file => "LICENSE" }
   s.description  = <<-DESC
 Using SMJobBless and friends is rather ...painful. SMJobKit does everything in its power to alleviate that and get you back to writing awesome OS X apps.
 

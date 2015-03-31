@@ -8,7 +8,5 @@ There are a few manual steps that you need to perform before you can build your 
 
 2. Set up your application's target to link with `SMJobKit.framework`.
 
-3. Set up your service's target to link with `libSMJService.a`.
-
 Xcode templates can do a lot, but not everything!  Plus, they're not really documented.  If you
 know how to accomplish any of the above steps via template configuration, let me know, please :)
