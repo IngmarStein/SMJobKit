@@ -21,37 +21,36 @@ class ClientUtility {
 		// We can't use CFBundleCopyInfoDictionaryForURL, as it breaks our code signing validity.
 		var codeRef: Unmanaged<SecStaticCode>? = nil
 
-		let result = SecStaticCodeCreateWithPath(NSURL(string:bundlePath)!, SecCSFlags(kSecCSDefaultFlags), &codeRef)
-		if result != noErr {
-			if result == OSStatus(errSecCSUnsigned) {
-				SET_ERROR(error, .UnsignedBundle, "Encountered unsigned bundle")
-			} else if result == OSStatus(errSecCSStaticCodeNotFound) {
-				SET_ERROR(error, .BundleNotFound, "No bundle found at given path")
+		if let url = NSURL(fileURLWithPath: bundlePath, isDirectory: false) {
+			let result = SecStaticCodeCreateWithPath(url, SecCSFlags(kSecCSDefaultFlags), &codeRef)
+			if result == noErr, let code = codeRef?.takeRetainedValue() {
+				var codeInfoRef: Unmanaged<CFDictionary>? = nil
+				let result2 = SecCodeCopySigningInformation(code, SecCSFlags(kSecCSDefaultFlags), &codeInfoRef)
+				if result2 == noErr, let codeInfo = codeInfoRef?.takeRetainedValue() {
+					if let codeInfoDictionary = codeInfo as? [NSObject: AnyObject], bundleInfo = codeInfoDictionary[kSecCodeInfoPList] as? [NSObject: AnyObject] {
+						return bundleInfo["CFBundleVersion"] as? String
+					} else {
+						SET_ERROR(error, .BadBundleCodeSigningDictionary, "kSecCodeInfoPList was not a dictionary")
+						return nil
+					}
+				} else {
+					SET_ERROR(error, .BadBundleCodeSigningDictionary, "Failed to read code signing dictionary (OSStatus %d)", result2)
+					return nil
+				}
 			} else {
-				SET_ERROR(error, .BadBundleSecurity, "Failed to create SecStaticCodeRef (OSStatus %d)", result)
+				if result == OSStatus(errSecCSUnsigned) {
+					SET_ERROR(error, .UnsignedBundle, "Encountered unsigned bundle")
+				} else if result == OSStatus(errSecCSStaticCodeNotFound) {
+					SET_ERROR(error, .BundleNotFound, "No bundle found at given path")
+				} else {
+					SET_ERROR(error, .BadBundleSecurity, "Failed to create SecStaticCodeRef (OSStatus %d)", result)
+				}
+				return nil
 			}
-			return nil
-		}
-
-		let code = codeRef!.takeRetainedValue()
-		var codeInfoRef: Unmanaged<CFDictionary>? = nil
-		let result2 = SecCodeCopySigningInformation(code, SecCSFlags(kSecCSDefaultFlags), &codeInfoRef)
-		if result2 != noErr {
-			SET_ERROR(error, .BadBundleCodeSigningDictionary, "Failed to read code signing dictionary (OSStatus %d)", result2)
-			return nil
-		}
-
-		let codeInfo = codeInfoRef!.takeRetainedValue()
-		let codeInfoDictionary = codeInfo as! [NSObject: AnyObject]
-
-		if let bundleInfo = codeInfoDictionary[kSecCodeInfoPList] as? [NSObject: AnyObject] {
-			return bundleInfo["CFBundleVersion"] as? String
 		} else {
-			SET_ERROR(error, .BadBundleCodeSigningDictionary, "kSecCodeInfoPList was not a dictionary")
 			return nil
 		}
-  	}
-
+	}
 
 	//MARK: - Authorization & Security
 
