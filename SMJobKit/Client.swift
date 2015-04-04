@@ -9,7 +9,7 @@
 import Cocoa
 import ServiceManagement
 
-public class Client: NSObject {
+public class Client {
 
 	//MARK: - Abstract Interface
 
