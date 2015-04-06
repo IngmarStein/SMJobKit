@@ -23,29 +23,7 @@ public class Client {
 		return ClientUtility.versionForBundlePath(bundledServicePath)
 	}
 
-	public class var installedVersion: String? {
-		return installedServicePath.flatMap { ClientUtility.versionForBundlePath($0) }
-	}
-
-	public class func isLatestVersionInstalled() -> Bool {
-		if let installedVersion = installedVersion, bundledVersion = bundledVersion {
-			return installedVersion == bundledVersion
-		}
-		return false
-	}
-
 	public class func installWithPrompt(prompt:String?, error:NSErrorPointer) -> Bool {
-		if isLatestVersionInstalled() {
-			NSLog("%@ (%@) is already current, skipping install.", serviceIdentifier, bundledVersion!)
-			return true
-		}
-  
-		if installedVersion != nil {
-			if !uninstallWithPrompt(prompt, error:error) {
-				return false
-			}
-		}
-  
 		let authRef = ClientUtility.authWithRight(kSMRightBlessPrivilegedHelper, prompt:prompt, error:error)
 		if authRef == nil {
 			return false
@@ -60,28 +38,6 @@ public class Client {
 		}
   
 		NSLog("%@ (%@) installed successfully", serviceIdentifier, bundledVersion!)
-		return true
-	}
-
-	public class func uninstallWithPrompt(prompt : String?, error:NSErrorPointer) -> Bool {
-		if installedVersion == nil {
-			NSLog("%@ is not installed, skipping uninstall.", serviceIdentifier)
-			return true
-		}
-  
-		let authRef = ClientUtility.authWithRight(kSMRightModifySystemDaemons, prompt:prompt, error:error)
-		if authRef == nil {
-			return false
-		}
-  
-		var cfError: Unmanaged<CFError>? = nil
-		if SMJobRemove(kSMDomainSystemLaunchd, cfIdentifier, authRef, 1, &cfError) == 0 {
-			let removeError = cfError!.takeRetainedValue() as AnyObject as! NSError
-			SET_ERROR(error, .UnableToBless, "SMJobRemove failure (code %ld): %@", removeError.code, removeError.localizedDescription)
-			return false
-		}
-  
-		NSLog("%@ uninstalled successfully", serviceIdentifier)
 		return true
 	}
 
@@ -105,17 +61,6 @@ public class Client {
 		let helperRelative = "Contents/Library/LaunchServices/\(serviceIdentifier)"
   
 		return NSBundle(forClass:self).bundlePath.stringByAppendingPathComponent(helperRelative)
-	}
-
-	public class var installedServicePath: String? {
-		if let jobData = SMJobCopyDictionary(kSMDomainSystemLaunchd, self.cfIdentifier) {
-			if let dictionary = jobData.takeRetainedValue() as? [NSObject:AnyObject] {
-				if let arguments = dictionary["ProgramArguments"] as? [String] {
-					return arguments.first
-				}
-			}
-		}
-		return nil
 	}
 
 	//MARK: - Utility
