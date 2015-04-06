@@ -85,10 +85,9 @@ public class Client {
 		return true
 	}
 
-
 	//MARK: - Diagnostics
 
-	public class func checkForProblems() -> [NSError]? {
+	public class func checkForProblems() -> [NSError] {
 		var error: NSError? = nil
 		var errors = [NSError]()
   
@@ -97,9 +96,8 @@ public class Client {
 			errors.append(error!)
 		}
   
-		return errors.isEmpty ? nil : errors
+		return errors
 	}
-
 
 	//MARK: - Service Information
 

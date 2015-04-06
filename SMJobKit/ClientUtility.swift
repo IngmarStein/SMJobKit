@@ -11,7 +11,7 @@ import Security
 
 class ClientUtility {
 
-	//MARK -   Bundle Introspection
+	//MARK: - Bundle Introspection
 
 	class func versionForBundlePath(bundlePath: String) -> String? {
 		return versionForBundlePath(bundlePath, error:nil)

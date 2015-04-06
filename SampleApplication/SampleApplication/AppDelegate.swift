@@ -51,7 +51,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		self.bundledVersionLabel.stringValue = SampleService.bundledVersion ?? "Unknown Version"
 		self.installedVersionLabel.stringValue = SampleService.installedVersion ?? "Not Installed"
 
-		SampleService.checkForProblems()?.map { self.appendMessage($0.description) }
+		SampleService.checkForProblems().map { self.appendMessage($0.description) }
 	}
 
 	private func appendMessage(message: String) {
