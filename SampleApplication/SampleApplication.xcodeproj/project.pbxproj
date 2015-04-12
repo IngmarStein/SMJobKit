@@ -14,7 +14,6 @@
 		3CE185C415C64C1000A8FB57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE185C315C64C1000A8FB57 /* main.m */; };
 		3CE185CF15C64C2A00A8FB57 /* net.nevir.SMJobKit.SampleApplication.SampleService in Copy Services */ = {isa = PBXBuildFile; fileRef = 3CE185BC15C64C1000A8FB57 /* net.nevir.SMJobKit.SampleApplication.SampleService */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3CE185D115C64CA500A8FB57 /* SMJobKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE185D015C64CA500A8FB57 /* SMJobKit.framework */; };
-		3CE185D315C64CAA00A8FB57 /* libSMJService.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE185D215C64CAA00A8FB57 /* libSMJService.a */; };
 		9591AC7F1AC88345000C58EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591AC7E1AC88345000C58EC /* AppDelegate.swift */; };
 		9591AC811AC8858E000C58EC /* SampleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591AC801AC8858E000C58EC /* SampleService.swift */; };
 /* End PBXBuildFile section */
@@ -77,7 +76,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CE185D315C64CAA00A8FB57 /* libSMJService.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

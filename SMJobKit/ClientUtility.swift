@@ -9,7 +9,7 @@
 import Foundation
 import Security
 
-class ClientUtility {
+final class ClientUtility {
 
 	//MARK: - Bundle Introspection
 
