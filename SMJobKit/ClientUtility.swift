@@ -13,11 +13,11 @@ final class ClientUtility {
 
 	//MARK: - Bundle Introspection
 
-	class func versionForBundlePath(bundlePath: String) -> String? {
+	static func versionForBundlePath(bundlePath: String) -> String? {
 		return versionForBundlePath(bundlePath, error:nil)
 	}
 
-	class func versionForBundlePath(bundlePath: String, error:NSErrorPointer) -> String? {
+	static func versionForBundlePath(bundlePath: String, error:NSErrorPointer) -> String? {
 		// We can't use CFBundleCopyInfoDictionaryForURL, as it breaks our code signing validity.
 		var codeRef: Unmanaged<SecStaticCode>? = nil
 
@@ -54,7 +54,7 @@ final class ClientUtility {
 
 	//MARK: - Authorization & Security
 
-	class func authWithRight(rightName: AuthorizationString, prompt:String?, error:NSErrorPointer) -> AuthorizationRef {
+	static func authWithRight(rightName: AuthorizationString, prompt:String?, error:NSErrorPointer) -> AuthorizationRef {
 		var authItem = AuthorizationItem(name: rightName, valueLength: 0, value: nil, flags: 0)
 		var authRights = AuthorizationRights(count: 1, items: &authItem)
 
