@@ -206,6 +206,7 @@
 		3CE1858B15C64C1000A8FB57 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Ian MacLeod";
 			};

@@ -8,7 +8,7 @@
 
 import Cocoa
 import XCTest
-import SMJobKit
+@testable import SMJobKit
 
 class ClientTests: XCTestCase {
 

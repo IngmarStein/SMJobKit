@@ -20,36 +20,35 @@ public class Client {
 	//MARK: - Public Interface
 
 	public class var bundledVersion: String? {
-		return ClientUtility.versionForBundlePath(bundledServicePath)
+		do {
+			return try ClientUtility.versionForBundlePath(bundledServicePath)
+		} catch _ {
+			return nil
+		}
 	}
 
-	public class func installWithPrompt(prompt:String?, error:NSErrorPointer) -> Bool {
-		let authRef = ClientUtility.authWithRight(kSMRightBlessPrivilegedHelper, prompt:prompt, error:error)
-		if authRef == nil {
-			return false
-		}
-  
+	public class func installWithPrompt(prompt:String?) throws {
+		let authRef = try ClientUtility.authWithRight(kSMRightBlessPrivilegedHelper, prompt:prompt)
+
 		// Here's the good stuff
 		var cfError: Unmanaged<CFError>? = nil
 		if SMJobBless(kSMDomainSystemLaunchd, cfIdentifier, authRef, &cfError) == 0 {
 			let blessError = cfError!.takeRetainedValue() as AnyObject as! NSError
-			SET_ERROR(error, .UnableToBless, "SMJobBless failure (code %ld): %@", blessError.code, blessError.localizedDescription)
-			return false
+			throw NSError(code:.UnableToBless, message:String(format: "SMJobBless failure (code %ld): %@", blessError.code, blessError.localizedDescription))
 		}
   
 		NSLog("%@ (%@) installed successfully", serviceIdentifier, bundledVersion!)
-		return true
 	}
 
 	//MARK: - Diagnostics
 
 	public class func checkForProblems() -> [NSError] {
-		var error: NSError? = nil
 		var errors = [NSError]()
   
-		ClientUtility.versionForBundlePath(bundledServicePath, error:&error)
-		if error != nil {
-			errors.append(error!)
+		do {
+			try ClientUtility.versionForBundlePath(bundledServicePath)
+		} catch let error as NSError {
+			errors.append(error)
 		}
   
 		return errors
