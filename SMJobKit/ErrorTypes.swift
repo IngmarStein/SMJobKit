@@ -30,4 +30,17 @@ public enum SMJError: ErrorType {
 	// Unknown failure when prompting the user for authorization
 	case AuthorizationFailed(OSStatus)
 
+	public var code: Int {
+		switch self {
+		case .BundleNotFound: return 1000
+		case .UnsignedBundle: return 1001
+		case .BadBundleSecurity(_): return 1002
+		case .BadBundleCodeSigningDictionary: return 1003
+		case .UnableToBless(_): return 1010
+		case .AuthorizationDenied: return 1020
+		case .AuthorizationCanceled: return 1021
+		case .AuthorizationInteractionNotAllowed: return 1022
+		case .AuthorizationFailed(_): return 1023
+		}
+	}
 }
