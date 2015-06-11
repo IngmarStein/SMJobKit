@@ -27,7 +27,6 @@
 		3CA1508F15A91179001CF9F8 /* SMJobKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA1507115A91179001CF9F8 /* SMJobKit.framework */; };
 		3CA150B015A93C5F001CF9F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA1507915A91179001CF9F8 /* Foundation.framework */; };
 		3CA150B115A93C98001CF9F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA1507915A91179001CF9F8 /* Foundation.framework */; };
-		95340BA01AC83B7E00DE4879 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95340B9F1AC83B7E00DE4879 /* Error.swift */; };
 		95340BA21AC83DB400DE4879 /* ErrorTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95340BA11AC83DB400DE4879 /* ErrorTypes.swift */; };
 		95340BA41AC84C9C00DE4879 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95340BA31AC84C9C00DE4879 /* Client.swift */; };
 		95340BA61AC8555D00DE4879 /* MissingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95340BA51AC8555D00DE4879 /* MissingClient.swift */; };
@@ -86,7 +85,6 @@
 		3CD9BC9915B2503F00F0007B /* ___PACKAGENAMEASIDENTIFIER___-Launchd.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "___PACKAGENAMEASIDENTIFIER___-Launchd.plist"; sourceTree = "<group>"; };
 		3CD9BCD315B2632D00F0007B /* TemplateInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TemplateInfo.plist; sourceTree = "<group>"; };
 		3CFB0E2015B37DE400FA0E6B /* README-SMJobKit.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = "README-SMJobKit.md"; sourceTree = "<group>"; };
-		95340B9F1AC83B7E00DE4879 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		95340BA11AC83DB400DE4879 /* ErrorTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTypes.swift; sourceTree = "<group>"; };
 		95340BA31AC84C9C00DE4879 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		95340BA51AC8555D00DE4879 /* MissingClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissingClient.swift; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				956253001AC837A900D93E91 /* ClientUtility.swift */,
-				95340B9F1AC83B7E00DE4879 /* Error.swift */,
 			);
 			name = Private;
 			sourceTree = "<group>";
@@ -452,7 +449,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				95340BA41AC84C9C00DE4879 /* Client.swift in Sources */,
-				95340BA01AC83B7E00DE4879 /* Error.swift in Sources */,
 				95340BA21AC83DB400DE4879 /* ErrorTypes.swift in Sources */,
 				956253011AC837A900D93E91 /* ClientUtility.swift in Sources */,
 			);

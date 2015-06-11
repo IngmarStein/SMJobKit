@@ -1,5 +1,5 @@
 //
-//  SMJClient.swift
+//  Client.swift
 //  SMJobKit
 //
 //  Created by Ingmar Stein on 29.03.15.
@@ -33,8 +33,8 @@ public class Client {
 		// Here's the good stuff
 		var cfError: Unmanaged<CFError>? = nil
 		if SMJobBless(kSMDomainSystemLaunchd, cfIdentifier, authRef, &cfError) == 0 {
-			let blessError = cfError!.takeRetainedValue() as AnyObject as! NSError
-			throw NSError(code:.UnableToBless, message:String(format: "SMJobBless failure (code %ld): %@", blessError.code, blessError.localizedDescription))
+			let blessError = cfError!.takeRetainedValue() as NSError
+			throw SMJError.UnableToBless(blessError) // String(format: "SMJobBless failure (code %ld): %@", blessError.code, blessError.localizedDescription)
 		}
   
 		NSLog("%@ (%@) installed successfully", serviceIdentifier, bundledVersion!)
@@ -42,12 +42,12 @@ public class Client {
 
 	//MARK: - Diagnostics
 
-	public class func checkForProblems() -> [NSError] {
-		var errors = [NSError]()
+	public class func checkForProblems() -> [ErrorType] {
+		var errors = [ErrorType]()
   
 		do {
 			try ClientUtility.versionForBundlePath(bundledServicePath)
-		} catch let error as NSError {
+		} catch let error {
 			errors.append(error)
 		}
   

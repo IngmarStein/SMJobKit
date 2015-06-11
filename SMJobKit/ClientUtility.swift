@@ -1,5 +1,5 @@
 //
-//  SMJClientUtility.swift
+//  ClientUtility.swift
 //  SMJobKit
 //
 //  Created by Ingmar Stein on 29.03.15.
@@ -28,21 +28,21 @@ final class ClientUtility {
 					if let value = bundleInfo["CFBundleVersion"] as? String {
 						return value
 					} else {
-						throw NSError(code:.BadBundleCodeSigningDictionary, message:"CFBundleVersion was not a string")
+						throw SMJError.BadBundleCodeSigningDictionary //"CFBundleVersion was not a string"
 					}
 				} else {
-					throw NSError(code:.BadBundleCodeSigningDictionary, message:"kSecCodeInfoPList was not a dictionary")
+					throw SMJError.BadBundleCodeSigningDictionary // "kSecCodeInfoPList was not a dictionary"
 				}
 			} else {
-				throw NSError(code:.BadBundleCodeSigningDictionary, message:String(format: "Failed to read code signing dictionary (OSStatus %d)", result2))
+				throw SMJError.BadBundleCodeSigningDictionary // String(format: "Failed to read code signing dictionary (OSStatus %d)", result2)
 			}
 		} else {
 			if result == OSStatus(errSecCSUnsigned) {
-				throw NSError(code:.UnsignedBundle, message:"Encountered unsigned bundle")
+				throw SMJError.UnsignedBundle // "Encountered unsigned bundle"
 			} else if result == OSStatus(errSecCSStaticCodeNotFound) {
-				throw NSError(code:.BundleNotFound, message:"No bundle found at given path")
+				throw SMJError.BundleNotFound // "No bundle found at given path"
 			} else {
-				throw NSError(code:.BadBundleSecurity, message:String(format: "Failed to create SecStaticCodeRef (OSStatus %d)", result))
+				throw SMJError.BadBundleSecurity(result) // String(format: "Failed to create SecStaticCodeRef (OSStatus %d)", result)
 			}
 		}
 	}
@@ -75,13 +75,13 @@ final class ClientUtility {
 		if status == OSStatus(errAuthorizationSuccess) {
 			return authRef
 		} else if status == OSStatus(errAuthorizationDenied) {
-			throw NSError(code:.AuthorizationDenied, message:"The system denied the authorization request")
+			throw SMJError.AuthorizationDenied // "The system denied the authorization request"
 		} else if status == OSStatus(errAuthorizationCanceled) {
-			throw NSError(code:.AuthorizationCanceled, message:"The user canceled the authorization request")
+			throw SMJError.AuthorizationCanceled // "The user canceled the authorization request"
 		} else if status == OSStatus(errAuthorizationInteractionNotAllowed) {
-			throw NSError(code:.AuthorizationInteractionNotAllowed, message:"Not allowed to prompt the user for authorization")
+			throw SMJError.AuthorizationInteractionNotAllowed // "Not allowed to prompt the user for authorization"
 		} else {
-			throw NSError(code:.AuthorizationFailed, message:String(format: "Unknown failure when calling AuthorizationCreate (OSStatus %d)", status))
+			throw SMJError.AuthorizationFailed(status) // String(format: "Unknown failure when calling AuthorizationCreate (OSStatus %d)", status)
 		}
 	}
 }

@@ -1,5 +1,5 @@
 //
-//  SMJClientTests.swift
+//  ClientTests.swift
 //  SMJobKit
 //
 //  Created by Ingmar Stein on 29.03.15.
@@ -22,8 +22,12 @@ class ClientTests: XCTestCase {
 
 		let errors = MissingClient.checkForProblems()
 		XCTAssertEqual(errors.count, 1, "MissingService should have one error")
-		let error = errors.first!
-		XCTAssert(ErrorCode(rawValue:error.code) == .BundleNotFound, "Missing service should be missing")
+		let error = errors.first! as! SMJError
+		switch error {
+		case .BundleNotFound: ()
+		default:
+			XCTAssert(false, "Missing service should be missing")
+		}
 	}
 
 }
