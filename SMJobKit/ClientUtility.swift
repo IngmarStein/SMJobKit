@@ -15,14 +15,14 @@ final class ClientUtility {
 
 	static func versionForBundlePath(bundlePath: String) throws -> String {
 		// We can't use CFBundleCopyInfoDictionaryForURL, as it breaks our code signing validity.
-		var codeRef: Unmanaged<SecStaticCode>? = nil
+		var codeRef: SecStaticCode?
 
 		let url = NSURL(fileURLWithPath: bundlePath, isDirectory: false)
-		let result = SecStaticCodeCreateWithPath(url, SecCSFlags(kSecCSDefaultFlags), &codeRef)
-		if result == noErr, let code = codeRef?.takeRetainedValue() {
-			var codeInfoRef: Unmanaged<CFDictionary>? = nil
-			let result2 = SecCodeCopySigningInformation(code, SecCSFlags(kSecCSDefaultFlags), &codeInfoRef)
-			if result2 == noErr, let codeInfo = codeInfoRef?.takeRetainedValue() {
+		let result = SecStaticCodeCreateWithPath(url, .DefaultFlags, &codeRef)
+		if result == noErr, let code = codeRef {
+			var codeInfoRef: CFDictionary?
+			let result2 = SecCodeCopySigningInformation(code, .DefaultFlags, &codeInfoRef)
+			if result2 == noErr, let codeInfo = codeInfoRef {
 				let codeInfoDictionary = codeInfo as [NSObject: AnyObject]
 				if let bundleInfo = codeInfoDictionary[kSecCodeInfoPList] as? [NSObject: AnyObject] {
 					if let value = bundleInfo["CFBundleVersion"] as? String {
