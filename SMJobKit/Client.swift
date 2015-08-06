@@ -32,7 +32,7 @@ public class Client {
 
 		// Here's the good stuff
 		var cfError: Unmanaged<CFError>? = nil
-		if SMJobBless(kSMDomainSystemLaunchd, cfIdentifier, authRef, &cfError) == 0 {
+		if !SMJobBless(kSMDomainSystemLaunchd, cfIdentifier, authRef, &cfError) {
 			let blessError = cfError!.takeRetainedValue() as NSError
 			throw SMJError.UnableToBless(blessError) // String(format: "SMJobBless failure (code %ld): %@", blessError.code, blessError.localizedDescription)
 		}
@@ -59,7 +59,7 @@ public class Client {
 	public class var bundledServicePath: String {
 		let helperRelative = "Contents/Library/LaunchServices/\(serviceIdentifier)"
   
-		return NSBundle(forClass:self).bundlePath.stringByAppendingPathComponent(helperRelative)
+		return (NSBundle(forClass:self).bundlePath as NSString).stringByAppendingPathComponent(helperRelative)
 	}
 
 	//MARK: - Utility
