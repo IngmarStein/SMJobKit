@@ -20,11 +20,7 @@ public class Client {
 	//MARK: - Public Interface
 
 	public class var bundledVersion: String? {
-		do {
-			return try ClientUtility.versionForBundlePath(bundledServicePath)
-		} catch _ {
-			return nil
-		}
+		return try? ClientUtility.versionForBundlePath(bundledServicePath)
 	}
 
 	public class func installWithPrompt(prompt:String?) throws {
