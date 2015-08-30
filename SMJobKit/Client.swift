@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import ServiceManagement
 
 public class Client {
 

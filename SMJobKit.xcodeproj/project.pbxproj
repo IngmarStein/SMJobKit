@@ -33,6 +33,7 @@
 		95340BA81AC855A100DE4879 /* TestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95340BA71AC855A100DE4879 /* TestClient.swift */; };
 		95340BAA1AC855DE00DE4879 /* ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95340BA91AC855DE00DE4879 /* ClientTests.swift */; };
 		956253011AC837A900D93E91 /* ClientUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956253001AC837A900D93E91 /* ClientUtility.swift */; };
+		95CA05341B9343D1000ABDCE /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95CA05331B9343D1000ABDCE /* ServiceManagement.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,8 @@
 		95340BA91AC855DE00DE4879 /* ClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientTests.swift; sourceTree = "<group>"; };
 		956253001AC837A900D93E91 /* ClientUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientUtility.swift; sourceTree = "<group>"; };
 		958CB2A81AC95B6300D4FE65 /* ___VARIABLE_smjServiceName:RFC1034Identifier___.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "___VARIABLE_smjServiceName:RFC1034Identifier___.swift"; sourceTree = "<group>"; };
+		95CA05321B934371000ABDCE /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		95CA05331B9343D1000ABDCE /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95CA05341B9343D1000ABDCE /* ServiceManagement.framework in Frameworks */,
 				3CA150B015A93C5F001CF9F8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +130,7 @@
 		3C2BFA8815AB2E570011FA52 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				95CA05321B934371000ABDCE /* BridgingHeader.h */,
 				3CA1507C15A91179001CF9F8 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -220,6 +225,7 @@
 		3CA1507315A91179001CF9F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				95CA05331B9343D1000ABDCE /* ServiceManagement.framework */,
 				3CA1507915A91179001CF9F8 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -576,6 +582,7 @@
 		3CA1509C15A91179001CF9F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -585,12 +592,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "net.nevir.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = SMJobKit;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = SMJobKit/BridgingHeader.h;
 			};
 			name = Debug;
 		};
 		3CA1509D15A91179001CF9F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -600,6 +609,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "net.nevir.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = SMJobKit;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = SMJobKit/BridgingHeader.h;
 			};
 			name = Release;
 		};
