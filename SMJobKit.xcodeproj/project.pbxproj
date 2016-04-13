@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -238,7 +238,7 @@
 				3C2BFA8A15AB2E8F0011FA52 /* Private */,
 				3C2BFA8815AB2E570011FA52 /* Supporting Files */,
 			);
-			path = SMJobKit;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		3CCC06C515AA810D00C84BE1 /* SMJobKit Service.xctemplate */ = {
@@ -365,10 +365,10 @@
 				CLASSPREFIX = SMJ;
 				LastSwiftUpdateCheck = 0700;
 				LastTestingUpgradeCheck = 0630;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0730;
 			};
 			buildConfigurationList = 3CA1506A15A91179001CF9F8 /* Build configuration list for PBXProject "SMJobKit" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -575,41 +575,43 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				SWIFT_WHOLE_MODULE_OPTIMIZATION = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
 		3CA1509C15A91179001CF9F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SMJobKit/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.nevir.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = SMJobKit;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = SMJobKit/BridgingHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = Sources/BridgingHeader.h;
 			};
 			name = Debug;
 		};
 		3CA1509D15A91179001CF9F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SMJobKit/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.nevir.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = SMJobKit;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = SMJobKit/BridgingHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = Sources/BridgingHeader.h;
 			};
 			name = Release;
 		};
