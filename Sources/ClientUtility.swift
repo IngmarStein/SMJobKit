@@ -15,15 +15,15 @@ final class ClientUtility {
 
 	//MARK: - Bundle Introspection
 
-	static func versionForBundlePath(bundlePath: String) throws -> String {
+	static func versionForBundlePath(_ bundlePath: String) throws -> String {
 		// We can't use CFBundleCopyInfoDictionaryForURL, as it breaks our code signing validity.
 		var codeRef: SecStaticCode?
 
 		let url = NSURL(fileURLWithPath: bundlePath, isDirectory: false)
-		let result = SecStaticCodeCreateWithPath(url, .defaultFlags, &codeRef)
+		let result = SecStaticCodeCreateWithPath(url, [], &codeRef)
 		if result == noErr, let code = codeRef {
 			var codeInfoRef: CFDictionary?
-			let result2 = SecCodeCopySigningInformation(code, .defaultFlags, &codeInfoRef)
+			let result2 = SecCodeCopySigningInformation(code, [], &codeInfoRef)
 			if result2 == noErr, let codeInfo = codeInfoRef {
 				let codeInfoDictionary = codeInfo as [NSObject: AnyObject]
 				if let bundleInfo = codeInfoDictionary[kSecCodeInfoPList] as? [NSObject: AnyObject] {
@@ -51,31 +51,32 @@ final class ClientUtility {
 
 	//MARK: - Authorization & Security
 
-	static func authWithRight(rightName: String, prompt:String?) throws -> AuthorizationRef {
-		let authorizationRight = (rightName as NSString).utf8String
-		var authItem = AuthorizationItem(name: authorizationRight, valueLength: 0, value: nil, flags: 0)
+	static func authWithRight(_ rightName: String, prompt:String?) throws -> AuthorizationRef {
+		let authorizationRight = (rightName as NSString).utf8String!
+		// TODO: this should be a nil pointer but changes for SE-0055 made this a non-optional pointer for now
+		var authItem = AuthorizationItem(name: authorizationRight, valueLength: 0, value: UnsafeMutablePointer<Void>(allocatingCapacity: 0), flags: 0)
 		var authRights = AuthorizationRights(count: 1, items: &authItem)
 
-		var environment = AuthorizationEnvironment(count: 0, items: nil)
+		// TODO: this should be a nil pointer but changes for SE-0055 made this a non-optional pointer for now
+		var environment = AuthorizationEnvironment(count: 0, items: UnsafeMutablePointer<AuthorizationItem>(allocatingCapacity: 0))
 
 		if let prompt = prompt {
-			let authorizationEnvironmentPrompt = (kAuthorizationEnvironmentPrompt as NSString).utf8String
-			let promptString = (prompt as NSString).utf8String
-			var envItem = AuthorizationItem(name: authorizationEnvironmentPrompt, valueLength: prompt.lengthOfBytes(usingEncoding: NSUTF8StringEncoding), value: UnsafeMutablePointer(promptString), flags: UInt32(0))
+			let authorizationEnvironmentPrompt = (kAuthorizationEnvironmentPrompt as NSString).utf8String!
+			let promptString = (prompt as NSString).utf8String!
+			var envItem = AuthorizationItem(name: authorizationEnvironmentPrompt, valueLength: prompt.lengthOfBytes(using: NSUTF8StringEncoding), value: UnsafeMutablePointer(promptString), flags: UInt32(0))
 			environment = AuthorizationEnvironment(count: 1, items: &envItem)
 		}
 
 		let flags: AuthorizationFlags = [
-			.defaults,
 			.interactionAllowed,
 			.preAuthorize,
 			.extendRights
 		]
 
-		var authRef: AuthorizationRef = nil
+		var authRef: AuthorizationRef? = nil
 		let status = AuthorizationCreate(&authRights, &environment, flags, &authRef)
 		if status == OSStatus(errAuthorizationSuccess) {
-			return authRef
+			return authRef!
 		} else if status == OSStatus(errAuthorizationDenied) {
 			throw SMJError.authorizationDenied // "The system denied the authorization request"
 		} else if status == OSStatus(errAuthorizationCanceled) {
