@@ -24,7 +24,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		// In order to test out SMJobKit,
 		// SampleApplication is trying to install a new
 		// helper tool.  Type your password to allow this.
-		if SampleService.installWithPrompt("In order to test out SMJobKit,", error:&error) {
+		if SampleService.installWithPrompt("In order to test out SMJobKit,", error: &error) {
 			appendMessage(error!.description)
 		} else {
 			appendMessage("Successfully installed SampleService")
@@ -38,7 +38,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		// In order to test out SMJobKit,
 		// SampleApplication is trying to install a new
 		// helper tool.  Type your password to allow this.
-		if !SampleService.uninstallWithPrompt("In order to test out SMJobKit,", error:&error) {
+		if !SampleService.uninstallWithPrompt("In order to test out SMJobKit,", error: &error) {
 			appendMessage(error!.description)
 		} else {
 			appendMessage("Successfully uninstalled SampleService")
@@ -57,4 +57,5 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	private func appendMessage(message: String) {
 		self.outputTextView.string! += "\(message)\n"
 	}
+
 }
