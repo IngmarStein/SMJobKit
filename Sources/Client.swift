@@ -26,7 +26,7 @@ public class Client {
 	#if swift(>=3.0)
 
 	public class func installWithPrompt(prompt: String?) throws {
-		let authRef = try ClientUtility.authWithRight(kSMRightBlessPrivilegedHelper, prompt:prompt)
+		let authRef = try ClientUtility.authWithRight(kSMRightBlessPrivilegedHelper, prompt: prompt)
 
 		// Here's the good stuff
 		var cfError: Unmanaged<CFError>? = nil
@@ -34,7 +34,7 @@ public class Client {
 			let blessError = cfError!.takeRetainedValue() as NSError
 			throw SMJError.unableToBless(blessError) // String(format: "SMJobBless failure (code %ld): %@", blessError.code, blessError.localizedDescription)
 		}
-  
+
 		NSLog("%@ (%@) installed successfully", serviceIdentifier, bundledVersion!)
 	}
 
@@ -42,13 +42,13 @@ public class Client {
 
 	public class func checkForProblems() -> [ErrorProtocol] {
 		var errors = [ErrorProtocol]()
-  
+
 		do {
 			try ClientUtility.versionForBundlePath(bundledServicePath)
 		} catch let error {
 			errors.append(error)
 		}
-  
+
 		return errors
 	}
 
@@ -57,7 +57,7 @@ public class Client {
 	public class var bundledServicePath: String {
 		let helperRelative = "Contents/Library/LaunchServices/\(serviceIdentifier)"
 
-		return (NSBundle(for:self).bundlePath as NSString).appendingPathComponent(helperRelative)
+		return (NSBundle(for: self).bundlePath as NSString).appendingPathComponent(helperRelative)
 	}
 
 	#else
@@ -71,7 +71,7 @@ public class Client {
 			let blessError = cfError!.takeRetainedValue() as NSError
 			throw SMJError.UnableToBless(blessError) // String(format: "SMJobBless failure (code %ld): %@", blessError.code, blessError.localizedDescription)
 		}
-  
+
 		NSLog("%@ (%@) installed successfully", serviceIdentifier, bundledVersion!)
 	}
 
@@ -79,13 +79,13 @@ public class Client {
 
 	public class func checkForProblems() -> [ErrorType] {
 		var errors = [ErrorType]()
-  
+
 		do {
 			try ClientUtility.versionForBundlePath(bundledServicePath)
 		} catch let error {
 			errors.append(error)
 		}
-  
+
 		return errors
 	}
 
@@ -93,8 +93,8 @@ public class Client {
 
 	public class var bundledServicePath: String {
 		let helperRelative = "Contents/Library/LaunchServices/\(serviceIdentifier)"
-  
-		return (NSBundle(forClass:self).bundlePath as NSString).stringByAppendingPathComponent(helperRelative)
+
+		return (NSBundle(forClass: self).bundlePath as NSString).stringByAppendingPathComponent(helperRelative)
 	}
 
 	#endif
