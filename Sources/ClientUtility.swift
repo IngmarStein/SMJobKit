@@ -13,7 +13,7 @@ final class ClientUtility {
 
 	#if swift(>=3.0)
 
-	//MARK: - Bundle Introspection
+	// MARK: - Bundle Introspection
 
 	static func versionForBundlePath(_ bundlePath: String) throws -> String {
 		// We can't use CFBundleCopyInfoDictionaryForURL, as it breaks our code signing validity.
@@ -30,7 +30,7 @@ final class ClientUtility {
 					if let value = bundleInfo["CFBundleVersion"] as? String {
 						return value
 					} else {
-						throw SMJError.badBundleCodeSigningDictionary //"CFBundleVersion was not a string"
+						throw SMJError.badBundleCodeSigningDictionary // "CFBundleVersion was not a string"
 					}
 				} else {
 					throw SMJError.badBundleCodeSigningDictionary // "kSecCodeInfoPList was not a dictionary"
@@ -49,9 +49,9 @@ final class ClientUtility {
 		}
 	}
 
-	//MARK: - Authorization & Security
+	// MARK: - Authorization & Security
 
-	static func authWithRight(_ rightName: String, prompt:String?) throws -> AuthorizationRef {
+	static func authWithRight(_ rightName: String, prompt: String?) throws -> AuthorizationRef {
 		let authorizationRight = (rightName as NSString).utf8String!
 		// TODO: this should be a nil pointer but changes for SE-0055 made this a non-optional pointer for now
 		var authItem = AuthorizationItem(name: authorizationRight, valueLength: 0, value: UnsafeMutablePointer<Void>(allocatingCapacity: 0), flags: 0)
@@ -90,7 +90,7 @@ final class ClientUtility {
 
 	#else
 
-	//MARK: - Bundle Introspection
+	// MARK: - Bundle Introspection
 
 	static func versionForBundlePath(bundlePath: String) throws -> String {
 		// We can't use CFBundleCopyInfoDictionaryForURL, as it breaks our code signing validity.
@@ -107,7 +107,7 @@ final class ClientUtility {
 					if let value = bundleInfo["CFBundleVersion"] as? String {
 						return value
 					} else {
-						throw SMJError.BadBundleCodeSigningDictionary //"CFBundleVersion was not a string"
+						throw SMJError.BadBundleCodeSigningDictionary // "CFBundleVersion was not a string"
 					}
 				} else {
 					throw SMJError.BadBundleCodeSigningDictionary // "kSecCodeInfoPList was not a dictionary"
@@ -126,9 +126,9 @@ final class ClientUtility {
 		}
 	}
 
-	//MARK: - Authorization & Security
+	// MARK: - Authorization & Security
 
-	static func authWithRight(rightName: String, prompt:String?) throws -> AuthorizationRef {
+	static func authWithRight(rightName: String, prompt: String?) throws -> AuthorizationRef {
 		let authorizationRight = (rightName as NSString).UTF8String
 		var authItem = AuthorizationItem(name: authorizationRight, valueLength: 0, value: nil, flags: 0)
 		var authRights = AuthorizationRights(count: 1, items: &authItem)

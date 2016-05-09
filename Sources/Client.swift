@@ -11,13 +11,13 @@ import ServiceManagement
 
 public class Client {
 
-	//MARK: - Abstract Interface
+	// MARK: - Abstract Interface
 
 	public class var serviceIdentifier: String {
 		fatalError("You need to implement serviceIdentifier!")
 	}
 
-	//MARK: - Public Interface
+	// MARK: - Public Interface
 
 	public class var bundledVersion: String? {
 		return try? ClientUtility.versionForBundlePath(bundledServicePath)
@@ -25,7 +25,7 @@ public class Client {
 
 	#if swift(>=3.0)
 
-	public class func installWithPrompt(prompt:String?) throws {
+	public class func installWithPrompt(prompt: String?) throws {
 		let authRef = try ClientUtility.authWithRight(kSMRightBlessPrivilegedHelper, prompt:prompt)
 
 		// Here's the good stuff
@@ -38,7 +38,7 @@ public class Client {
 		NSLog("%@ (%@) installed successfully", serviceIdentifier, bundledVersion!)
 	}
 
-	//MARK: - Diagnostics
+	// MARK: - Diagnostics
 
 	public class func checkForProblems() -> [ErrorProtocol] {
 		var errors = [ErrorProtocol]()
@@ -52,7 +52,7 @@ public class Client {
 		return errors
 	}
 
-	//MARK: - Service Information
+	// MARK: - Service Information
 
 	public class var bundledServicePath: String {
 		let helperRelative = "Contents/Library/LaunchServices/\(serviceIdentifier)"
@@ -62,8 +62,8 @@ public class Client {
 
 	#else
 
-	public class func installWithPrompt(prompt:String?) throws {
-		let authRef = try ClientUtility.authWithRight(kSMRightBlessPrivilegedHelper, prompt:prompt)
+	public class func installWithPrompt(prompt: String?) throws {
+		let authRef = try ClientUtility.authWithRight(kSMRightBlessPrivilegedHelper, prompt: prompt)
 
 		// Here's the good stuff
 		var cfError: Unmanaged<CFError>? = nil
@@ -75,7 +75,7 @@ public class Client {
 		NSLog("%@ (%@) installed successfully", serviceIdentifier, bundledVersion!)
 	}
 
-	//MARK: - Diagnostics
+	// MARK: - Diagnostics
 
 	public class func checkForProblems() -> [ErrorType] {
 		var errors = [ErrorType]()
@@ -89,7 +89,7 @@ public class Client {
 		return errors
 	}
 
-	//MARK: - Service Information
+	// MARK: - Service Information
 
 	public class var bundledServicePath: String {
 		let helperRelative = "Contents/Library/LaunchServices/\(serviceIdentifier)"
@@ -99,7 +99,7 @@ public class Client {
 
 	#endif
 
-	//MARK: - Utility
+	// MARK: - Utility
 
 	private class var cfIdentifier: CFString {
 		return serviceIdentifier as CFString
