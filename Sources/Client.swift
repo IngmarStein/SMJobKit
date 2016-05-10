@@ -35,7 +35,7 @@ public class Client {
 			throw SMJError.unableToBless(blessError) // String(format: "SMJobBless failure (code %ld): %@", blessError.code, blessError.localizedDescription)
 		}
 
-		NSLog("%@ (%@) installed successfully", serviceIdentifier, bundledVersion!)
+		NSLog("%@ (%@) installed successfully", serviceIdentifier as NSString, bundledVersion! as NSString)
 	}
 
 	// MARK: - Diagnostics
