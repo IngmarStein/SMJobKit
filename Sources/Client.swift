@@ -44,7 +44,7 @@ public class Client {
 		var errors = [ErrorProtocol]()
 
 		do {
-			try ClientUtility.versionForBundlePath(bundledServicePath)
+			try _ = ClientUtility.versionForBundlePath(bundledServicePath)
 		} catch let error {
 			errors.append(error)
 		}
