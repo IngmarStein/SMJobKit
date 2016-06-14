@@ -57,7 +57,7 @@ public class Client {
 	public class var bundledServicePath: String {
 		let helperRelative = "Contents/Library/LaunchServices/\(serviceIdentifier)"
 
-		return (NSBundle(for: self).bundlePath as NSString).appendingPathComponent(helperRelative)
+		return (Bundle(for: self).bundlePath as NSString).appendingPathComponent(helperRelative)
 	}
 
 	#else

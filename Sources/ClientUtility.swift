@@ -63,7 +63,7 @@ final class ClientUtility {
 		if let prompt = prompt {
 			let authorizationEnvironmentPrompt = (kAuthorizationEnvironmentPrompt as NSString).utf8String!
 			let promptString = (prompt as NSString).utf8String!
-			var envItem = AuthorizationItem(name: authorizationEnvironmentPrompt, valueLength: prompt.lengthOfBytes(using: NSUTF8StringEncoding), value: UnsafeMutablePointer(promptString), flags: UInt32(0))
+			var envItem = AuthorizationItem(name: authorizationEnvironmentPrompt, valueLength: prompt.lengthOfBytes(using: String.Encoding.utf8), value: UnsafeMutablePointer(promptString), flags: UInt32(0))
 			environment = AuthorizationEnvironment(count: 1, items: &envItem)
 		}
 
