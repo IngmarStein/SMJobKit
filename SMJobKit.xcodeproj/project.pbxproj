@@ -21,19 +21,15 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		3C2BFAB215AB33020011FA52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA1507915A91179001CF9F8 /* Foundation.framework */; };
 		3C2BFAB515AB33020011FA52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2BFAB415AB33020011FA52 /* main.m */; };
 		3C2BFABE15AB33EF0011FA52 /* net.nevir.SMJobKitTests.TestService in Copy Services */ = {isa = PBXBuildFile; fileRef = 3C2BFAB015AB33020011FA52 /* net.nevir.SMJobKitTests.TestService */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3CA1508F15A91179001CF9F8 /* SMJobKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA1507115A91179001CF9F8 /* SMJobKit.framework */; };
-		3CA150B015A93C5F001CF9F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA1507915A91179001CF9F8 /* Foundation.framework */; };
-		3CA150B115A93C98001CF9F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA1507915A91179001CF9F8 /* Foundation.framework */; };
 		95340BA21AC83DB400DE4879 /* ErrorTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95340BA11AC83DB400DE4879 /* ErrorTypes.swift */; };
 		95340BA41AC84C9C00DE4879 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95340BA31AC84C9C00DE4879 /* Client.swift */; };
 		95340BA61AC8555D00DE4879 /* MissingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95340BA51AC8555D00DE4879 /* MissingClient.swift */; };
 		95340BA81AC855A100DE4879 /* TestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95340BA71AC855A100DE4879 /* TestClient.swift */; };
 		95340BAA1AC855DE00DE4879 /* ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95340BA91AC855DE00DE4879 /* ClientTests.swift */; };
 		956253011AC837A900D93E91 /* ClientUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956253001AC837A900D93E91 /* ClientUtility.swift */; };
-		95CA05341B9343D1000ABDCE /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95CA05331B9343D1000ABDCE /* ServiceManagement.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +70,6 @@
 		3C2BFAB715AB33020011FA52 /* Launchd.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Launchd.plist; sourceTree = "<group>"; };
 		3C560DAD15A9460E00A05BC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CA1507115A91179001CF9F8 /* SMJobKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SMJobKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CA1507915A91179001CF9F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3CA1507C15A91179001CF9F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CA1508915A91179001CF9F8 /* SMJobKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMJobKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA150A115A911A0001CF9F8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
@@ -94,7 +89,6 @@
 		956253001AC837A900D93E91 /* ClientUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientUtility.swift; sourceTree = "<group>"; };
 		958CB2A81AC95B6300D4FE65 /* ___VARIABLE_smjServiceName:RFC1034Identifier___.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "___VARIABLE_smjServiceName:RFC1034Identifier___.swift"; sourceTree = "<group>"; };
 		95CA05321B934371000ABDCE /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
-		95CA05331B9343D1000ABDCE /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +96,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C2BFAB215AB33020011FA52 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,8 +103,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95CA05341B9343D1000ABDCE /* ServiceManagement.framework in Frameworks */,
-				3CA150B015A93C5F001CF9F8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +111,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CA1508F15A91179001CF9F8 /* SMJobKit.framework in Frameworks */,
-				3CA150B115A93C98001CF9F8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,7 +197,6 @@
 				3CA1507A15A91179001CF9F8 /* Sources */,
 				3C560DAB15A9460E00A05BC2 /* Tests */,
 				3CCC07AA15AA949400C84BE1 /* Xcode Templates */,
-				3CA1507315A91179001CF9F8 /* Frameworks */,
 				3CA1507215A91179001CF9F8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -220,15 +209,6 @@
 				3C2BFAB015AB33020011FA52 /* net.nevir.SMJobKitTests.TestService */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		3CA1507315A91179001CF9F8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				95CA05331B9343D1000ABDCE /* ServiceManagement.framework */,
-				3CA1507915A91179001CF9F8 /* Foundation.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		3CA1507A15A91179001CF9F8 /* Sources */ = {

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3CE1859B15C64C1000A8FB57 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE1859A15C64C1000A8FB57 /* Cocoa.framework */; };
 		3CE185A515C64C1000A8FB57 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CE185A315C64C1000A8FB57 /* InfoPlist.strings */; };
 		3CE185AB15C64C1000A8FB57 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3CE185A915C64C1000A8FB57 /* Credits.rtf */; };
 		3CE185B115C64C1000A8FB57 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CE185AF15C64C1000A8FB57 /* MainMenu.xib */; };
@@ -44,9 +43,6 @@
 
 /* Begin PBXFileReference section */
 		3CE1859615C64C1000A8FB57 /* SampleApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CE1859A15C64C1000A8FB57 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		3CE1859D15C64C1000A8FB57 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		3CE1859F15C64C1000A8FB57 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3CE185A215C64C1000A8FB57 /* SampleApplication-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SampleApplication-Info.plist"; sourceTree = "<group>"; };
 		3CE185A415C64C1000A8FB57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3CE185AA15C64C1000A8FB57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
@@ -68,7 +64,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CE185D115C64CA500A8FB57 /* SMJobKit.framework in Frameworks */,
-				3CE1859B15C64C1000A8FB57 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,19 +101,8 @@
 			children = (
 				3CE185D215C64CAA00A8FB57 /* libSMJService.a */,
 				3CE185D015C64CA500A8FB57 /* SMJobKit.framework */,
-				3CE1859A15C64C1000A8FB57 /* Cocoa.framework */,
-				3CE1859C15C64C1000A8FB57 /* Other Frameworks */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		3CE1859C15C64C1000A8FB57 /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3CE1859D15C64C1000A8FB57 /* AppKit.framework */,
-				3CE1859F15C64C1000A8FB57 /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
 		3CE185A015C64C1000A8FB57 /* SampleApplication */ = {
