@@ -13,35 +13,42 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	@IBOutlet private weak var window: NSWindow!
 	@IBOutlet private var outputTextView: NSTextView!
 	@IBOutlet private weak var bundledVersionLabel: NSTextField!
-	@IBOutlet private weak var installedVersionLabel: NSTextField!
+
+	#if swift(>=3.0)
+
+	func applicationDidFinishLaunching(_ notification: Notification) {
+		updateStatus()
+	}
+
+	private func appendMessage(_ message: String) {
+		self.outputTextView.string! += "\(message)\n"
+	}
+
+	#else
 
 	func applicationDidFinishLaunching(notification: NSNotification) {
 		updateStatus()
 	}
 
-	@IBAction func installService(sender: AnyObject!) {
-		var error: NSError? = nil
-		// In order to test out SMJobKit,
-		// SampleApplication is trying to install a new
-		// helper tool.  Type your password to allow this.
-		if SampleService.installWithPrompt("In order to test out SMJobKit,", error: &error) {
-			appendMessage(error!.description)
-		} else {
-			appendMessage("Successfully installed SampleService")
-		}
-
-		updateStatus()
+	private func appendMessage(message: String) {
+		self.outputTextView.string! += "\(message)\n"
 	}
 
-	@IBAction func uninstallService(sender: AnyObject!) {
-		var error: NSError? = nil
+	#endif
+
+	@IBAction func installService(sender: AnyObject!) {
 		// In order to test out SMJobKit,
 		// SampleApplication is trying to install a new
-		// helper tool.  Type your password to allow this.
-		if !SampleService.uninstallWithPrompt("In order to test out SMJobKit,", error: &error) {
-			appendMessage(error!.description)
-		} else {
-			appendMessage("Successfully uninstalled SampleService")
+		// helper tool. Type your password to allow this.
+		do {
+			#if swift(>=3.0)
+			try SampleService.installWithPrompt(prompt: "In order to test out SMJobKit,")
+			#else
+			try SampleService.installWithPrompt("In order to test out SMJobKit,")
+			#endif
+			appendMessage("Successfully installed SampleService")
+		} catch let error {
+			appendMessage("\(error)")
 		}
 
 		updateStatus()
@@ -49,13 +56,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 	private func updateStatus() {
 		self.bundledVersionLabel.stringValue = SampleService.bundledVersion ?? "Unknown Version"
-		self.installedVersionLabel.stringValue = SampleService.installedVersion ?? "Not Installed"
 
-		SampleService.checkForProblems().map { self.appendMessage($0.description) }
-	}
-
-	private func appendMessage(message: String) {
-		self.outputTextView.string! += "\(message)\n"
+		SampleService.checkForProblems().map { self.appendMessage("\($0)") }
 	}
 
 }

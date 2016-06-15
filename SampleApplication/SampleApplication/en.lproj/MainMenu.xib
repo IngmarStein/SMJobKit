@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7528.3" systemVersion="14D113c" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11129.15" systemVersion="15G12a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7528.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11129.15"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -656,13 +657,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <box autoresizesSubviews="NO" title="Bundled Service" borderType="line" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="963">
-                        <rect key="frame" x="7" y="177" width="199" height="83"/>
-                        <view key="contentView">
-                            <rect key="frame" x="1" y="1" width="197" height="81"/>
+                        <rect key="frame" x="7" y="177" width="401" height="83"/>
+                        <view key="contentView" id="jdY-yw-QbM">
+                            <rect key="frame" x="1" y="1" width="399" height="81"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1021">
-                                    <rect key="frame" x="12" y="11" width="173" height="25"/>
+                                    <rect key="frame" x="12" y="11" width="375" height="25"/>
                                     <buttonCell key="cell" type="roundTextured" title="Install Service" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1022">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
@@ -672,7 +673,7 @@
                                     </connections>
                                 </button>
                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1064">
-                                    <rect key="frame" x="10" y="60" width="177" height="15"/>
+                                    <rect key="frame" x="10" y="60" width="379" height="15"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="15" id="1203"/>
                                     </constraints>
@@ -683,7 +684,7 @@
                                     </textFieldCell>
                                 </textField>
                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1074">
-                                    <rect key="frame" x="10" y="45" width="177" height="14"/>
+                                    <rect key="frame" x="10" y="45" width="379" height="14"/>
                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="0.1.2.3" id="1075">
                                         <font key="font" metaFont="smallSystem"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -693,75 +694,23 @@
                             </subviews>
                         </view>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="1021" secondAttribute="trailing" constant="10" id="1027"/>
-                            <constraint firstItem="1021" firstAttribute="leading" secondItem="963" secondAttribute="leading" constant="10" id="1028"/>
-                            <constraint firstAttribute="bottom" secondItem="1021" secondAttribute="bottom" constant="10" id="1100"/>
-                            <constraint firstItem="1064" firstAttribute="trailing" secondItem="1021" secondAttribute="trailing" id="1110"/>
-                            <constraint firstItem="1064" firstAttribute="leading" secondItem="1021" secondAttribute="leading" id="1111"/>
-                            <constraint firstItem="1064" firstAttribute="trailing" secondItem="1074" secondAttribute="trailing" id="1120"/>
-                            <constraint firstItem="1074" firstAttribute="leading" secondItem="1064" secondAttribute="leading" id="1122"/>
-                            <constraint firstItem="1074" firstAttribute="top" secondItem="1064" secondAttribute="bottom" constant="1" id="1129"/>
-                            <constraint firstItem="1021" firstAttribute="top" relation="greaterThanOrEqual" secondItem="1074" secondAttribute="bottom" constant="10" id="1130"/>
-                            <constraint firstItem="1064" firstAttribute="top" secondItem="963" secondAttribute="top" constant="5" id="1133"/>
-                        </constraints>
-                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </box>
-                    <box autoresizesSubviews="NO" title="Bundled Service" borderType="line" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="1146">
-                        <rect key="frame" x="209" y="177" width="199" height="83"/>
-                        <view key="contentView">
-                            <rect key="frame" x="1" y="1" width="197" height="81"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1149">
-                                    <rect key="frame" x="12" y="11" width="173" height="25"/>
-                                    <buttonCell key="cell" type="roundTextured" title="Uninstall Service" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1160">
-                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system"/>
-                                    </buttonCell>
-                                    <connections>
-                                        <action selector="uninstallService:" target="494" id="1208"/>
-                                    </connections>
-                                </button>
-                                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1148">
-                                    <rect key="frame" x="10" y="60" width="177" height="15"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="15" id="1202"/>
-                                    </constraints>
-                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="center" title="Installed Service" id="1161">
-                                        <font key="font" metaFont="systemBold"/>
-                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </textFieldCell>
-                                </textField>
-                                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1147">
-                                    <rect key="frame" x="10" y="45" width="177" height="14"/>
-                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="0.1.2.3" id="1163">
-                                        <font key="font" metaFont="smallSystem"/>
-                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </textFieldCell>
-                                </textField>
-                            </subviews>
-                        </view>
-                        <constraints>
-                            <constraint firstItem="1148" firstAttribute="trailing" secondItem="1149" secondAttribute="trailing" id="1150"/>
-                            <constraint firstItem="1148" firstAttribute="leading" secondItem="1149" secondAttribute="leading" id="1151"/>
-                            <constraint firstItem="1148" firstAttribute="trailing" secondItem="1147" secondAttribute="trailing" id="1152"/>
-                            <constraint firstItem="1148" firstAttribute="top" secondItem="1146" secondAttribute="top" constant="5" id="1153"/>
-                            <constraint firstItem="1147" firstAttribute="leading" secondItem="1148" secondAttribute="leading" id="1154"/>
-                            <constraint firstItem="1147" firstAttribute="top" secondItem="1148" secondAttribute="bottom" constant="1" id="1155"/>
-                            <constraint firstAttribute="trailing" secondItem="1149" secondAttribute="trailing" constant="10" id="1156"/>
-                            <constraint firstItem="1149" firstAttribute="leading" secondItem="1146" secondAttribute="leading" constant="10" id="1157"/>
-                            <constraint firstAttribute="bottom" secondItem="1149" secondAttribute="bottom" constant="10" id="1158"/>
-                            <constraint firstItem="1149" firstAttribute="top" relation="greaterThanOrEqual" secondItem="1147" secondAttribute="bottom" constant="10" id="1159"/>
+                            <constraint firstItem="1064" firstAttribute="trailing" secondItem="1074" secondAttribute="trailing" id="2Og-lO-jFb"/>
+                            <constraint firstItem="1064" firstAttribute="trailing" secondItem="1021" secondAttribute="trailing" id="MBN-qI-8bg"/>
+                            <constraint firstItem="1064" firstAttribute="leading" secondItem="1021" secondAttribute="leading" id="Qmw-IG-Kye"/>
+                            <constraint firstItem="1021" firstAttribute="top" relation="greaterThanOrEqual" secondItem="1074" secondAttribute="bottom" constant="10" id="RTV-ha-hzF"/>
+                            <constraint firstItem="1064" firstAttribute="top" secondItem="963" secondAttribute="top" constant="5" id="cvc-Eb-Gl7"/>
+                            <constraint firstAttribute="trailing" secondItem="1021" secondAttribute="trailing" constant="10" id="fGL-3n-rNb"/>
+                            <constraint firstItem="1074" firstAttribute="leading" secondItem="1064" secondAttribute="leading" id="gG6-iD-EkB"/>
+                            <constraint firstItem="1074" firstAttribute="top" secondItem="1064" secondAttribute="bottom" constant="1" id="hTg-tW-94J"/>
+                            <constraint firstItem="1021" firstAttribute="leading" secondItem="963" secondAttribute="leading" constant="10" id="ize-Ke-cEb"/>
+                            <constraint firstAttribute="bottom" secondItem="1021" secondAttribute="bottom" constant="10" id="jJ1-gM-WAx"/>
                         </constraints>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
                     <box autoresizesSubviews="NO" title="Bundled Service" borderType="line" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="974">
                         <rect key="frame" x="7" y="6" width="401" height="167"/>
-                        <view key="contentView">
+                        <view key="contentView" id="c0a-RC-2xi">
                             <rect key="frame" x="1" y="1" width="399" height="165"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -799,10 +748,10 @@
                             </subviews>
                         </view>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="1174" secondAttribute="bottom" id="1178"/>
-                            <constraint firstItem="1174" firstAttribute="top" secondItem="974" secondAttribute="top" id="1179"/>
-                            <constraint firstItem="1174" firstAttribute="leading" secondItem="974" secondAttribute="leading" id="1180"/>
-                            <constraint firstAttribute="trailing" secondItem="1174" secondAttribute="trailing" id="1181"/>
+                            <constraint firstItem="1174" firstAttribute="leading" secondItem="974" secondAttribute="leading" id="Ka2-oO-FyZ"/>
+                            <constraint firstAttribute="trailing" secondItem="1174" secondAttribute="trailing" id="QSl-RJ-hBj"/>
+                            <constraint firstAttribute="bottom" secondItem="1174" secondAttribute="bottom" id="fcD-zt-E5a"/>
+                            <constraint firstItem="1174" firstAttribute="top" secondItem="974" secondAttribute="top" id="hdC-EO-pGQ"/>
                         </constraints>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -815,19 +764,15 @@
                     <constraint firstAttribute="bottom" secondItem="974" secondAttribute="bottom" constant="10" id="1134"/>
                     <constraint firstItem="974" firstAttribute="top" secondItem="963" secondAttribute="bottom" constant="10" id="1135"/>
                     <constraint firstItem="963" firstAttribute="leading" secondItem="974" secondAttribute="leading" id="1139"/>
-                    <constraint firstItem="1146" firstAttribute="trailing" secondItem="974" secondAttribute="trailing" id="1168"/>
-                    <constraint firstItem="1146" firstAttribute="bottom" secondItem="963" secondAttribute="bottom" id="1169"/>
-                    <constraint firstItem="1146" firstAttribute="top" secondItem="963" secondAttribute="top" id="1171"/>
-                    <constraint firstItem="1146" firstAttribute="leading" secondItem="963" secondAttribute="trailing" constant="9" id="1172"/>
-                    <constraint firstItem="963" firstAttribute="width" secondItem="1146" secondAttribute="width" id="1191"/>
                     <constraint firstItem="974" firstAttribute="top" secondItem="372" secondAttribute="top" constant="97" id="1192"/>
+                    <constraint firstItem="963" firstAttribute="trailing" secondItem="1175" secondAttribute="trailing" id="7H3-ya-kCG"/>
                 </constraints>
             </view>
+            <point key="canvasLocation" x="140.5" y="-59"/>
         </window>
         <customObject id="494" customClass="AppDelegate" customModule="SampleApplication" customModuleProvider="target">
             <connections>
                 <outlet property="bundledVersionLabel" destination="1074" id="1205"/>
-                <outlet property="installedVersionLabel" destination="1147" id="1206"/>
                 <outlet property="outputTextView" destination="1175" id="1204"/>
                 <outlet property="window" destination="371" id="532"/>
             </connections>

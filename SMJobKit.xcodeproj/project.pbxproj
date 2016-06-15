@@ -366,6 +366,11 @@
 				LastSwiftUpdateCheck = 0700;
 				LastTestingUpgradeCheck = 0630;
 				LastUpgradeCheck = 0800;
+				TargetAttributes = {
+					3CA1507015A91179001CF9F8 = {
+						LastSwiftMigration = 0800;
+					};
+				};
 			};
 			buildConfigurationList = 3CA1506A15A91179001CF9F8 /* Build configuration list for PBXProject "SMJobKit" */;
 			compatibilityVersion = "Xcode 6.3";
