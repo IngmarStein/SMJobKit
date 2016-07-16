@@ -53,11 +53,9 @@ final class ClientUtility {
 
 	static func authWithRight(_ rightName: String, prompt: String?) throws -> AuthorizationRef {
 		let authorizationRight = (rightName as NSString).utf8String!
-		// TODO: this should be a nil pointer but changes for SE-0055 made this a non-optional pointer for now
 		var authItem = AuthorizationItem(name: authorizationRight, valueLength: 0, value: nil, flags: 0)
 		var authRights = AuthorizationRights(count: 1, items: &authItem)
 
-		// TODO: this should be a nil pointer but changes for SE-0055 made this a non-optional pointer for now
 		var environment = AuthorizationEnvironment(count: 0, items: nil)
 
 		if let prompt = prompt {
