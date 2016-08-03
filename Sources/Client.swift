@@ -31,8 +31,11 @@ public class Client {
 		// Here's the good stuff
 		var cfError: Unmanaged<CFError>? = nil
 		if !SMJobBless(kSMDomainSystemLaunchd, cfIdentifier, authRef, &cfError) {
-			let blessError = cfError!.takeRetainedValue() as NSError
-			throw SMJError.unableToBless(blessError) // String(format: "SMJobBless failure (code %ld): %@", blessError.code, blessError.localizedDescription)
+			// TODO: bridging CFError to NSError fails in Xcode 8 Beta 4
+			//let blessError = cfError!.takeRetainedValue() as NSError
+			let blessError = cfError!.takeRetainedValue()
+			let nsError = NSError(domain: CFErrorGetDomain(blessError) as String, code: CFErrorGetCode(blessError), userInfo: CFErrorCopyUserInfo(blessError) as [NSObject: AnyObject])
+			throw SMJError.unableToBless(nsError) // String(format: "SMJobBless failure (code %ld): %@", blessError.code, blessError.localizedDescription)
 		}
 
 		NSLog("%@ (%@) installed successfully", serviceIdentifier as NSString, bundledVersion! as NSString)
@@ -40,8 +43,8 @@ public class Client {
 
 	// MARK: - Diagnostics
 
-	public class func checkForProblems() -> [ErrorProtocol] {
-		var errors = [ErrorProtocol]()
+	public class func checkForProblems() -> [Error] {
+		var errors = [Error]()
 
 		do {
 			try _ = ClientUtility.versionForBundlePath(bundledServicePath)

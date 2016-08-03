@@ -10,7 +10,7 @@ import Foundation
 
 #if swift(>=3.0)
 
-public enum SMJError: ErrorProtocol {
+public enum SMJError: Error {
 	// A failure when referencing a bundle that doesn't exist (or bad perms)
 	case bundleNotFound
 	// A failure when trying to get the SecStaticCode for a bundle, but it is unsigned

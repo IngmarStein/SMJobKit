@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name         = "SMJobKit"
-  s.version      = "0.0.11"
+  s.version      = "0.0.12"
   s.summary      = "Framework that simplifies SMJobBless."
   s.homepage     = "https://github.com/IngmarStein/SMJobKit"
   s.authors      = { "Ian MacLeod" => "ian@nevir.net", "Ingmar Stein" => "IngmarStein@gmail.com" }
-  s.source       = { :git => "https://github.com/IngmarStein/SMJobKit.git", :tag => "0.0.11" }
+  s.source       = { :git => "https://github.com/IngmarStein/SMJobKit.git", :tag => "0.0.12" }
   s.platform     = :osx, 10.9
   s.source_files = 'Sources/**/*.{h,swift}'
   s.framework    = 'ServiceManagement', 'Security'
