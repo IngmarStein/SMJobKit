@@ -1,7 +1,7 @@
 SMJobKit
 ========
 
-Using SMJobBless and friends is rather ...painful.  SMJobKit does everything in its power to
+Using SMJobBless and friends is rather… painful.  SMJobKit does everything in its power to
 alleviate that and get you back to writing awesome OS X apps.
 
 SMJobKit is more than just a framework/library to link against.  It gives you:
