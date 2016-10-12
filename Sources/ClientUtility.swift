@@ -26,7 +26,7 @@ final class ClientUtility {
 			let result2 = SecCodeCopySigningInformation(code, [], &codeInfoRef)
 			if result2 == noErr, let codeInfo = codeInfoRef {
 				let codeInfoDictionary = codeInfo as [NSObject: AnyObject]
-				if let bundleInfo = codeInfoDictionary[kSecCodeInfoPList] as? [NSObject: AnyObject] {
+				if let bundleInfo = codeInfoDictionary[kSecCodeInfoPList] as? [String: AnyObject] {
 					if let value = bundleInfo["CFBundleVersion"] as? String {
 						return value
 					} else {
@@ -61,7 +61,7 @@ final class ClientUtility {
 		if let prompt = prompt {
 			let authorizationEnvironmentPrompt = (kAuthorizationEnvironmentPrompt as NSString).utf8String!
 			let promptString = (prompt as NSString).utf8String!
-			var envItem = AuthorizationItem(name: authorizationEnvironmentPrompt, valueLength: prompt.lengthOfBytes(using: String.Encoding.utf8), value: UnsafeMutablePointer(promptString), flags: UInt32(0))
+			var envItem = AuthorizationItem(name: authorizationEnvironmentPrompt, valueLength: prompt.lengthOfBytes(using: String.Encoding.utf8), value: UnsafeMutablePointer(mutating: promptString), flags: UInt32(0))
 			environment = AuthorizationEnvironment(count: 1, items: &envItem)
 		}
 

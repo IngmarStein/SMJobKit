@@ -21,7 +21,7 @@ public enum SMJError: Error {
 	case badBundleCodeSigningDictionary
 
 	// Failure when calling SMJobBless
-	case unableToBless(NSError)
+	case unableToBless(Error)
 
 	// Authorization was denied by the system when asking a user for authorization
 	case authorizationDenied
