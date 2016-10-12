@@ -9,11 +9,13 @@
 import Foundation
 import ServiceManagement
 
-public class Client {
+#if swift(>=3.0)
+
+open class Client {
 
 	// MARK: - Abstract Interface
 
-	public class var serviceIdentifier: String {
+	open class var serviceIdentifier: String {
 		fatalError("You need to implement serviceIdentifier!")
 	}
 
@@ -22,8 +24,6 @@ public class Client {
 	public class var bundledVersion: String? {
 		return try? ClientUtility.versionForBundlePath(bundledServicePath)
 	}
-
-	#if swift(>=3.0)
 
 	public class func installWithPrompt(prompt: String?) throws {
 		let authRef = try ClientUtility.authWithRight(kSMRightBlessPrivilegedHelper, prompt: prompt)
@@ -60,7 +60,29 @@ public class Client {
 		return (Bundle(for: self).bundlePath as NSString).appendingPathComponent(helperRelative)
 	}
 
-	#else
+	// MARK: - Utility
+
+	private class var cfIdentifier: CFString {
+		return serviceIdentifier as CFString
+	}
+
+}
+
+#else
+
+public class Client {
+
+	// MARK: - Abstract Interface
+
+	public class var serviceIdentifier: String {
+		fatalError("You need to implement serviceIdentifier!")
+	}
+
+	// MARK: - Public Interface
+
+	public class var bundledVersion: String? {
+		return try? ClientUtility.versionForBundlePath(bundledServicePath)
+	}
 
 	public class func installWithPrompt(prompt: String?) throws {
 		let authRef = try ClientUtility.authWithRight(kSMRightBlessPrivilegedHelper, prompt: prompt)
@@ -97,8 +119,6 @@ public class Client {
 		return (NSBundle(forClass: self).bundlePath as NSString).stringByAppendingPathComponent(helperRelative)
 	}
 
-	#endif
-
 	// MARK: - Utility
 
 	private class var cfIdentifier: CFString {
@@ -106,3 +126,5 @@ public class Client {
 	}
 
 }
+
+#endif
