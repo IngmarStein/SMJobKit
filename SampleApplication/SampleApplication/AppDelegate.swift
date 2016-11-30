@@ -14,8 +14,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	@IBOutlet private var outputTextView: NSTextView!
 	@IBOutlet private weak var bundledVersionLabel: NSTextField!
 
-	#if swift(>=3.0)
-
 	func applicationDidFinishLaunching(_ notification: Notification) {
 		updateStatus()
 	}
@@ -24,28 +22,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		self.outputTextView.string! += "\(message)\n"
 	}
 
-	#else
-
-	func applicationDidFinishLaunching(notification: NSNotification) {
-		updateStatus()
-	}
-
-	private func appendMessage(message: String) {
-		self.outputTextView.string! += "\(message)\n"
-	}
-
-	#endif
-
 	@IBAction func installService(sender: AnyObject!) {
 		// In order to test out SMJobKit,
 		// SampleApplication is trying to install a new
 		// helper tool. Type your password to allow this.
 		do {
-			#if swift(>=3.0)
 			try SampleService.installWithPrompt(prompt: "In order to test out SMJobKit,")
-			#else
-			try SampleService.installWithPrompt("In order to test out SMJobKit,")
-			#endif
 			appendMessage("Successfully installed SampleService")
 		} catch let error {
 			appendMessage("\(error)")
