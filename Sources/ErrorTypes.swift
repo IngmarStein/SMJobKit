@@ -35,13 +35,13 @@ public enum SMJError: Error {
 		switch self {
 		case .bundleNotFound: return 1000
 		case .unsignedBundle: return 1001
-		case .badBundleSecurity(_): return 1002
+		case .badBundleSecurity: return 1002
 		case .badBundleCodeSigningDictionary: return 1003
-		case .unableToBless(_): return 1010
+		case .unableToBless: return 1010
 		case .authorizationDenied: return 1020
 		case .authorizationCanceled: return 1021
 		case .authorizationInteractionNotAllowed: return 1022
-		case .authorizationFailed(_): return 1023
+		case .authorizationFailed: return 1023
 		}
 	}
 
