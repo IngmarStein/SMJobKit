@@ -323,7 +323,6 @@
 				3CA1508415A91179001CF9F8 /* Sources */,
 				3CA1508515A91179001CF9F8 /* Frameworks */,
 				3C2BFABD15AB33CB0011FA52 /* Copy Services */,
-				3CA1508715A91179001CF9F8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -347,6 +346,10 @@
 				LastTestingUpgradeCheck = 0630;
 				LastUpgradeCheck = 1020;
 				TargetAttributes = {
+					3C2BFAAF15AB33020011FA52 = {
+						DevelopmentTeam = ADVP2P7SJK;
+						ProvisioningStyle = Manual;
+					};
 					3CA1507015A91179001CF9F8 = {
 						LastSwiftMigration = 1020;
 					};
@@ -354,11 +357,11 @@
 			};
 			buildConfigurationList = 3CA1506A15A91179001CF9F8 /* Build configuration list for PBXProject "SMJobKit" */;
 			compatibilityVersion = "Xcode 6.3";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = 3CA1506515A91179001CF9F8;
 			productRefGroup = 3CA1507215A91179001CF9F8 /* Products */;
@@ -397,19 +400,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/usr/bin/env ruby";
 			shellScript = "# Generic preprocessing for ${ENV_VAR} with output to the build dir.\n\nrequire 'cgi'\nrequire 'fileutils'\n\nmissing_keys = ['BUILD_DIR', 'CODE_SIGN_IDENTITY', 'SMJ_PREPROCESS_FILES', 'SMJ_PREPROCESS_DIR'] - ENV.keys\nraise \"Missing required ENV values: #{missing_keys.inspect}\" if missing_keys.size > 0\n\n# SMJ_PREPROCESS_FILES is a comma-separated list of *relative* file paths to preprocess\n#  and spit out into the SMJ_PREPROCESS_DIR (w/ the same relative paths as given)\nfiles_to_preprocess = ENV['SMJ_PREPROCESS_FILES'].split(',').map(&:strip)\n\n\n# Environment Cleanup\n# -------------------\ndummy_path = \"#{ENV['BUILD_DIR']}/SMJobKitCodeSigningDummy\"\n\nidentity = ENV['CODE_SIGN_IDENTITY']\n# If you use the generic code signing identity, chances are that it'll conflict.\nidentity = \"#{identity}:\" if identity.end_with? ' Developer'\n\n# We can't seem to get direct access to the code signing certificate that Xcode has\n# selected at this point :(\n`touch #{dummy_path}`\n`codesign --force --sign \"#{identity}\" \"#{dummy_path}\"`\nresult = `codesign --display --verbose --verbose \"#{dummy_path}\" 2>&1`\n`rm #{dummy_path}`\n\nENV['CODE_SIGN_IDENTITY'] = result[/Authority\\=(.*#{Regexp.escape(identity)}.*)/, 1]\n\n\n# Actual Preprocessing\n# --------------------\n\nfiles_to_preprocess.each do |path|\n  target_path = File.join(ENV['SMJ_PREPROCESS_DIR'], path)\n  FileUtils.mkpath File.dirname(target_path)\n\n  open(path) do |input|\n    open(target_path, 'w') do |output|\n      # Specify macros via ${VAR_NAME} in the preprocessed file.  Same as regular\n      # Info.plist preprocessing.\n      output.write input.read.gsub(/\\$\\{([A-Z_]+)\\}/) { CGI.escapeHTML(ENV[$1]) }\n    end\n    puts target_path\n  end\nend\n";
-		};
-		3CA1508715A91179001CF9F8 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
 		3CD9BC9715B24DBF00F0007B /* Copy Templates */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -477,7 +467,8 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
-				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = ADVP2P7SJK;
 				OTHER_LDFLAGS = (
 					"-sectcreate",
 					__TEXT,
@@ -489,6 +480,7 @@
 					"\"$(SMJ_PREPROCESS_DIR)/Tests/TestService/Launchd.plist\"",
 				);
 				PRODUCT_NAME = "net.nevir.SMJobKitTests.$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SMJ_PREPROCESS_DIR = "$(BUILD_DIR)/Preprocessed";
 				SMJ_PREPROCESS_FILES = "Tests/TestService/Info.plist, Tests/TestService/Launchd.plist";
@@ -500,7 +492,8 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
-				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = ADVP2P7SJK;
 				OTHER_LDFLAGS = (
 					"-sectcreate",
 					__TEXT,
@@ -512,6 +505,7 @@
 					"\"$(SMJ_PREPROCESS_DIR)/Tests/TestService/Launchd.plist\"",
 				);
 				PRODUCT_NAME = "net.nevir.SMJobKitTests.$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SMJ_PREPROCESS_DIR = "$(BUILD_DIR)/Preprocessed";
 				SMJ_PREPROCESS_FILES = "Tests/TestService/Info.plist, Tests/TestService/Launchd.plist";

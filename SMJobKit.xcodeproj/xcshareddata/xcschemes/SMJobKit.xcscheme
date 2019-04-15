@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3CA1508815A91179001CF9F8"
+               BuildableName = "SMJobKitTests.xctest"
+               BlueprintName = "SMJobKitTests"
+               ReferencedContainer = "container:SMJobKit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3CA1507015A91179001CF9F8"
+            BuildableName = "SMJobKit.framework"
+            BlueprintName = "SMJobKit"
+            ReferencedContainer = "container:SMJobKit.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>

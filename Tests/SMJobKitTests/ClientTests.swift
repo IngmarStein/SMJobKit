@@ -23,7 +23,10 @@ class ClientTests: XCTestCase {
 		let errors = MissingClient.checkForProblems()
 		XCTAssertEqual(errors.count, 1, "MissingService should have one error")
 		if let error = errors.first! as? SMJError {
-			if error != .BundleNotFound {
+			switch error {
+			case .bundleNotFound:
+				break
+			default:
 				XCTAssert(false, "Missing service should be missing")
 			}
 		} else {
