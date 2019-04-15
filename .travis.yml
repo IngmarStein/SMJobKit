@@ -1,4 +1,4 @@
 language: objective-c
-xcode_project: SMJobKit.xcworkspace
+xcode_workspace: SMJobKit.xcworkspace
 xcode_scheme: SMJobKitTests
 osx_image: xcode10.2
