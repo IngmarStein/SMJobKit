@@ -1,0 +1,6 @@
+language: objective-c
+xcode_project: SMJobKit.xcworkspace
+xcode_scheme: SMJobKitTests
+osx_image: xcode10.2
+script:
+- fastlane test
