@@ -27,7 +27,7 @@ open class Client {
 		let authRef = try ClientUtility.authWithRight(kSMRightBlessPrivilegedHelper, prompt: prompt)
 
 		// Here's the good stuff
-		var cfError: Unmanaged<CFError>? = nil
+		var cfError: Unmanaged<CFError>?
 		if !SMJobBless(kSMDomainSystemLaunchd, cfIdentifier, authRef, &cfError) {
 			let blessError = cfError!.takeRetainedValue()
 			throw SMJError.unableToBless(blessError) // String(format: "SMJobBless failure (code %ld): %@", blessError.code, blessError.localizedDescription)

@@ -69,7 +69,7 @@ final class ClientUtility {
 			.extendRights
 		]
 
-		var authRef: AuthorizationRef? = nil
+		var authRef: AuthorizationRef?
 		let status = AuthorizationCreate(&authRights, &environment, flags, &authRef)
 		if status == OSStatus(errAuthorizationSuccess) {
 			return authRef!
