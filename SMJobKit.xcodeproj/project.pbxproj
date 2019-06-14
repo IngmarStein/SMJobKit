@@ -70,7 +70,7 @@
 		3C2BFAB715AB33020011FA52 /* Launchd.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Launchd.plist; sourceTree = "<group>"; };
 		3C560DAD15A9460E00A05BC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CA1507115A91179001CF9F8 /* SMJobKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SMJobKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CA1507C15A91179001CF9F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CA1507C15A91179001CF9F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		3CA1508915A91179001CF9F8 /* SMJobKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMJobKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA150A115A911A0001CF9F8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		3CA150A215A911A7001CF9F8 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
@@ -81,14 +81,14 @@
 		3CD9BC9915B2503F00F0007B /* ___PACKAGENAMEASIDENTIFIER___-Launchd.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "___PACKAGENAMEASIDENTIFIER___-Launchd.plist"; sourceTree = "<group>"; };
 		3CD9BCD315B2632D00F0007B /* TemplateInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TemplateInfo.plist; sourceTree = "<group>"; };
 		3CFB0E2015B37DE400FA0E6B /* README-SMJobKit.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = "README-SMJobKit.md"; sourceTree = "<group>"; };
-		95340BA11AC83DB400DE4879 /* ErrorTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTypes.swift; sourceTree = "<group>"; };
-		95340BA31AC84C9C00DE4879 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		95340BA11AC83DB400DE4879 /* ErrorTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorTypes.swift; path = SMJobKit/ErrorTypes.swift; sourceTree = "<group>"; };
+		95340BA31AC84C9C00DE4879 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Client.swift; path = SMJobKit/Client.swift; sourceTree = "<group>"; };
 		95340BA51AC8555D00DE4879 /* MissingClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissingClient.swift; sourceTree = "<group>"; };
 		95340BA71AC855A100DE4879 /* TestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestClient.swift; sourceTree = "<group>"; };
 		95340BA91AC855DE00DE4879 /* ClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientTests.swift; sourceTree = "<group>"; };
-		956253001AC837A900D93E91 /* ClientUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientUtility.swift; sourceTree = "<group>"; };
+		956253001AC837A900D93E91 /* ClientUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClientUtility.swift; path = SMJobKit/ClientUtility.swift; sourceTree = "<group>"; };
 		958CB2A81AC95B6300D4FE65 /* ___VARIABLE_smjServiceName:RFC1034Identifier___.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "___VARIABLE_smjServiceName:RFC1034Identifier___.swift"; sourceTree = "<group>"; };
-		95CA05321B934371000ABDCE /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		95CA05321B934371000ABDCE /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BridgingHeader.h; path = SMJobKit/BridgingHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +133,7 @@
 				95340BA11AC83DB400DE4879 /* ErrorTypes.swift */,
 			);
 			name = Public;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		3C2BFA8A15AB2E8F0011FA52 /* Private */ = {
@@ -141,6 +142,7 @@
 				956253001AC837A900D93E91 /* ClientUtility.swift */,
 			);
 			name = Private;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		3C2BFAA815AB30EB0011FA52 /* Supporting Files */ = {
@@ -214,8 +216,7 @@
 		3CA1507A15A91179001CF9F8 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				3C2BFA8915AB2E870011FA52 /* Public */,
-				3C2BFA8A15AB2E8F0011FA52 /* Private */,
+				9568253422B447610027EB49 /* SMJobKit */,
 				3C2BFA8815AB2E570011FA52 /* Supporting Files */,
 			);
 			path = Sources;
@@ -266,6 +267,15 @@
 				3CD9BCD315B2632D00F0007B /* TemplateInfo.plist */,
 			);
 			path = "SMJobKit-Based Application.xctemplate";
+			sourceTree = "<group>";
+		};
+		9568253422B447610027EB49 /* SMJobKit */ = {
+			isa = PBXGroup;
+			children = (
+				3C2BFA8915AB2E870011FA52 /* Public */,
+				3C2BFA8A15AB2E8F0011FA52 /* Private */,
+			);
+			path = SMJobKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,7 +354,7 @@
 				CLASSPREFIX = SMJ;
 				LastSwiftUpdateCheck = 0700;
 				LastTestingUpgradeCheck = 0630;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1100;
 				TargetAttributes = {
 					3C2BFAAF15AB33020011FA52 = {
 						ProvisioningStyle = Manual;
@@ -468,6 +478,7 @@
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = ADVP2P7SJK;
+				ENABLE_HARDENED_RUNTIME = YES;
 				OTHER_LDFLAGS = (
 					"-sectcreate",
 					__TEXT,
@@ -493,6 +504,7 @@
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = ADVP2P7SJK;
+				ENABLE_HARDENED_RUNTIME = YES;
 				OTHER_LDFLAGS = (
 					"-sectcreate",
 					__TEXT,
@@ -604,7 +616,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -613,7 +625,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "net.nevir.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = SMJobKit;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = Sources/BridgingHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = Sources/SMJobKit/BridgingHeader.h;
 			};
 			name = Debug;
 		};
@@ -626,7 +638,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -635,7 +647,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "net.nevir.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = SMJobKit;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = Sources/BridgingHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = Sources/SMJobKit/BridgingHeader.h;
 			};
 			name = Release;
 		};
