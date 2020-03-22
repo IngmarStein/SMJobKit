@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name          = "SMJobKit"
-  s.version       = "0.0.20"
+  s.version       = "0.0.21"
   s.swift_version = '5.0'
   s.summary       = "Framework that simplifies SMJobBless."
   s.homepage      = "https://github.com/IngmarStein/SMJobKit"
