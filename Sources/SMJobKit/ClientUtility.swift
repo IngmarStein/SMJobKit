@@ -51,16 +51,25 @@ final class ClientUtility {
 
 	static func authWithRight(_ rightName: String, prompt: String?) throws -> AuthorizationRef {
 		let authorizationRight = (rightName as NSString).utf8String!
-		var authItem = AuthorizationItem(name: authorizationRight, valueLength: 0, value: nil, flags: 0)
-		var authRights = AuthorizationRights(count: 1, items: &authItem)
+		let authItem = AuthorizationItem(name: authorizationRight, valueLength: 0, value: nil, flags: 0)
+		let authItemPointer = UnsafeMutablePointer<AuthorizationItem>.allocate(capacity: 1)
+		authItemPointer.initialize(to: authItem)
+		defer {
+			authItemPointer.deinitialize(count: 1)
+			authItemPointer.deallocate()
+		}
+		var authRights = AuthorizationRights(count: 1, items: authItemPointer)
 
 		var environment = AuthorizationEnvironment(count: 0, items: nil)
 
 		if let prompt = prompt {
 			let authorizationEnvironmentPrompt = (kAuthorizationEnvironmentPrompt as NSString).utf8String!
 			let promptString = (prompt as NSString).utf8String!
-			var envItem = AuthorizationItem(name: authorizationEnvironmentPrompt, valueLength: prompt.lengthOfBytes(using: String.Encoding.utf8), value: UnsafeMutablePointer(mutating: promptString), flags: UInt32(0))
-			environment = AuthorizationEnvironment(count: 1, items: &envItem)
+			let envItem = AuthorizationItem(name: authorizationEnvironmentPrompt, valueLength: prompt.lengthOfBytes(using: String.Encoding.utf8), value: UnsafeMutablePointer(mutating: promptString), flags: UInt32(0))
+			let envItemPointer = UnsafeMutablePointer<AuthorizationItem>.allocate(capacity: 1)
+			envItemPointer.initialize(to: envItem)
+			environment.count = 1
+			environment.items = envItemPointer
 		}
 
 		let flags: AuthorizationFlags = [
@@ -71,6 +80,10 @@ final class ClientUtility {
 
 		var authRef: AuthorizationRef?
 		let status = AuthorizationCreate(&authRights, &environment, flags, &authRef)
+		if let envItems = environment.items {
+			envItems.deinitialize(count: Int(environment.count))
+			envItems.deallocate()
+		}
 		if status == OSStatus(errAuthorizationSuccess) {
 			return authRef!
 		} else if status == OSStatus(errAuthorizationDenied) {
